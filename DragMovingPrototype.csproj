@@ -76,24 +76,94 @@
     <Reference Include="DemiLib">
       <HintPath>Assets\Demigiant\DemiLib\Core\DemiLib.dll</HintPath>
     </Reference>
-    <Reference Include="DOTween43">
-      <HintPath>Assets\Demigiant\DOTween\DOTween43.dll</HintPath>
-    </Reference>
-    <Reference Include="DOTween50">
-      <HintPath>Assets\Demigiant\DOTween\DOTween50.dll</HintPath>
-    </Reference>
     <Reference Include="DOTween">
       <HintPath>Assets\Demigiant\DOTween\DOTween.dll</HintPath>
     </Reference>
-    <Reference Include="DOTweenPro">
-      <HintPath>Assets\Demigiant\DOTweenPro\DOTweenPro.dll</HintPath>
+    <Reference Include="DOTween43">
+      <HintPath>Assets\Demigiant\DOTween\DOTween43.dll</HintPath>
     </Reference>
     <Reference Include="DOTween46">
       <HintPath>Assets\Demigiant\DOTween\DOTween46.dll</HintPath>
     </Reference>
+    <Reference Include="DOTween50">
+      <HintPath>Assets\Demigiant\DOTween\DOTween50.dll</HintPath>
+    </Reference>
+    <Reference Include="DOTweenPro">
+      <HintPath>Assets\Demigiant\DOTweenPro\DOTweenPro.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Demigiant\DOTweenPro\DOTweenAnimation.cs" />
+    <Compile Include="Assets\Illogika\HeavyDutyInspector\Examples\LocalizationKeys\LocalizationKey.cs" />
+    <Compile Include="Assets\Illogika\HeavyDutyInspector\Examples\LocalizationKeys\LocalizationKeysExample.cs" />
+    <Compile Include="Assets\Illogika\HeavyDutyInspector\Examples\Scripts\ExampleAssetPath.cs" />
+    <Compile Include="Assets\Illogika\HeavyDutyInspector\Examples\Scripts\ExampleButton.cs" />
+    <Compile Include="Assets\Illogika\HeavyDutyInspector\Examples\Scripts\ExampleChangeCheckCallback.cs" />
+    <Compile Include="Assets\Illogika\HeavyDutyInspector\Examples\Scripts\ExampleComment.cs" />
+    <Compile Include="Assets\Illogika\HeavyDutyInspector\Examples\Scripts\ExampleComplexHeaders.cs" />
+    <Compile Include="Assets\Illogika\HeavyDutyInspector\Examples\Scripts\ExampleComponentField.cs" />
+    <Compile Include="Assets\Illogika\HeavyDutyInspector\Examples\Scripts\ExampleComponentSelection43.cs" />
+    <Compile Include="Assets\Illogika\HeavyDutyInspector\Examples\Scripts\ExampleDictionary.cs" />
+    <Compile Include="Assets\Illogika\HeavyDutyInspector\Examples\Scripts\ExampleDynamicRange.cs" />
+    <Compile Include="Assets\Illogika\HeavyDutyInspector\Examples\Scripts\ExampleEditableComment.cs" />
+    <Compile Include="Assets\Illogika\HeavyDutyInspector\Examples\Scripts\ExampleEditableProperty.cs" />
+    <Compile Include="Assets\Illogika\HeavyDutyInspector\Examples\Scripts\ExampleEnumMask.cs" />
+    <Compile Include="Assets\Illogika\HeavyDutyInspector\Examples\Scripts\ExampleHideConditional.cs" />
+    <Compile Include="Assets\Illogika\HeavyDutyInspector\Examples\Scripts\ExampleImage.cs" />
+    <Compile Include="Assets\Illogika\HeavyDutyInspector\Examples\Scripts\ExampleLayer.cs" />
+    <Compile Include="Assets\Illogika\HeavyDutyInspector\Examples\Scripts\ExampleReadOnlyProperty.cs" />
+    <Compile Include="Assets\Illogika\HeavyDutyInspector\Examples\Scripts\ExampleReadonly.cs" />
+    <Compile Include="Assets\Illogika\HeavyDutyInspector\Examples\Scripts\ExampleReorderableArray.cs" />
+    <Compile Include="Assets\Illogika\HeavyDutyInspector\Examples\Scripts\ExampleReorderableArrayComponentSelection.cs" />
+    <Compile Include="Assets\Illogika\HeavyDutyInspector\Examples\Scripts\ExampleReorderableArrayCustomSerializableObject.cs" />
+    <Compile Include="Assets\Illogika\HeavyDutyInspector\Examples\Scripts\ExampleReorderableList.cs" />
+    <Compile Include="Assets\Illogika\HeavyDutyInspector\Examples\Scripts\ExampleReorderableListComponentSelection.cs" />
+    <Compile Include="Assets\Illogika\HeavyDutyInspector\Examples\Scripts\ExampleReorderableListCustomSerializableObject.cs" />
+    <Compile Include="Assets\Illogika\HeavyDutyInspector\Examples\Scripts\ExampleScene.cs" />
+    <Compile Include="Assets\Illogika\HeavyDutyInspector\Examples\Scripts\ExampleTag.cs" />
+    <Compile Include="Assets\Illogika\HeavyDutyInspector\Examples\Scripts\ExampleTagList.cs" />
+    <Compile Include="Assets\Illogika\HeavyDutyInspector\Examples\Scripts\ExampleUnsignedIntDrawer.cs" />
+    <Compile Include="Assets\Illogika\HeavyDutyInspector\Examples\Scripts\FakeState.cs" />
+    <Compile Include="Assets\Illogika\HeavyDutyInspector\Examples\Scripts\FakeStateAttack.cs" />
+    <Compile Include="Assets\Illogika\HeavyDutyInspector\Examples\Scripts\FakeStateGoToPosition.cs" />
+    <Compile Include="Assets\Illogika\HeavyDutyInspector\Examples\Scripts\FakeStateIdle.cs" />
+    <Compile Include="Assets\Illogika\HeavyDutyInspector\Extras\Spreadsheet.cs" />
+    <Compile Include="Assets\Illogika\HeavyDutyInspector\NamedMonoBehaviour\Internal\NMBColorAttribute.cs" />
+    <Compile Include="Assets\Illogika\HeavyDutyInspector\NamedMonoBehaviour\Internal\NMBNameAttribute.cs" />
+    <Compile Include="Assets\Illogika\HeavyDutyInspector\NamedMonoBehaviour\MonoBehaviour.cs" />
+    <Compile Include="Assets\Illogika\HeavyDutyInspector\NamedMonoBehaviour\NamedMonoBehaviour.cs" />
+    <Compile Include="Assets\Illogika\HeavyDutyInspector\PropertyDrawers\AssetPathAttribute.cs" />
+    <Compile Include="Assets\Illogika\HeavyDutyInspector\PropertyDrawers\BackgroundAttribute.cs" />
+    <Compile Include="Assets\Illogika\HeavyDutyInspector\PropertyDrawers\ButtonAttribute.cs" />
+    <Compile Include="Assets\Illogika\HeavyDutyInspector\PropertyDrawers\ChangeCheckCallbackAttribute.cs" />
+    <Compile Include="Assets\Illogika\HeavyDutyInspector\PropertyDrawers\ColorExtension.cs" />
+    <Compile Include="Assets\Illogika\HeavyDutyInspector\PropertyDrawers\CommentAttribute.cs" />
+    <Compile Include="Assets\Illogika\HeavyDutyInspector\PropertyDrawers\ComplexHeaderAttribute.cs" />
+    <Compile Include="Assets\Illogika\HeavyDutyInspector\PropertyDrawers\ComponentField.cs" />
+    <Compile Include="Assets\Illogika\HeavyDutyInspector\PropertyDrawers\ComponentFieldRestrictionAttribute.cs" />
+    <Compile Include="Assets\Illogika\HeavyDutyInspector\PropertyDrawers\ComponentSelectionAttribute.cs" />
+    <Compile Include="Assets\Illogika\HeavyDutyInspector\PropertyDrawers\DictionaryAttribute.cs" />
+    <Compile Include="Assets\Illogika\HeavyDutyInspector\PropertyDrawers\DynamicRangeAttribute.cs" />
+    <Compile Include="Assets\Illogika\HeavyDutyInspector\PropertyDrawers\EditableCommentAttribute.cs" />
+    <Compile Include="Assets\Illogika\HeavyDutyInspector\PropertyDrawers\EditablePropertyAttribute.cs" />
+    <Compile Include="Assets\Illogika\HeavyDutyInspector\PropertyDrawers\EnumMaskAttribute.cs" />
+    <Compile Include="Assets\Illogika\HeavyDutyInspector\PropertyDrawers\HideConditionalAttribute.cs" />
+    <Compile Include="Assets\Illogika\HeavyDutyInspector\PropertyDrawers\HideVariableAttribute.cs" />
+    <Compile Include="Assets\Illogika\HeavyDutyInspector\PropertyDrawers\ImageAttribute.cs" />
+    <Compile Include="Assets\Illogika\HeavyDutyInspector\PropertyDrawers\ImageButtonAttribute.cs" />
+    <Compile Include="Assets\Illogika\HeavyDutyInspector\PropertyDrawers\Keyword.cs" />
+    <Compile Include="Assets\Illogika\HeavyDutyInspector\PropertyDrawers\KeywordsConfig.cs" />
+    <Compile Include="Assets\Illogika\HeavyDutyInspector\PropertyDrawers\LayerAttribute.cs" />
+    <Compile Include="Assets\Illogika\HeavyDutyInspector\PropertyDrawers\NamedMonoBehaviourAttribute.cs" />
+    <Compile Include="Assets\Illogika\HeavyDutyInspector\PropertyDrawers\ReadonlyAttribute.cs" />
+    <Compile Include="Assets\Illogika\HeavyDutyInspector\PropertyDrawers\ReadonlyPropertiesAttribute.cs" />
+    <Compile Include="Assets\Illogika\HeavyDutyInspector\PropertyDrawers\ReorderableArrayAttribute.cs" />
+    <Compile Include="Assets\Illogika\HeavyDutyInspector\PropertyDrawers\ReorderableListAttribute.cs" />
+    <Compile Include="Assets\Illogika\HeavyDutyInspector\PropertyDrawers\Scene.cs" />
+    <Compile Include="Assets\Illogika\HeavyDutyInspector\PropertyDrawers\SceneAttribute.cs" />
+    <Compile Include="Assets\Illogika\HeavyDutyInspector\PropertyDrawers\SerializationWrappers.cs" />
+    <Compile Include="Assets\Illogika\HeavyDutyInspector\PropertyDrawers\TagAttribute.cs" />
+    <Compile Include="Assets\Illogika\HeavyDutyInspector\PropertyDrawers\TagListAttribute.cs" />
     <Compile Include="Assets\ProCore\ProGrids\Classes\pg_Constant.cs" />
     <Compile Include="Assets\ProCore\ProGrids\Classes\pg_Enum.cs" />
     <Compile Include="Assets\ProCore\ProGrids\Classes\pg_IconUtility.cs" />
@@ -106,7 +176,9 @@
     <Compile Include="Assets\Scripts\ObstacleCtrl.cs" />
     <Compile Include="Assets\Scripts\PlayerCtrl.cs" />
     <Compile Include="Assets\Scripts\SpawnManager.cs" />
+    <Compile Include="Assets\Scripts\Test.cs" />
     <Compile Include="Assets\Scripts\UIManager.cs" />
+    <Compile Include="Assets\Scripts\ZoneCtrl.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Demigiant\DOTween\DOTween.XML" />
@@ -121,6 +193,9 @@
     <None Include="Assets\Demigiant\DemiLib\Core\DemiLib.xml" />
     <None Include="Assets\Demigiant\DemiLib\Core\Editor\DemiEditor.xml" />
     <None Include="Assets\Demigiant\readme_DOTweenPro.txt" />
+    <None Include="Assets\Illogika\ScriptTemplates\100-C%23 Named Script-NewNamedBehaviourScript.cs.txt" />
+    <None Include="Assets\Illogika\ScriptTemplates\101-C%23 Custom Keyword-NewKeywordScript.cs.txt" />
+    <None Include="Assets\Illogika\ScriptTemplates\102-C%23 Custom Keyword Editor-NewKeywordEditorScript.cs.txt" />
     <None Include="Assets\ProCore\ProGrids\About\changelog.txt" />
     <None Include="Assets\ProCore\ProGrids\About\pc_AboutEntry_ProGrids.txt" />
     <None Include="Assets\ProCore\ProGrids\Shader\pg_GridShader.shader" />

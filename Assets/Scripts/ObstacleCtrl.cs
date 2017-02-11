@@ -2,81 +2,132 @@
 using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
+using HeavyDutyInspector;
+using DG.Tweening.Core;
+using DG.Tweening.Plugins.Core.PathCore;
+using DG.Tweening.Plugins.Options;
+using System;
 
+[System.Serializable]
 public struct WayPoint
 {
     public Vector3 scale;
+    [HideInInspector]
     public Vector3 pos;
+    public float addSpeed;
+    public float addAngle;
+    public bool isFlipRotate;
+    public WayPoint(Vector3 scale, Vector3 pos, float addSpeed, float addAngle, bool isFlipRotate)
+    {
+        this.scale = scale;
+        this.pos = pos;
+        this.addSpeed = addSpeed;
+        this.addAngle = addAngle;
+        this.isFlipRotate = isFlipRotate;
+    }
 }
 
 public class ObstacleCtrl : MonoBehaviour {
 
+    [ComponentSelection]
+    public DOTweenPath doTweenPath;
+
     new SpriteRenderer renderer;
+    [HideInInspector]
     public bool isNeedRespawn = false;
 
-    WayPoint[] wayPoints;
-    public int wayPointCnt = 2;
+    [Comment("WayPoint 설정 후 클릭")]
+    [Button("Reset wayPointPath Position", "ResetArrWayPoint", true)]
+    public bool hidden;
+
+    Vector3 beginScale;
+
+    public float normalSpeedPerSec;
+    public float normalAnglePerSec;
+    public float changeScaleDuration = 0.2f;
+    public float timeScaleMultiply = 1f;
+
+    public AnimationCurve easeCurve;
+
+    void ResetArrWayPoint()
+    {
+        Debug.Log("reset");
+
+        WayPoint[] oldArrWayPoint = arrWayPoint;
+        int cnt = doTweenPath.wps.Count;
+        arrWayPoint = new WayPoint[cnt];
+
+        for (int i = 0; i < arrWayPoint.Length; i++)
+        {
+            arrWayPoint[i] = new WayPoint(Vector3.one, Vector3.zero, 0f, 0f, false);
+        }
+
+        for (int i = 0; i < cnt; i++)
+        {
+            if (oldArrWayPoint != null)
+            {
+                if (oldArrWayPoint.Length == i)
+                    break;
+                arrWayPoint[i] = oldArrWayPoint[i];
+            }
+            arrWayPoint[i].pos = doTweenPath.wps[i];
+        }
+    }
+
+    [Comment("[Readonly] Current WayPoint Index")]
+    [Readonly]
     public int wayPointIdx = 0;
 
-    Tweener moveTween;
-    Tweener scaleTween;
+    [ReorderableArray]
+    public WayPoint[] arrWayPoint;
+
+    Vector3[] wayPointPath;
+    int maxWayPointCnt;
+    int curWayPointIdx;
+    float originAngleTimeScale;
+    float originSpeedTimeScale;
+    float originChangeScaleDuration;
+
+    TweenerCore<Vector3, Path, DG.Tweening.Plugins.Options.PathOptions> pathTweener;
+    Tweener rotTweener;
+    Tweener scaleTweener;
 
     private void Awake()
     {
         renderer = GetComponent<SpriteRenderer>();
         renderer.enabled = false;
+        beginScale = transform.localScale;
+
+        ResetArrWayPoint();
+
+        WayPoint[] temp = arrWayPoint;
+        arrWayPoint = new WayPoint[temp.Length+1];
+
+        arrWayPoint[0].scale = transform.localScale;
+        arrWayPoint[0].pos = transform.position;
+
+        for (int i = 1; i < arrWayPoint.Length; i++)
+        {
+            arrWayPoint[i] = temp[i-1];
+        }
     }
     // Use this for initialization
     void Start () {
-        //StartCoroutine(CoInit());
+        StartCoroutine(CoInit());
         StartCoroutine(CoClickCheck());
     }
 
+    
     public IEnumerator CoInit()
     {
-        Vector3 scale = Vector3.one * Random.Range(0.5f, 1.5f);
-        transform.localScale = scale;
         yield return null;
-
-        if (isNeedRespawn)
+        
+        wayPointPath = new Vector3[arrWayPoint.Length];
+        for (int i = 0; i < wayPointPath.Length; i++)
         {
-            SpawnManager.spawnCnt--;
-            Debug.Log("삭제");
-            Destroy(this.gameObject, 0.1f);
-            yield break;
+            wayPointPath[i] = arrWayPoint[i].pos;
         }
-
-        wayPoints = new WayPoint[wayPointCnt];
-        wayPoints[0].pos = transform.position;
-        wayPoints[0].scale = scale;
-        for (int i = 1; i < wayPointCnt; i++)
-        {
-            float x = transform.position.x;
-            float y = transform.position.y;
-            float tmpX = x + Random.Range(-4f, 4f);
-            float tmpY = y + Random.Range(-5f, 5f);
-            x = tmpX < -5f ? -5f
-                : tmpX > 5f ? 5f
-                : tmpX;
-            y = tmpY < -6f ? -6f
-                : tmpY > 8.5f ? 8.5f
-                : tmpY;
-
-            wayPoints[i].pos = new Vector3(x, y, 0f);
-            wayPoints[i].scale = Vector3.one * Random.Range(0.5f, 1.5f);
-
-            transform.localScale = wayPoints[i].scale;
-            transform.position = wayPoints[i].pos;
-            yield return null;
-            if(isNeedRespawn)
-            {
-                transform.position = wayPoints[0].pos;
-                transform.localScale = wayPoints[0].scale;
-                i--;
-                isNeedRespawn = false;
-                Debug.Log("경로 재설정");
-            }
-        }
+        maxWayPointCnt = wayPointPath.Length;
 
         transform.localScale = Vector3.zero;
 
@@ -91,49 +142,124 @@ public class ObstacleCtrl : MonoBehaviour {
 
     public void OnGameStart()
     {
-        MoveNextWayPoint(out moveTween, out scaleTween);
+        transform.DOScale(beginScale, 0.2f);
+
+        rotTweener = transform.DORotate(transform.rotation.eulerAngles + new Vector3(0f, 0f, 360f), 1f, RotateMode.LocalAxisAdd)
+            .SetEase(Ease.Linear)
+            .SetSpeedBased(true)
+            .SetLoops(-1)
+            .Pause();
+        rotTweener.timeScale = originAngleTimeScale = normalAnglePerSec;
+        
+        pathTweener = transform.DOPath(wayPointPath, 1f)
+            .SetLoops(-1, LoopType.Yoyo)
+            .SetAutoKill(false)
+            .SetEase(easeCurve)
+            .SetSpeedBased(true)
+            .Pause()
+            .OnWaypointChange(idx => 
+            {
+                
+                curWayPointIdx = idx;
+                if (scaleTweener != null)
+                {
+                    scaleTweener.Kill();
+                    scaleTweener = null;
+                }
+                scaleTweener = ScaleWayPoint(idx);
+                scaleTweener.Play();
+
+                if (rotTweener != null)
+                {
+                    rotTweener.Kill();
+                    rotTweener = null;
+                }
+                rotTweener = MakeRotTweener(arrWayPoint[idx].isFlipRotate, arrWayPoint[idx].addAngle);
+
+                UpdateTimeScale();
+            });
+        pathTweener.timeScale = originSpeedTimeScale = normalSpeedPerSec;
+        
+        StartCoroutine(CoPlay(pathTweener, rotTweener));
     }
 
-    public void MoveNextWayPoint(out Tweener move, out Tweener scale)
+    IEnumerator CoPlay(TweenerCore<Vector3, Path, DG.Tweening.Plugins.Options.PathOptions> pathTweener, Tweener rotTweener)
     {
-        wayPointIdx = wayPointIdx + 1 == wayPointCnt ? 0 : wayPointIdx + 1;
-        move = MoveWayPoint(wayPointIdx);
-        scale = ScaleWayPoint(wayPointIdx);
+        yield return new WaitForSeconds(0.5f);
+        pathTweener.Play();
+        rotTweener.Play();
     }
 
-    public Tweener MoveWayPoint(int idx)
+    public void UpdateTimeScale()
     {
-        if (idx >= wayPointCnt)
-            return null;
-        return transform.DOMove(wayPoints[idx].pos, Random.Range(0.5f,2f)).SetSpeedBased(true).SetAutoKill(false).SetEase(Ease.Linear);
+        scaleTweener.timeScale = originChangeScaleDuration = (1f) * timeScaleMultiply;
+        rotTweener.timeScale = originAngleTimeScale = (normalAnglePerSec + arrWayPoint[curWayPointIdx].addAngle) * timeScaleMultiply;
+        pathTweener.timeScale = originSpeedTimeScale = (normalSpeedPerSec + arrWayPoint[curWayPointIdx].addSpeed) * timeScaleMultiply;
+
+        if (PlayerCtrl.isClick)
+        {
+            scaleTweener.timeScale = originChangeScaleDuration * 0.05f;
+            rotTweener.timeScale = originAngleTimeScale * 0.05f;
+            pathTweener.timeScale = originSpeedTimeScale * 0.05f;
+        }
+    }
+
+    public Tweener MakeRotTweener(bool isRightRot, float addAngle)
+    {
+        Vector3 rot = transform.rotation.eulerAngles;
+        rot = isRightRot ? rot - new Vector3(0f, 0f, 360f) : rot + new Vector3(0f, 0f, 360f);
+
+        Tweener r = transform.DORotate(rot, 1f, RotateMode.FastBeyond360)
+            .SetEase(Ease.Linear)
+            .SetSpeedBased(true)
+            .SetLoops(-1);
+        return r;
     }
 
     public Tweener ScaleWayPoint(int idx)
     {
-        if (idx >= wayPointCnt)
+        if (idx >= maxWayPointCnt)
             return null;
-        return transform.DOScale(wayPoints[idx].scale, 1f).SetAutoKill(false);
+        return transform.DOScale(arrWayPoint[idx].scale, changeScaleDuration).Pause();
     }
 
     IEnumerator CoClickCheck()
     {
         yield return new WaitForSeconds(0.2f);
-        if(moveTween != null)
+        
+        if(pathTweener != null)
         {
             if (PlayerCtrl.isClick)
             {
-                moveTween.timeScale = scaleTween.timeScale = 0.05f;
+                if(pathTweener.timeScale - originSpeedTimeScale * 0.05f > Mathf.Epsilon)
+                {
+                    Debug.Log("change");
+                    pathTweener.timeScale = originSpeedTimeScale * 0.05f;
+                    rotTweener.timeScale = originAngleTimeScale * 0.05f;
+                    if (scaleTweener != null)
+                        scaleTweener.timeScale = originChangeScaleDuration * 0.05f;
+                }
             }
             else
             {
-                moveTween.timeScale = scaleTween.timeScale = 1f;
+                if(pathTweener.timeScale != originSpeedTimeScale)
+                {
+                    Debug.Log("wow");
+                    pathTweener.timeScale = originSpeedTimeScale;
+                    rotTweener.timeScale = originAngleTimeScale;
+                    if (scaleTweener != null)
+                        scaleTweener.timeScale = originChangeScaleDuration;
+
+                }
             }
         }
+        
         StartCoroutine(CoClickCheck());
     }
 
 	// Update is called once per frame
 	void Update () {
+        /*
 		if(moveTween != null)
         {
             if (moveTween.IsComplete())
@@ -144,6 +270,7 @@ public class ObstacleCtrl : MonoBehaviour {
                 MoveNextWayPoint(out moveTween, out scaleTween);
             }
         }
+        */
     }
 
     private void OnEnable()

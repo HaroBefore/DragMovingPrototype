@@ -121,29 +121,29 @@
     <Reference Include="DemiLib">
       <HintPath>Assets\Demigiant\DemiLib\Core\DemiLib.dll</HintPath>
     </Reference>
-    <Reference Include="DOTween43">
-      <HintPath>Assets\Demigiant\DOTween\DOTween43.dll</HintPath>
-    </Reference>
-    <Reference Include="DOTweenEditor">
-      <HintPath>Assets\Demigiant\DOTween\Editor\DOTweenEditor.dll</HintPath>
-    </Reference>
-    <Reference Include="DOTween50">
-      <HintPath>Assets\Demigiant\DOTween\DOTween50.dll</HintPath>
-    </Reference>
-    <Reference Include="DOTweenProEditor">
-      <HintPath>Assets\Demigiant\DOTweenPro\Editor\DOTweenProEditor.dll</HintPath>
+    <Reference Include="DemiEditor">
+      <HintPath>Assets\Demigiant\DemiLib\Core\Editor\DemiEditor.dll</HintPath>
     </Reference>
     <Reference Include="DOTween">
       <HintPath>Assets\Demigiant\DOTween\DOTween.dll</HintPath>
     </Reference>
-    <Reference Include="DOTweenPro">
-      <HintPath>Assets\Demigiant\DOTweenPro\DOTweenPro.dll</HintPath>
-    </Reference>
-    <Reference Include="DemiEditor">
-      <HintPath>Assets\Demigiant\DemiLib\Core\Editor\DemiEditor.dll</HintPath>
+    <Reference Include="DOTween43">
+      <HintPath>Assets\Demigiant\DOTween\DOTween43.dll</HintPath>
     </Reference>
     <Reference Include="DOTween46">
       <HintPath>Assets\Demigiant\DOTween\DOTween46.dll</HintPath>
+    </Reference>
+    <Reference Include="DOTween50">
+      <HintPath>Assets\Demigiant\DOTween\DOTween50.dll</HintPath>
+    </Reference>
+    <Reference Include="DOTweenEditor">
+      <HintPath>Assets\Demigiant\DOTween\Editor\DOTweenEditor.dll</HintPath>
+    </Reference>
+    <Reference Include="DOTweenPro">
+      <HintPath>Assets\Demigiant\DOTweenPro\DOTweenPro.dll</HintPath>
+    </Reference>
+    <Reference Include="DOTweenProEditor">
+      <HintPath>Assets\Demigiant\DOTweenPro\Editor\DOTweenProEditor.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -154,6 +154,45 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Demigiant\DOTweenPro\Editor\DOTweenAnimationInspector.cs" />
+    <Compile Include="Assets\Illogika\HeavyDutyInspector\Examples\LocalizationKeys\Editor\LocalizationKey.cs" />
+    <Compile Include="Assets\Illogika\HeavyDutyInspector\NamedMonoBehaviour\Internal\Editor\NMBColorDrawer.cs" />
+    <Compile Include="Assets\Illogika\HeavyDutyInspector\NamedMonoBehaviour\Internal\Editor\NMBNameDrawer.cs" />
+    <Compile Include="Assets\Illogika\HeavyDutyInspector\PropertyDrawers\Editor\AssetPathDrawer.cs" />
+    <Compile Include="Assets\Illogika\HeavyDutyInspector\PropertyDrawers\Editor\BackgroundDrawer.cs" />
+    <Compile Include="Assets\Illogika\HeavyDutyInspector\PropertyDrawers\Editor\BaseKeywordDrawer.cs" />
+    <Compile Include="Assets\Illogika\HeavyDutyInspector\PropertyDrawers\Editor\ButtonDrawer.cs" />
+    <Compile Include="Assets\Illogika\HeavyDutyInspector\PropertyDrawers\Editor\ChangeCheckCallbackDrawer.cs" />
+    <Compile Include="Assets\Illogika\HeavyDutyInspector\PropertyDrawers\Editor\CommentDrawer.cs" />
+    <Compile Include="Assets\Illogika\HeavyDutyInspector\PropertyDrawers\Editor\ComplexHeaderDrawer.cs" />
+    <Compile Include="Assets\Illogika\HeavyDutyInspector\PropertyDrawers\Editor\ComponentFieldDrawer.cs" />
+    <Compile Include="Assets\Illogika\HeavyDutyInspector\PropertyDrawers\Editor\ComponentSelectionDrawer.cs" />
+    <Compile Include="Assets\Illogika\HeavyDutyInspector\PropertyDrawers\Editor\CreateKeywords.cs" />
+    <Compile Include="Assets\Illogika\HeavyDutyInspector\PropertyDrawers\Editor\DictionaryDrawer.cs" />
+    <Compile Include="Assets\Illogika\HeavyDutyInspector\PropertyDrawers\Editor\DynamicRangeDrawer.cs" />
+    <Compile Include="Assets\Illogika\HeavyDutyInspector\PropertyDrawers\Editor\EditableCommentDrawer.cs" />
+    <Compile Include="Assets\Illogika\HeavyDutyInspector\PropertyDrawers\Editor\EditablePropertyDrawer.cs" />
+    <Compile Include="Assets\Illogika\HeavyDutyInspector\PropertyDrawers\Editor\EnumMaskDrawer.cs" />
+    <Compile Include="Assets\Illogika\HeavyDutyInspector\PropertyDrawers\Editor\HideConditionalDrawer.cs" />
+    <Compile Include="Assets\Illogika\HeavyDutyInspector\PropertyDrawers\Editor\HideVariableDrawer.cs" />
+    <Compile Include="Assets\Illogika\HeavyDutyInspector\PropertyDrawers\Editor\IllogikaDrawer.cs" />
+    <Compile Include="Assets\Illogika\HeavyDutyInspector\PropertyDrawers\Editor\ImageButtonDrawer.cs" />
+    <Compile Include="Assets\Illogika\HeavyDutyInspector\PropertyDrawers\Editor\ImageDrawer.cs" />
+    <Compile Include="Assets\Illogika\HeavyDutyInspector\PropertyDrawers\Editor\KeywordsInspector.cs" />
+    <Compile Include="Assets\Illogika\HeavyDutyInspector\PropertyDrawers\Editor\LayerDrawer.cs" />
+    <Compile Include="Assets\Illogika\HeavyDutyInspector\PropertyDrawers\Editor\NamedMonoBehaviourAttributeDrawer.cs" />
+    <Compile Include="Assets\Illogika\HeavyDutyInspector\PropertyDrawers\Editor\NamedMonoBehaviourDrawer.cs" />
+    <Compile Include="Assets\Illogika\HeavyDutyInspector\PropertyDrawers\Editor\ReadonlyDrawer.cs" />
+    <Compile Include="Assets\Illogika\HeavyDutyInspector\PropertyDrawers\Editor\ReadonlyPropertiesDrawer.cs" />
+    <Compile Include="Assets\Illogika\HeavyDutyInspector\PropertyDrawers\Editor\ReorderableArrayDrawer.cs" />
+    <Compile Include="Assets\Illogika\HeavyDutyInspector\PropertyDrawers\Editor\ReorderableListDrawer.cs" />
+    <Compile Include="Assets\Illogika\HeavyDutyInspector\PropertyDrawers\Editor\SceneDrawer.cs" />
+    <Compile Include="Assets\Illogika\HeavyDutyInspector\PropertyDrawers\Editor\SerializationWrappersDrawer.cs" />
+    <Compile Include="Assets\Illogika\HeavyDutyInspector\PropertyDrawers\Editor\TagDrawer.cs" />
+    <Compile Include="Assets\Illogika\HeavyDutyInspector\PropertyDrawers\Editor\TagListDrawer.cs" />
+    <Compile Include="Assets\Illogika\HeavyDutyInspector\PropertyDrawers\Editor\UlongDrawer.cs" />
+    <Compile Include="Assets\Illogika\HeavyDutyInspector\PropertyDrawers\Editor\Vector2Drawer.cs" />
+    <Compile Include="Assets\Illogika\HeavyDutyInspector\PropertyDrawers\Editor\Vector3Drawer.cs" />
+    <Compile Include="Assets\Illogika\ScriptTemplates\Editor\InstallScriptTemplates.cs" />
     <Compile Include="Assets\ProCore\ProGrids\About\Editor\pg_AboutWindow.cs" />
     <Compile Include="Assets\ProCore\ProGrids\Editor\pg_Editor.cs" />
     <Compile Include="Assets\ProCore\ProGrids\Editor\pg_GridRenderer.cs" />
@@ -174,6 +213,9 @@
     <None Include="Assets\Demigiant\DemiLib\Core\DemiLib.xml" />
     <None Include="Assets\Demigiant\DemiLib\Core\Editor\DemiEditor.xml" />
     <None Include="Assets\Demigiant\readme_DOTweenPro.txt" />
+    <None Include="Assets\Illogika\ScriptTemplates\100-C%23 Named Script-NewNamedBehaviourScript.cs.txt" />
+    <None Include="Assets\Illogika\ScriptTemplates\101-C%23 Custom Keyword-NewKeywordScript.cs.txt" />
+    <None Include="Assets\Illogika\ScriptTemplates\102-C%23 Custom Keyword Editor-NewKeywordEditorScript.cs.txt" />
     <None Include="Assets\ProCore\ProGrids\About\changelog.txt" />
     <None Include="Assets\ProCore\ProGrids\About\pc_AboutEntry_ProGrids.txt" />
     <None Include="Assets\ProCore\ProGrids\Shader\pg_GridShader.shader" />
