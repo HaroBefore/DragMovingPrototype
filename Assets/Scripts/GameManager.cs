@@ -18,7 +18,7 @@ public class GameManager : MonoBehaviour {
     SpawnManager spawnManager;
 
     GoalCtrl goalCtrl;
-    PlayerCtrl playerCtrl;
+    public PlayerCtrl playerCtrl;
 
     private void Awake()
     {

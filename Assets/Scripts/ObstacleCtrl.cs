@@ -47,6 +47,8 @@ public class ObstacleCtrl : MonoBehaviour {
     public float changeScaleDuration = 0.2f;
     public float timeScaleMultiply = 1f;
 
+    public bool isOnTimeZone = false;
+
     public AnimationCurve easeCurve;
 
     void ResetArrWayPoint()
@@ -114,7 +116,6 @@ public class ObstacleCtrl : MonoBehaviour {
     // Use this for initialization
     void Start () {
         StartCoroutine(CoInit());
-        StartCoroutine(CoClickCheck());
     }
 
     
@@ -196,8 +197,9 @@ public class ObstacleCtrl : MonoBehaviour {
         rotTweener.timeScale = originAngleTimeScale = (normalAnglePerSec + arrWayPoint[curWayPointIdx].addAngle) * timeScaleMultiply;
         pathTweener.timeScale = originSpeedTimeScale = (normalSpeedPerSec + arrWayPoint[curWayPointIdx].addSpeed) * timeScaleMultiply;
 
-        if (PlayerCtrl.isClick)
+        if (PlayerCtrl.isClick && !isOnTimeZone)
         {
+            Debug.Log("hi");
             scaleTweener.timeScale = originChangeScaleDuration * 0.05f;
             rotTweener.timeScale = originAngleTimeScale * 0.05f;
             pathTweener.timeScale = originSpeedTimeScale * 0.05f;
@@ -223,59 +225,16 @@ public class ObstacleCtrl : MonoBehaviour {
         return transform.DOScale(arrWayPoint[idx].scale, changeScaleDuration).Pause();
     }
 
-    IEnumerator CoClickCheck()
-    {
-        yield return new WaitForSeconds(0.2f);
-        
-        if(pathTweener != null)
-        {
-            if (PlayerCtrl.isClick)
-            {
-                if(pathTweener.timeScale - originSpeedTimeScale * 0.05f > Mathf.Epsilon)
-                {
-                    Debug.Log("change");
-                    pathTweener.timeScale = originSpeedTimeScale * 0.05f;
-                    rotTweener.timeScale = originAngleTimeScale * 0.05f;
-                    if (scaleTweener != null)
-                        scaleTweener.timeScale = originChangeScaleDuration * 0.05f;
-                }
-            }
-            else
-            {
-                if(pathTweener.timeScale != originSpeedTimeScale)
-                {
-                    Debug.Log("wow");
-                    pathTweener.timeScale = originSpeedTimeScale;
-                    rotTweener.timeScale = originAngleTimeScale;
-                    if (scaleTweener != null)
-                        scaleTweener.timeScale = originChangeScaleDuration;
-
-                }
-            }
-        }
-        
-        StartCoroutine(CoClickCheck());
-    }
-
-	// Update is called once per frame
-	void Update () {
-        /*
-		if(moveTween != null)
-        {
-            if (moveTween.IsComplete())
-            {
-                moveTween.Kill();
-                scaleTween.Kill();
-                moveTween = scaleTween = null;
-                MoveNextWayPoint(out moveTween, out scaleTween);
-            }
-        }
-        */
-    }
-
     private void OnEnable()
     {
-        
+        PlayerCtrl.EventBeginClickedPlayer += UpdateTimeScale;
+        PlayerCtrl.EventEndClickedPlayer += UpdateTimeScale;
+    }
+
+    private void OnDisable()
+    {
+        PlayerCtrl.EventBeginClickedPlayer -= UpdateTimeScale;
+        PlayerCtrl.EventEndClickedPlayer += UpdateTimeScale;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

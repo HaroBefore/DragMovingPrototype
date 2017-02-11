@@ -4,6 +4,9 @@ using UnityEngine;
 using DG.Tweening;
 
 public class PlayerCtrl : MonoBehaviour {
+    public delegate void EventArgs();
+    public static event EventArgs EventBeginClickedPlayer;
+    public static event EventArgs EventEndClickedPlayer;
 
     public static bool isClick = false;
 
@@ -66,15 +69,20 @@ public class PlayerCtrl : MonoBehaviour {
     private void OnMouseDown()
     {
         isClick = true;
+        if (EventBeginClickedPlayer != null)
+            EventBeginClickedPlayer();
     }
 
     private void OnMouseUp()
     {
         isClick = false;
 
+        if (EventEndClickedPlayer != null)
+            EventEndClickedPlayer();
+
         if(GameManager.Instance.gameState == eGameState.gamePlaying)
         {
-            Die();
+            //Die();
         }
     }
 }
