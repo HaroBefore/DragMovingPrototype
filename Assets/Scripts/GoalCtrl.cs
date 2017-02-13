@@ -1,11 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using DG.Tweening;
 
 public class GoalCtrl : MonoBehaviour {
     [HideInInspector]
     public CircleCollider2D trigger;
+
+    public bool endLevel;
+    public string level;
 
     private void Awake()
     {
@@ -24,7 +28,14 @@ public class GoalCtrl : MonoBehaviour {
     {
         if(collision.CompareTag("Player"))
         {
-            StartCoroutine(GameManager.Instance.CoGameWin());
+            if(endLevel)
+            {
+                StartCoroutine(GameManager.Instance.CoGameWin());
+            }
+            else
+            {
+                SceneManager.LoadScene(level);
+            }            
         }
     }
 }
