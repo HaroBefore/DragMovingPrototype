@@ -14,7 +14,7 @@ public class DontSpawnResionCtrl : MonoBehaviour {
         if (collision.CompareTag("Obstacle"))
         {
             ObstacleCtrl obstacle = collision.GetComponent<ObstacleCtrl>();
-            obstacle.isNeedRespawn = true;
+            //obstacle.isNeedRespawn = true;
         }
     }
 }

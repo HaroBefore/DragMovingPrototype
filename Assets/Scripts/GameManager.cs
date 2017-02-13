@@ -31,9 +31,10 @@ public class GameManager : MonoBehaviour {
         playerCtrl = GameObject.Find("Player").GetComponent<PlayerCtrl>();
         spawnManager = SpawnManager.Instance;
 
-        gameState = eGameState.gameStartWaiting;
+        //gameState = eGameState.gameStartWaiting;
+        OnGameStart();
 
-	}
+    }
 
     public void OnGameStart()
     {
@@ -43,7 +44,7 @@ public class GameManager : MonoBehaviour {
 
     public void OnGameRestart()
     {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     IEnumerator CoGameStart()

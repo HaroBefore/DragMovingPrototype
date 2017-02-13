@@ -19,7 +19,7 @@ public class GoalCtrl : MonoBehaviour {
 
     public IEnumerator CoGameStart()
     {
-        transform.position = new Vector3(UnityEngine.Random.Range(-4f, 4f), 8f, 0f);
+        //transform.position = new Vector3(UnityEngine.Random.Range(-4f, 4f), 8f, 0f);
         transform.DOScale(Vector3.one, 1f);
         yield return new WaitForSeconds(0.5f);
     }

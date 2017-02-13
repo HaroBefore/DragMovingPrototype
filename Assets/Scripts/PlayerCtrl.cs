@@ -19,9 +19,9 @@ public class PlayerCtrl : MonoBehaviour {
     {
         trigger = GetComponent<CircleCollider2D>();
         dontSpawnResion = GetComponent<DontSpawnResionCtrl>();
-        trail = GetComponent<TrailRenderer>();
+        //trail = GetComponent<TrailRenderer>();
         transform.localScale = Vector3.zero;
-        trail.enabled = false;
+        //trail.enabled = false;
     }
 
     private void Start()
@@ -32,10 +32,10 @@ public class PlayerCtrl : MonoBehaviour {
     public IEnumerator CoGameStart()
     {
         dontSpawnResion.enabled = false;
-        transform.DOScale(new Vector3(0.8f, 0.8f, 0.8f), 1f);
+        transform.DOScale(new Vector3(0.3f, 0.3f, 0.3f), 1f);
         yield return new WaitForSeconds(1f);
-        trail.Clear();
-        trail.enabled = true;
+        //trail.Clear();
+        //trail.enabled = true;
     }
 
     private void FixedUpdate()
@@ -83,6 +83,16 @@ public class PlayerCtrl : MonoBehaviour {
         if(GameManager.Instance.gameState == eGameState.gamePlaying)
         {
             //Die();
+        }
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (GameManager.Instance.gameState == eGameState.gamePlaying)
+        {
+            if (collision.CompareTag("Obstacle"))
+            {
+                StartCoroutine(GameManager.Instance.CoGameLose());
+            }
         }
     }
 }
