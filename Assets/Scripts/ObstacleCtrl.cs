@@ -237,14 +237,5 @@ public class ObstacleCtrl : MonoBehaviour {
         PlayerCtrl.EventEndClickedPlayer += UpdateTimeScale;
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if(GameManager.Instance.gameState == eGameState.gamePlaying)
-        {
-            if (collision.CompareTag("Player"))
-            {
-                StartCoroutine(GameManager.Instance.CoGameLose());
-            }
-        }
-    }
+
 }
