@@ -15,8 +15,6 @@ public class GameManager : MonoBehaviour {
 
     public eGameState gameState = eGameState.None;
 
-    SpawnManager spawnManager;
-
     GoalCtrl goalCtrl;
     public PlayerCtrl playerCtrl;
 
@@ -29,7 +27,6 @@ public class GameManager : MonoBehaviour {
     void Start () {
         goalCtrl = GameObject.Find("Goal").GetComponent<GoalCtrl>();
         playerCtrl = GameObject.Find("Player").GetComponent<PlayerCtrl>();
-        spawnManager = SpawnManager.Instance;
 
         //gameState = eGameState.gameStartWaiting;
         OnGameStart();
@@ -51,7 +48,6 @@ public class GameManager : MonoBehaviour {
     {
         yield return null;
         yield return StartCoroutine(goalCtrl.CoGameStart());
-        yield return StartCoroutine(spawnManager.CoSpawnObstacles());
         
         if (EventGameStart != null)
             EventGameStart();

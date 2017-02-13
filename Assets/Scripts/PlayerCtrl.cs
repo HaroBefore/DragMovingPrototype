@@ -12,13 +12,11 @@ public class PlayerCtrl : MonoBehaviour {
 
     [HideInInspector]
     public CircleCollider2D trigger;
-    DontSpawnResionCtrl dontSpawnResion;
     TrailRenderer trail;
 
     private void Awake()
     {
         trigger = GetComponent<CircleCollider2D>();
-        dontSpawnResion = GetComponent<DontSpawnResionCtrl>();
         //trail = GetComponent<TrailRenderer>();
         transform.localScale = Vector3.zero;
         //trail.enabled = false;
@@ -31,7 +29,6 @@ public class PlayerCtrl : MonoBehaviour {
 
     public IEnumerator CoGameStart()
     {
-        dontSpawnResion.enabled = false;
         transform.DOScale(new Vector3(0.3f, 0.3f, 0.3f), 1f);
         yield return new WaitForSeconds(1f);
         //trail.Clear();

@@ -169,14 +169,11 @@
     <Compile Include="Assets\ProCore\ProGrids\Classes\pg_IconUtility.cs" />
     <Compile Include="Assets\ProCore\ProGrids\Classes\pg_SceneMeshRender.cs" />
     <Compile Include="Assets\ProCore\ProGrids\Classes\pg_Util.cs" />
-    <Compile Include="Assets\Scripts\DontSpawnResionCtrl.cs" />
     <Compile Include="Assets\Scripts\Enums.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\GoalCtrl.cs" />
     <Compile Include="Assets\Scripts\ObstacleCtrl.cs" />
     <Compile Include="Assets\Scripts\PlayerCtrl.cs" />
-    <Compile Include="Assets\Scripts\SpawnManager.cs" />
-    <Compile Include="Assets\Scripts\Test.cs" />
     <Compile Include="Assets\Scripts\UIManager.cs" />
     <Compile Include="Assets\Scripts\ZoneCtrl.cs" />
   </ItemGroup>
