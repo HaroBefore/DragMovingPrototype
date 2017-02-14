@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 using UnityEngine.SceneManagement;
+using EasyMobile;
 
 public class GameManager : MonoBehaviour {
     static GameManager instance;
@@ -46,6 +47,7 @@ public class GameManager : MonoBehaviour {
 
     IEnumerator CoGameStart()
     {
+        AdManager.ShowBannerAd(BannerAdPosition.Bottom, BannerAdSize.SmartBanner);
         yield return null;
         yield return StartCoroutine(goalCtrl.CoGameStart());
         
@@ -54,10 +56,13 @@ public class GameManager : MonoBehaviour {
 
         goalCtrl.trigger.radius = 0.4f;
 
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(0.8f);
         yield return StartCoroutine(playerCtrl.CoGameStart());
+        AdManager.HideBannerAd(BannerAdNetwork.AdMob);
 
         gameState = eGameState.gamePlaying;
+
+        EasyMobileManager.ShowInterstitialAd();
     }
 
     public IEnumerator CoGameWin()

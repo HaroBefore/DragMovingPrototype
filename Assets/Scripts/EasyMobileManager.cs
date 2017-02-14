@@ -6,17 +6,29 @@ using System;
 
 public class EasyMobileManager : MonoBehaviour {
 
+    static EasyMobileManager instance;
+    public static EasyMobileManager Instance
+    {
+        get { return instance; }
+    }
+
+    private void Awake()
+    {
+        instance = this;
+    }
+
+    public static void ShowInterstitialAd()
+    {
+        instance.StartCoroutine(instance.CoShowBanner());
+    }
+
 	// Use this for initialization
 	void Start () {
-        StartCoroutine(CoShowBanner());
+
 	}
 
     private IEnumerator CoShowBanner()
     {
-        yield return new WaitForSeconds(5f);
-        Debug.Log("Show Banner");
-        AdManager.ShowBannerAd(BannerAdPosition.Bottom, BannerAdSize.Banner);
-
         yield return new WaitUntil(() => 
         {
             return AdManager.IsInterstitialAdReady();

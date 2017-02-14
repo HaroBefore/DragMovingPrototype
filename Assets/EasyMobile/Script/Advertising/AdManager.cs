@@ -242,7 +242,7 @@ namespace EasyMobile
 
                 return;
             }
-                
+
             switch ((AdNetwork)adNetwork)
             {
                 case AdNetwork.AdMob:
