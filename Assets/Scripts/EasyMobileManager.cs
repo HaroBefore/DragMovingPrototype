@@ -14,7 +14,10 @@ public class EasyMobileManager : MonoBehaviour {
 
     private void Awake()
     {
-        instance = this;
+        if(instance == null)
+        {
+            instance = this;
+        }
     }
 
     public static void ShowInterstitialAd()
