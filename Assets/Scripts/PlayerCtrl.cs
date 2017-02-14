@@ -29,8 +29,8 @@ public class PlayerCtrl : MonoBehaviour {
 
     public IEnumerator CoGameStart()
     {
-        transform.DOScale(new Vector3(0.3f, 0.3f, 0.3f), 1f);
-        yield return new WaitForSeconds(1f);
+        //Tweener tweener = transform.DOScale(new Vector3(0.3f, 0.3f, 0.3f), 1f);
+        yield return transform.DOScale(new Vector3(0.3f, 0.3f, 0.3f), 1f).WaitForCompletion();
         //trail.Clear();
         //trail.enabled = true;
     }

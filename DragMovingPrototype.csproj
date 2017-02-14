@@ -27,7 +27,7 @@
     <IntermediateOutputPath>Temp\UnityVS_obj\Debug\</IntermediateOutputPath>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <DefineConstants>DEBUG;TRACE;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_5_0;UNITY_5_5;UNITY_5;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_GENERICS;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_SPRITERENDERER_FLIPPING;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_RAKNET;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_HUB;ENABLE_CLOUD_PROJECT_ID;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_METRICS;ENABLE_EDITOR_METRICS_CACHING;INCLUDE_DYNAMIC_GI;INCLUDE_GI;PLATFORM_SUPPORTS_MONO;INCLUDE_PUBNUB;ENABLE_PLAYMODE_TESTS_RUNNER;ENABLE_SCRIPTING_NEW_CSHARP_COMPILER;UNITY_ANDROID;ENABLE_SUBSTANCE;UNITY_ANDROID_API;ENABLE_EGL;ENABLE_NETWORK;ENABLE_RUNTIME_GI;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_UNITYWEBREQUEST;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;PLATFORM_SUPPORTS_ADS_ID;UNITY_CAN_SHOW_SPLASH_SCREEN;ENABLE_VIDEO;ENABLE_VR;ENABLE_UNITYADS_RUNTIME;UNITY_UNITYADS_API;ENABLE_MONO;ENABLE_PROFILER;DEBUG;TRACE;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN;UNITY_TEAM_LICENSE;ENABLE_VSTU</DefineConstants>
+    <DefineConstants>DEBUG;TRACE;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_5_0;UNITY_5_5;UNITY_5;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_GENERICS;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_SPRITERENDERER_FLIPPING;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_RAKNET;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_HUB;ENABLE_CLOUD_PROJECT_ID;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_METRICS;ENABLE_EDITOR_METRICS_CACHING;INCLUDE_DYNAMIC_GI;INCLUDE_GI;PLATFORM_SUPPORTS_MONO;INCLUDE_PUBNUB;ENABLE_PLAYMODE_TESTS_RUNNER;ENABLE_SCRIPTING_NEW_CSHARP_COMPILER;UNITY_ANDROID;ENABLE_SUBSTANCE;UNITY_ANDROID_API;ENABLE_EGL;ENABLE_NETWORK;ENABLE_RUNTIME_GI;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_UNITYWEBREQUEST;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;PLATFORM_SUPPORTS_ADS_ID;UNITY_CAN_SHOW_SPLASH_SCREEN;ENABLE_VIDEO;ENABLE_VR;ENABLE_UNITYADS_RUNTIME;UNITY_UNITYADS_API;ENABLE_MONO;ENABLE_PROFILER;DEBUG;TRACE;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN;UNITY_TEAM_LICENSE;ENABLE_VSTU;EASY_MOBILE;EM_ADMOB</DefineConstants>
     <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
@@ -37,7 +37,7 @@
     <IntermediateOutputPath>Temp\UnityVS_obj\Release\</IntermediateOutputPath>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <DefineConstants>TRACE;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_5_0;UNITY_5_5;UNITY_5;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_GENERICS;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_SPRITERENDERER_FLIPPING;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_RAKNET;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_HUB;ENABLE_CLOUD_PROJECT_ID;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_METRICS;ENABLE_EDITOR_METRICS_CACHING;INCLUDE_DYNAMIC_GI;INCLUDE_GI;PLATFORM_SUPPORTS_MONO;INCLUDE_PUBNUB;ENABLE_PLAYMODE_TESTS_RUNNER;ENABLE_SCRIPTING_NEW_CSHARP_COMPILER;UNITY_ANDROID;ENABLE_SUBSTANCE;UNITY_ANDROID_API;ENABLE_EGL;ENABLE_NETWORK;ENABLE_RUNTIME_GI;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_UNITYWEBREQUEST;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;PLATFORM_SUPPORTS_ADS_ID;UNITY_CAN_SHOW_SPLASH_SCREEN;ENABLE_VIDEO;ENABLE_VR;ENABLE_UNITYADS_RUNTIME;UNITY_UNITYADS_API;ENABLE_MONO;ENABLE_PROFILER;DEBUG;TRACE;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN;UNITY_TEAM_LICENSE;ENABLE_VSTU</DefineConstants>
+    <DefineConstants>TRACE;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_5_0;UNITY_5_5;UNITY_5;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_GENERICS;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_SPRITERENDERER_FLIPPING;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_RAKNET;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_HUB;ENABLE_CLOUD_PROJECT_ID;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_METRICS;ENABLE_EDITOR_METRICS_CACHING;INCLUDE_DYNAMIC_GI;INCLUDE_GI;PLATFORM_SUPPORTS_MONO;INCLUDE_PUBNUB;ENABLE_PLAYMODE_TESTS_RUNNER;ENABLE_SCRIPTING_NEW_CSHARP_COMPILER;UNITY_ANDROID;ENABLE_SUBSTANCE;UNITY_ANDROID_API;ENABLE_EGL;ENABLE_NETWORK;ENABLE_RUNTIME_GI;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_UNITYWEBREQUEST;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;PLATFORM_SUPPORTS_ADS_ID;UNITY_CAN_SHOW_SPLASH_SCREEN;ENABLE_VIDEO;ENABLE_VR;ENABLE_UNITYADS_RUNTIME;UNITY_UNITYADS_API;ENABLE_MONO;ENABLE_PROFILER;DEBUG;TRACE;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN;UNITY_TEAM_LICENSE;ENABLE_VSTU;EASY_MOBILE;EM_ADMOB</DefineConstants>
     <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
   </PropertyGroup>
   <ItemGroup>
@@ -73,102 +73,62 @@
     <Reference Include="UnityEditor">
       <HintPath>Library\UnityAssemblies\UnityEditor.dll</HintPath>
     </Reference>
-    <Reference Include="DemiLib">
-      <HintPath>Assets\Demigiant\DemiLib\Core\DemiLib.dll</HintPath>
-    </Reference>
-    <Reference Include="DOTween">
-      <HintPath>Assets\Demigiant\DOTween\DOTween.dll</HintPath>
-    </Reference>
-    <Reference Include="DOTween43">
-      <HintPath>Assets\Demigiant\DOTween\DOTween43.dll</HintPath>
-    </Reference>
     <Reference Include="DOTween46">
-      <HintPath>Assets\Demigiant\DOTween\DOTween46.dll</HintPath>
+      <HintPath>Assets\ThirdPartyAssets\Demigiant\DOTween\DOTween46.dll</HintPath>
     </Reference>
     <Reference Include="DOTween50">
-      <HintPath>Assets\Demigiant\DOTween\DOTween50.dll</HintPath>
+      <HintPath>Assets\ThirdPartyAssets\Demigiant\DOTween\DOTween50.dll</HintPath>
+    </Reference>
+    <Reference Include="DemiLib">
+      <HintPath>Assets\ThirdPartyAssets\Demigiant\DemiLib\Core\DemiLib.dll</HintPath>
+    </Reference>
+    <Reference Include="DOTween43">
+      <HintPath>Assets\ThirdPartyAssets\Demigiant\DOTween\DOTween43.dll</HintPath>
+    </Reference>
+    <Reference Include="DOTween">
+      <HintPath>Assets\ThirdPartyAssets\Demigiant\DOTween\DOTween.dll</HintPath>
     </Reference>
     <Reference Include="DOTweenPro">
-      <HintPath>Assets\Demigiant\DOTweenPro\DOTweenPro.dll</HintPath>
+      <HintPath>Assets\ThirdPartyAssets\Demigiant\DOTweenPro\DOTweenPro.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Demigiant\DOTweenPro\DOTweenAnimation.cs" />
-    <Compile Include="Assets\Illogika\HeavyDutyInspector\Examples\LocalizationKeys\LocalizationKey.cs" />
-    <Compile Include="Assets\Illogika\HeavyDutyInspector\Examples\LocalizationKeys\LocalizationKeysExample.cs" />
-    <Compile Include="Assets\Illogika\HeavyDutyInspector\Examples\Scripts\ExampleAssetPath.cs" />
-    <Compile Include="Assets\Illogika\HeavyDutyInspector\Examples\Scripts\ExampleButton.cs" />
-    <Compile Include="Assets\Illogika\HeavyDutyInspector\Examples\Scripts\ExampleChangeCheckCallback.cs" />
-    <Compile Include="Assets\Illogika\HeavyDutyInspector\Examples\Scripts\ExampleComment.cs" />
-    <Compile Include="Assets\Illogika\HeavyDutyInspector\Examples\Scripts\ExampleComplexHeaders.cs" />
-    <Compile Include="Assets\Illogika\HeavyDutyInspector\Examples\Scripts\ExampleComponentField.cs" />
-    <Compile Include="Assets\Illogika\HeavyDutyInspector\Examples\Scripts\ExampleComponentSelection43.cs" />
-    <Compile Include="Assets\Illogika\HeavyDutyInspector\Examples\Scripts\ExampleDictionary.cs" />
-    <Compile Include="Assets\Illogika\HeavyDutyInspector\Examples\Scripts\ExampleDynamicRange.cs" />
-    <Compile Include="Assets\Illogika\HeavyDutyInspector\Examples\Scripts\ExampleEditableComment.cs" />
-    <Compile Include="Assets\Illogika\HeavyDutyInspector\Examples\Scripts\ExampleEditableProperty.cs" />
-    <Compile Include="Assets\Illogika\HeavyDutyInspector\Examples\Scripts\ExampleEnumMask.cs" />
-    <Compile Include="Assets\Illogika\HeavyDutyInspector\Examples\Scripts\ExampleHideConditional.cs" />
-    <Compile Include="Assets\Illogika\HeavyDutyInspector\Examples\Scripts\ExampleImage.cs" />
-    <Compile Include="Assets\Illogika\HeavyDutyInspector\Examples\Scripts\ExampleLayer.cs" />
-    <Compile Include="Assets\Illogika\HeavyDutyInspector\Examples\Scripts\ExampleReadOnlyProperty.cs" />
-    <Compile Include="Assets\Illogika\HeavyDutyInspector\Examples\Scripts\ExampleReadonly.cs" />
-    <Compile Include="Assets\Illogika\HeavyDutyInspector\Examples\Scripts\ExampleReorderableArray.cs" />
-    <Compile Include="Assets\Illogika\HeavyDutyInspector\Examples\Scripts\ExampleReorderableArrayComponentSelection.cs" />
-    <Compile Include="Assets\Illogika\HeavyDutyInspector\Examples\Scripts\ExampleReorderableArrayCustomSerializableObject.cs" />
-    <Compile Include="Assets\Illogika\HeavyDutyInspector\Examples\Scripts\ExampleReorderableList.cs" />
-    <Compile Include="Assets\Illogika\HeavyDutyInspector\Examples\Scripts\ExampleReorderableListComponentSelection.cs" />
-    <Compile Include="Assets\Illogika\HeavyDutyInspector\Examples\Scripts\ExampleReorderableListCustomSerializableObject.cs" />
-    <Compile Include="Assets\Illogika\HeavyDutyInspector\Examples\Scripts\ExampleScene.cs" />
-    <Compile Include="Assets\Illogika\HeavyDutyInspector\Examples\Scripts\ExampleTag.cs" />
-    <Compile Include="Assets\Illogika\HeavyDutyInspector\Examples\Scripts\ExampleTagList.cs" />
-    <Compile Include="Assets\Illogika\HeavyDutyInspector\Examples\Scripts\ExampleUnsignedIntDrawer.cs" />
-    <Compile Include="Assets\Illogika\HeavyDutyInspector\Examples\Scripts\FakeState.cs" />
-    <Compile Include="Assets\Illogika\HeavyDutyInspector\Examples\Scripts\FakeStateAttack.cs" />
-    <Compile Include="Assets\Illogika\HeavyDutyInspector\Examples\Scripts\FakeStateGoToPosition.cs" />
-    <Compile Include="Assets\Illogika\HeavyDutyInspector\Examples\Scripts\FakeStateIdle.cs" />
-    <Compile Include="Assets\Illogika\HeavyDutyInspector\Extras\Spreadsheet.cs" />
-    <Compile Include="Assets\Illogika\HeavyDutyInspector\NamedMonoBehaviour\Internal\NMBColorAttribute.cs" />
-    <Compile Include="Assets\Illogika\HeavyDutyInspector\NamedMonoBehaviour\Internal\NMBNameAttribute.cs" />
-    <Compile Include="Assets\Illogika\HeavyDutyInspector\NamedMonoBehaviour\MonoBehaviour.cs" />
-    <Compile Include="Assets\Illogika\HeavyDutyInspector\NamedMonoBehaviour\NamedMonoBehaviour.cs" />
-    <Compile Include="Assets\Illogika\HeavyDutyInspector\PropertyDrawers\AssetPathAttribute.cs" />
-    <Compile Include="Assets\Illogika\HeavyDutyInspector\PropertyDrawers\BackgroundAttribute.cs" />
-    <Compile Include="Assets\Illogika\HeavyDutyInspector\PropertyDrawers\ButtonAttribute.cs" />
-    <Compile Include="Assets\Illogika\HeavyDutyInspector\PropertyDrawers\ChangeCheckCallbackAttribute.cs" />
-    <Compile Include="Assets\Illogika\HeavyDutyInspector\PropertyDrawers\ColorExtension.cs" />
-    <Compile Include="Assets\Illogika\HeavyDutyInspector\PropertyDrawers\CommentAttribute.cs" />
-    <Compile Include="Assets\Illogika\HeavyDutyInspector\PropertyDrawers\ComplexHeaderAttribute.cs" />
-    <Compile Include="Assets\Illogika\HeavyDutyInspector\PropertyDrawers\ComponentField.cs" />
-    <Compile Include="Assets\Illogika\HeavyDutyInspector\PropertyDrawers\ComponentFieldRestrictionAttribute.cs" />
-    <Compile Include="Assets\Illogika\HeavyDutyInspector\PropertyDrawers\ComponentSelectionAttribute.cs" />
-    <Compile Include="Assets\Illogika\HeavyDutyInspector\PropertyDrawers\DictionaryAttribute.cs" />
-    <Compile Include="Assets\Illogika\HeavyDutyInspector\PropertyDrawers\DynamicRangeAttribute.cs" />
-    <Compile Include="Assets\Illogika\HeavyDutyInspector\PropertyDrawers\EditableCommentAttribute.cs" />
-    <Compile Include="Assets\Illogika\HeavyDutyInspector\PropertyDrawers\EditablePropertyAttribute.cs" />
-    <Compile Include="Assets\Illogika\HeavyDutyInspector\PropertyDrawers\EnumMaskAttribute.cs" />
-    <Compile Include="Assets\Illogika\HeavyDutyInspector\PropertyDrawers\HideConditionalAttribute.cs" />
-    <Compile Include="Assets\Illogika\HeavyDutyInspector\PropertyDrawers\HideVariableAttribute.cs" />
-    <Compile Include="Assets\Illogika\HeavyDutyInspector\PropertyDrawers\ImageAttribute.cs" />
-    <Compile Include="Assets\Illogika\HeavyDutyInspector\PropertyDrawers\ImageButtonAttribute.cs" />
-    <Compile Include="Assets\Illogika\HeavyDutyInspector\PropertyDrawers\Keyword.cs" />
-    <Compile Include="Assets\Illogika\HeavyDutyInspector\PropertyDrawers\KeywordsConfig.cs" />
-    <Compile Include="Assets\Illogika\HeavyDutyInspector\PropertyDrawers\LayerAttribute.cs" />
-    <Compile Include="Assets\Illogika\HeavyDutyInspector\PropertyDrawers\NamedMonoBehaviourAttribute.cs" />
-    <Compile Include="Assets\Illogika\HeavyDutyInspector\PropertyDrawers\ReadonlyAttribute.cs" />
-    <Compile Include="Assets\Illogika\HeavyDutyInspector\PropertyDrawers\ReadonlyPropertiesAttribute.cs" />
-    <Compile Include="Assets\Illogika\HeavyDutyInspector\PropertyDrawers\ReorderableArrayAttribute.cs" />
-    <Compile Include="Assets\Illogika\HeavyDutyInspector\PropertyDrawers\ReorderableListAttribute.cs" />
-    <Compile Include="Assets\Illogika\HeavyDutyInspector\PropertyDrawers\Scene.cs" />
-    <Compile Include="Assets\Illogika\HeavyDutyInspector\PropertyDrawers\SceneAttribute.cs" />
-    <Compile Include="Assets\Illogika\HeavyDutyInspector\PropertyDrawers\SerializationWrappers.cs" />
-    <Compile Include="Assets\Illogika\HeavyDutyInspector\PropertyDrawers\TagAttribute.cs" />
-    <Compile Include="Assets\Illogika\HeavyDutyInspector\PropertyDrawers\TagListAttribute.cs" />
-    <Compile Include="Assets\ProCore\ProGrids\Classes\pg_Constant.cs" />
-    <Compile Include="Assets\ProCore\ProGrids\Classes\pg_Enum.cs" />
-    <Compile Include="Assets\ProCore\ProGrids\Classes\pg_IconUtility.cs" />
-    <Compile Include="Assets\ProCore\ProGrids\Classes\pg_SceneMeshRender.cs" />
-    <Compile Include="Assets\ProCore\ProGrids\Classes\pg_Util.cs" />
+    <Compile Include="Assets\EasyMobile\Demo\Scripts\AdvertisingDemo.cs" />
+    <Compile Include="Assets\EasyMobile\Demo\Scripts\ColorChooser.cs" />
+    <Compile Include="Assets\EasyMobile\Demo\Scripts\DemoHomeController.cs" />
+    <Compile Include="Assets\EasyMobile\Demo\Scripts\DemoUtils.cs" />
+    <Compile Include="Assets\EasyMobile\Demo\Scripts\GameServiceDemo.cs" />
+    <Compile Include="Assets\EasyMobile\Demo\Scripts\InAppPurchaseDemo.cs" />
+    <Compile Include="Assets\EasyMobile\Demo\Scripts\MobileNativeShareDemo.cs" />
+    <Compile Include="Assets\EasyMobile\Demo\Scripts\MobileNativeUIDemo.cs" />
+    <Compile Include="Assets\EasyMobile\Demo\Scripts\SoundManager.cs" />
+    <Compile Include="Assets\EasyMobile\Demo\ScrollableList\ScrollableList.cs" />
+    <Compile Include="Assets\EasyMobile\Demo\ScrollableList\ScrollableListItem.cs" />
+    <Compile Include="Assets\EasyMobile\Script\Advertising\AdLocation.cs" />
+    <Compile Include="Assets\EasyMobile\Script\Advertising\AdManager.cs" />
+    <Compile Include="Assets\EasyMobile\Script\Advertising\AdSettings.cs" />
+    <Compile Include="Assets\EasyMobile\Script\Advertising\BannerAdPosition.cs" />
+    <Compile Include="Assets\EasyMobile\Script\Advertising\BannerAdSize.cs" />
+    <Compile Include="Assets\EasyMobile\Script\EM_PrefabManager.cs" />
+    <Compile Include="Assets\EasyMobile\Script\EM_Settings.cs" />
+    <Compile Include="Assets\EasyMobile\Script\GameService\GPGSGameInfo.cs" />
+    <Compile Include="Assets\EasyMobile\Script\GameService\GameServiceItem.cs" />
+    <Compile Include="Assets\EasyMobile\Script\GameService\GameServiceManager.cs" />
+    <Compile Include="Assets\EasyMobile\Script\GameService\GameServiceSettings.cs" />
+    <Compile Include="Assets\EasyMobile\Script\InAppPurchase\IAPManager.cs" />
+    <Compile Include="Assets\EasyMobile\Script\InAppPurchase\IAPProduct.cs" />
+    <Compile Include="Assets\EasyMobile\Script\InAppPurchase\IAPSettings.cs" />
+    <Compile Include="Assets\EasyMobile\Script\InAppPurchase\IAPStore.cs" />
+    <Compile Include="Assets\EasyMobile\Script\MobileNativeShare\MobileNativeShare.cs" />
+    <Compile Include="Assets\EasyMobile\Script\MobileNativeShare\Platforms\AndroidNativeShare.cs" />
+    <Compile Include="Assets\EasyMobile\Script\MobileNativeShare\Platforms\iOSNativeShare.cs" />
+    <Compile Include="Assets\EasyMobile\Script\MobileNativeUI\MobileNativeAlert.cs" />
+    <Compile Include="Assets\EasyMobile\Script\MobileNativeUI\MobileNativeUI.cs" />
+    <Compile Include="Assets\EasyMobile\Script\MobileNativeUI\Platforms\AndroidNativeAlert.cs" />
+    <Compile Include="Assets\EasyMobile\Script\MobileNativeUI\Platforms\iOSNativeAlert.cs" />
+    <Compile Include="Assets\EasyMobile\Script\Notification\NotificationManager.cs" />
+    <Compile Include="Assets\EasyMobile\Script\Notification\NotificationSettings.cs" />
+    <Compile Include="Assets\Scripts\EasyMobileManager.cs" />
     <Compile Include="Assets\Scripts\Enums.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\GoalCtrl.cs" />
@@ -176,26 +136,159 @@
     <Compile Include="Assets\Scripts\PlayerCtrl.cs" />
     <Compile Include="Assets\Scripts\UIManager.cs" />
     <Compile Include="Assets\Scripts\ZoneCtrl.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Demigiant\DOTweenPro\DOTweenAnimation.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\GoogleMobileAds\Api\AdFailedToLoadEventArgs.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\GoogleMobileAds\Api\AdLoader.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\GoogleMobileAds\Api\AdPosition.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\GoogleMobileAds\Api\AdRequest.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\GoogleMobileAds\Api\AdSize.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\GoogleMobileAds\Api\BannerView.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\GoogleMobileAds\Api\CustomNativeEventArgs.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\GoogleMobileAds\Api\CustomNativeTemplateAd.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\GoogleMobileAds\Api\Gender.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\GoogleMobileAds\Api\ICustomInAppPurchase.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\GoogleMobileAds\Api\ICustomInAppPurchaseProcessor.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\GoogleMobileAds\Api\IDefaultInAppPurchaseProcessor.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\GoogleMobileAds\Api\IInAppPurchaseResult.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\GoogleMobileAds\Api\InterstitialAd.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\GoogleMobileAds\Api\NativeExpressAdView.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\GoogleMobileAds\Api\Reward.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\GoogleMobileAds\Api\RewardBasedVideoAd.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\GoogleMobileAds\Common\DummyClient.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\GoogleMobileAds\Common\IAdLoaderClient.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\GoogleMobileAds\Common\IBannerClient.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\GoogleMobileAds\Common\ICustomNativeTemplateClient.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\GoogleMobileAds\Common\IInterstitialClient.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\GoogleMobileAds\Common\INativeExpressAdClient.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\GoogleMobileAds\Common\IRewardBasedVideoAdClient.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\GoogleMobileAds\Common\Utils.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\GoogleMobileAds\Platforms\Android\AdLoaderClient.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\GoogleMobileAds\Platforms\Android\BannerClient.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\GoogleMobileAds\Platforms\Android\CustomInAppPurchaseListener.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\GoogleMobileAds\Platforms\Android\CustomNativeTemplateClient.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\GoogleMobileAds\Platforms\Android\DefaultInAppPurchaseListener.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\GoogleMobileAds\Platforms\Android\InAppPurchase.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\GoogleMobileAds\Platforms\Android\InAppPurchaseResult.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\GoogleMobileAds\Platforms\Android\InterstitialClient.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\GoogleMobileAds\Platforms\Android\NativeExpressAdClient.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\GoogleMobileAds\Platforms\Android\RewardBasedVideoAdClient.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\GoogleMobileAds\Platforms\Android\Utils.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\GoogleMobileAds\Platforms\GoogleMobileAdsClientFactory.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\GoogleMobileAds\Platforms\iOS\AdLoaderClient.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\GoogleMobileAds\Platforms\iOS\BannerClient.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\GoogleMobileAds\Platforms\iOS\CustomNativeTemplateClient.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\GoogleMobileAds\Platforms\iOS\Externs.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\GoogleMobileAds\Platforms\iOS\InterstitialClient.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\GoogleMobileAds\Platforms\iOS\MonoPInvokeCallbackAttribute.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\GoogleMobileAds\Platforms\iOS\NativeExpressAdClient.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\GoogleMobileAds\Platforms\iOS\RewardBasedVideoAdClient.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\GoogleMobileAds\Platforms\iOS\Utils.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Illogika\HeavyDutyInspector\Examples\LocalizationKeys\LocalizationKey.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Illogika\HeavyDutyInspector\Examples\LocalizationKeys\LocalizationKeysExample.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Illogika\HeavyDutyInspector\Examples\Scripts\ExampleAssetPath.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Illogika\HeavyDutyInspector\Examples\Scripts\ExampleButton.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Illogika\HeavyDutyInspector\Examples\Scripts\ExampleChangeCheckCallback.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Illogika\HeavyDutyInspector\Examples\Scripts\ExampleComment.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Illogika\HeavyDutyInspector\Examples\Scripts\ExampleComplexHeaders.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Illogika\HeavyDutyInspector\Examples\Scripts\ExampleComponentField.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Illogika\HeavyDutyInspector\Examples\Scripts\ExampleComponentSelection43.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Illogika\HeavyDutyInspector\Examples\Scripts\ExampleDictionary.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Illogika\HeavyDutyInspector\Examples\Scripts\ExampleDynamicRange.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Illogika\HeavyDutyInspector\Examples\Scripts\ExampleEditableComment.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Illogika\HeavyDutyInspector\Examples\Scripts\ExampleEditableProperty.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Illogika\HeavyDutyInspector\Examples\Scripts\ExampleEnumMask.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Illogika\HeavyDutyInspector\Examples\Scripts\ExampleHideConditional.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Illogika\HeavyDutyInspector\Examples\Scripts\ExampleImage.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Illogika\HeavyDutyInspector\Examples\Scripts\ExampleLayer.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Illogika\HeavyDutyInspector\Examples\Scripts\ExampleReadOnlyProperty.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Illogika\HeavyDutyInspector\Examples\Scripts\ExampleReadonly.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Illogika\HeavyDutyInspector\Examples\Scripts\ExampleReorderableArray.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Illogika\HeavyDutyInspector\Examples\Scripts\ExampleReorderableArrayComponentSelection.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Illogika\HeavyDutyInspector\Examples\Scripts\ExampleReorderableArrayCustomSerializableObject.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Illogika\HeavyDutyInspector\Examples\Scripts\ExampleReorderableList.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Illogika\HeavyDutyInspector\Examples\Scripts\ExampleReorderableListComponentSelection.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Illogika\HeavyDutyInspector\Examples\Scripts\ExampleReorderableListCustomSerializableObject.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Illogika\HeavyDutyInspector\Examples\Scripts\ExampleScene.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Illogika\HeavyDutyInspector\Examples\Scripts\ExampleTag.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Illogika\HeavyDutyInspector\Examples\Scripts\ExampleTagList.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Illogika\HeavyDutyInspector\Examples\Scripts\ExampleUnsignedIntDrawer.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Illogika\HeavyDutyInspector\Examples\Scripts\FakeState.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Illogika\HeavyDutyInspector\Examples\Scripts\FakeStateAttack.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Illogika\HeavyDutyInspector\Examples\Scripts\FakeStateGoToPosition.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Illogika\HeavyDutyInspector\Examples\Scripts\FakeStateIdle.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Illogika\HeavyDutyInspector\Extras\Spreadsheet.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Illogika\HeavyDutyInspector\NamedMonoBehaviour\Internal\NMBColorAttribute.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Illogika\HeavyDutyInspector\NamedMonoBehaviour\Internal\NMBNameAttribute.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Illogika\HeavyDutyInspector\NamedMonoBehaviour\MonoBehaviour.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Illogika\HeavyDutyInspector\NamedMonoBehaviour\NamedMonoBehaviour.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Illogika\HeavyDutyInspector\PropertyDrawers\AssetPathAttribute.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Illogika\HeavyDutyInspector\PropertyDrawers\BackgroundAttribute.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Illogika\HeavyDutyInspector\PropertyDrawers\ButtonAttribute.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Illogika\HeavyDutyInspector\PropertyDrawers\ChangeCheckCallbackAttribute.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Illogika\HeavyDutyInspector\PropertyDrawers\ColorExtension.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Illogika\HeavyDutyInspector\PropertyDrawers\CommentAttribute.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Illogika\HeavyDutyInspector\PropertyDrawers\ComplexHeaderAttribute.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Illogika\HeavyDutyInspector\PropertyDrawers\ComponentField.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Illogika\HeavyDutyInspector\PropertyDrawers\ComponentFieldRestrictionAttribute.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Illogika\HeavyDutyInspector\PropertyDrawers\ComponentSelectionAttribute.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Illogika\HeavyDutyInspector\PropertyDrawers\DictionaryAttribute.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Illogika\HeavyDutyInspector\PropertyDrawers\DynamicRangeAttribute.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Illogika\HeavyDutyInspector\PropertyDrawers\EditableCommentAttribute.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Illogika\HeavyDutyInspector\PropertyDrawers\EditablePropertyAttribute.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Illogika\HeavyDutyInspector\PropertyDrawers\EnumMaskAttribute.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Illogika\HeavyDutyInspector\PropertyDrawers\HideConditionalAttribute.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Illogika\HeavyDutyInspector\PropertyDrawers\HideVariableAttribute.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Illogika\HeavyDutyInspector\PropertyDrawers\ImageAttribute.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Illogika\HeavyDutyInspector\PropertyDrawers\ImageButtonAttribute.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Illogika\HeavyDutyInspector\PropertyDrawers\Keyword.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Illogika\HeavyDutyInspector\PropertyDrawers\KeywordsConfig.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Illogika\HeavyDutyInspector\PropertyDrawers\LayerAttribute.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Illogika\HeavyDutyInspector\PropertyDrawers\NamedMonoBehaviourAttribute.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Illogika\HeavyDutyInspector\PropertyDrawers\ReadonlyAttribute.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Illogika\HeavyDutyInspector\PropertyDrawers\ReadonlyPropertiesAttribute.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Illogika\HeavyDutyInspector\PropertyDrawers\ReorderableArrayAttribute.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Illogika\HeavyDutyInspector\PropertyDrawers\ReorderableListAttribute.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Illogika\HeavyDutyInspector\PropertyDrawers\Scene.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Illogika\HeavyDutyInspector\PropertyDrawers\SceneAttribute.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Illogika\HeavyDutyInspector\PropertyDrawers\SerializationWrappers.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Illogika\HeavyDutyInspector\PropertyDrawers\TagAttribute.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Illogika\HeavyDutyInspector\PropertyDrawers\TagListAttribute.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\ProCore\ProGrids\Classes\pg_Constant.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\ProCore\ProGrids\Classes\pg_Enum.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\ProCore\ProGrids\Classes\pg_IconUtility.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\ProCore\ProGrids\Classes\pg_SceneMeshRender.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\ProCore\ProGrids\Classes\pg_Util.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Assets\Demigiant\DOTween\DOTween.XML" />
-    <None Include="Assets\Demigiant\DOTween\DOTween43.xml" />
-    <None Include="Assets\Demigiant\DOTween\DOTween46.xml" />
-    <None Include="Assets\Demigiant\DOTween\DOTween50.xml" />
-    <None Include="Assets\Demigiant\DOTween\Editor\DOTweenEditor.XML" />
-    <None Include="Assets\Demigiant\DOTween\readme.txt" />
-    <None Include="Assets\Demigiant\DOTweenPro\DOTweenPro.XML" />
-    <None Include="Assets\Demigiant\DOTweenPro\Editor\DOTweenProEditor.XML" />
-    <None Include="Assets\Demigiant\DOTweenPro\readme.txt" />
-    <None Include="Assets\Demigiant\DemiLib\Core\DemiLib.xml" />
-    <None Include="Assets\Demigiant\DemiLib\Core\Editor\DemiEditor.xml" />
-    <None Include="Assets\Demigiant\readme_DOTweenPro.txt" />
-    <None Include="Assets\Illogika\ScriptTemplates\100-C%23 Named Script-NewNamedBehaviourScript.cs.txt" />
-    <None Include="Assets\Illogika\ScriptTemplates\101-C%23 Custom Keyword-NewKeywordScript.cs.txt" />
-    <None Include="Assets\Illogika\ScriptTemplates\102-C%23 Custom Keyword Editor-NewKeywordEditorScript.cs.txt" />
-    <None Include="Assets\ProCore\ProGrids\About\changelog.txt" />
-    <None Include="Assets\ProCore\ProGrids\About\pc_AboutEntry_ProGrids.txt" />
-    <None Include="Assets\ProCore\ProGrids\Shader\pg_GridShader.shader" />
+    <None Include="Assets\EasyMobile\Demo\Fonts\SIL Open Font License.txt" />
+    <None Include="Assets\EasyMobile\EasyMobileSettings.txt" />
+    <None Include="Assets\EasyMobile\Editor\Templates\Template_AppleTangle.txt" />
+    <None Include="Assets\EasyMobile\Editor\Templates\Template_Constants.txt" />
+    <None Include="Assets\EasyMobile\Editor\Templates\Template_GooglePlayTangle.txt" />
+    <None Include="Assets\EasyMobile\GUISkins\Fonts\License\LICENSE-2.0.txt" />
+    <None Include="Assets\EasyMobile\GUISkins\Fonts\License\OFL.txt" />
+    <None Include="Assets\EasyMobile\GUISkins\Fonts\License\ubuntu-font-licence-1.0.txt" />
+    <None Include="Assets\EasyMobile\link.xml" />
+    <None Include="Assets\Plugins\Android\GoogleMobileAdsPlugin\AndroidManifest.xml" />
+    <None Include="Assets\ThirdPartyAssets\Demigiant\DOTween\DOTween.XML" />
+    <None Include="Assets\ThirdPartyAssets\Demigiant\DOTween\DOTween43.xml" />
+    <None Include="Assets\ThirdPartyAssets\Demigiant\DOTween\DOTween46.xml" />
+    <None Include="Assets\ThirdPartyAssets\Demigiant\DOTween\DOTween50.xml" />
+    <None Include="Assets\ThirdPartyAssets\Demigiant\DOTween\Editor\DOTweenEditor.XML" />
+    <None Include="Assets\ThirdPartyAssets\Demigiant\DOTween\readme.txt" />
+    <None Include="Assets\ThirdPartyAssets\Demigiant\DOTweenPro\DOTweenPro.XML" />
+    <None Include="Assets\ThirdPartyAssets\Demigiant\DOTweenPro\Editor\DOTweenProEditor.XML" />
+    <None Include="Assets\ThirdPartyAssets\Demigiant\DOTweenPro\readme.txt" />
+    <None Include="Assets\ThirdPartyAssets\Demigiant\DemiLib\Core\DemiLib.xml" />
+    <None Include="Assets\ThirdPartyAssets\Demigiant\DemiLib\Core\Editor\DemiEditor.xml" />
+    <None Include="Assets\ThirdPartyAssets\Demigiant\readme_DOTweenPro.txt" />
+    <None Include="Assets\ThirdPartyAssets\Illogika\ScriptTemplates\100-C%23 Named Script-NewNamedBehaviourScript.cs.txt" />
+    <None Include="Assets\ThirdPartyAssets\Illogika\ScriptTemplates\101-C%23 Custom Keyword-NewKeywordScript.cs.txt" />
+    <None Include="Assets\ThirdPartyAssets\Illogika\ScriptTemplates\102-C%23 Custom Keyword Editor-NewKeywordEditorScript.cs.txt" />
+    <None Include="Assets\ThirdPartyAssets\PlayServicesResolver\Editor\play-services-resolver.txt" />
+    <None Include="Assets\ThirdPartyAssets\ProCore\ProGrids\About\changelog.txt" />
+    <None Include="Assets\ThirdPartyAssets\ProCore\ProGrids\About\pc_AboutEntry_ProGrids.txt" />
+    <None Include="Assets\ThirdPartyAssets\ProCore\ProGrids\Shader\pg_GridShader.shader" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
