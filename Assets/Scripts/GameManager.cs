@@ -53,9 +53,8 @@ public class GameManager : MonoBehaviour {
             EventGameStart();
 
         goalCtrl.trigger.radius = 0.4f;
-        playerCtrl.trigger.radius = 0.4f;
 
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(0.5f);
         yield return StartCoroutine(playerCtrl.CoGameStart());
 
         gameState = eGameState.gamePlaying;

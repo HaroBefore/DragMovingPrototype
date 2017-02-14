@@ -31,11 +31,13 @@ public class ZoneCtrl : MonoBehaviour {
     private void OnEnable()
     {
         PlayerCtrl.EventBeginClickedPlayer += OnBeginClickedPlayer;
+        PlayerCtrl.EventEndClickedPlayer += OnEndClickedPlayer;
     }
 
     private void OnDisable()
     {
-        PlayerCtrl.EventBeginClickedPlayer += OnEndClickedPlayer;
+        PlayerCtrl.EventBeginClickedPlayer -= OnBeginClickedPlayer;
+        PlayerCtrl.EventEndClickedPlayer -= OnEndClickedPlayer;
     }
 
     private void OnBeginClickedPlayer()

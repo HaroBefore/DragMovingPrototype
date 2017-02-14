@@ -2,24 +2,30 @@
 using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
+using HeavyDutyInspector;
 
 public class PlayerCtrl : MonoBehaviour {
     public delegate void EventArgs();
-    public static event EventArgs EventBeginClickedPlayer;
-    public static event EventArgs EventEndClickedPlayer;
+    public static event EventArgs EventBeginClickedPlayer;  //플레이어 클릭 시작시 이벤트
+    public static event EventArgs EventEndClickedPlayer;    //플레이어 클릭 종료시 이벤트
 
     public static bool isClick = false;
 
-    [HideInInspector]
-    public CircleCollider2D trigger;
+    [Comment("True 시 터치 시작 후 때는순간 죽음")]
+    public bool isDieIfRelaseTouch = false;
+
+    Vector3 offset;
+
     TrailRenderer trail;
 
     private void Awake()
     {
-        trigger = GetComponent<CircleCollider2D>();
         //trail = GetComponent<TrailRenderer>();
         transform.localScale = Vector3.zero;
         //trail.enabled = false;
+
+        isClick = false;
+        offset = Vector3.zero;
     }
 
     private void Start()
@@ -53,7 +59,7 @@ public class PlayerCtrl : MonoBehaviour {
 
                 //Debug.Log(Camera.main.ScreenToWorldPoint(mousePos));
                 if(pos != Vector3.zero)
-                    transform.position = Camera.main.ScreenToWorldPoint(pos);
+                    transform.position = Vector3.Lerp(transform.position, Camera.main.ScreenToWorldPoint(pos), 0.9f);
             }
         }
     }
@@ -65,6 +71,7 @@ public class PlayerCtrl : MonoBehaviour {
 
     private void OnMouseDown()
     {
+        offset = transform.position;
         isClick = true;
         if (EventBeginClickedPlayer != null)
             EventBeginClickedPlayer();
@@ -73,13 +80,16 @@ public class PlayerCtrl : MonoBehaviour {
     private void OnMouseUp()
     {
         isClick = false;
-
+        offset = Vector3.zero;
         if (EventEndClickedPlayer != null)
             EventEndClickedPlayer();
 
-        if(GameManager.Instance.gameState == eGameState.gamePlaying)
+        if(isDieIfRelaseTouch)
         {
-            //Die();
+            if (GameManager.Instance.gameState == eGameState.gamePlaying)
+            {
+                Die();   
+            }
         }
     }
     private void OnTriggerEnter2D(Collider2D collision)
