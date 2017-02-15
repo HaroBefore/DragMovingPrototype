@@ -4,6 +4,8 @@ using UnityEngine;
 using System;
 using UnityEngine.SceneManagement;
 using EasyMobile;
+using MadLevelManager;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour {
     static GameManager instance;
@@ -16,7 +18,10 @@ public class GameManager : MonoBehaviour {
 
     public eGameState gameState = eGameState.None;
 
+    UIManager uiManager;
+
     GoalCtrl goalCtrl;
+    [HideInInspector]
     public PlayerCtrl playerCtrl;
 
     private void Awake()
@@ -25,18 +30,25 @@ public class GameManager : MonoBehaviour {
     }
 
     // Use this for initialization
-    void Start () {
+    IEnumerator Start () {
+
+        //gameState = eGameState.gameStartWaiting;
+        //OnGameStart();
+
+        var async = SceneManager.LoadSceneAsync("PlayUI", LoadSceneMode.Additive);
+
+        yield return new WaitUntil(() => { return async.isDone; });
+
         goalCtrl = GameObject.Find("Goal").GetComponent<GoalCtrl>();
         playerCtrl = GameObject.Find("Player").GetComponent<PlayerCtrl>();
 
-        //gameState = eGameState.gameStartWaiting;
-        OnGameStart();
+        uiManager = UIManager.Instance; 
 
+        OnGameStart();
     }
 
     public void OnGameStart()
     {
-        UIManager.Instance.goBtnGameStart.SetActive(false);
         StartCoroutine(CoGameStart());
     }
 
@@ -50,9 +62,23 @@ public class GameManager : MonoBehaviour {
         AdManager.ShowBannerAd(BannerAdPosition.Bottom, BannerAdSize.SmartBanner);
         yield return null;
         yield return StartCoroutine(goalCtrl.CoGameStart());
-        
+
+        //레벨 번호 보이고 사라짐
+        int levelNum = 0;
+        Int32.TryParse(MadLevel.arguments, out levelNum);
+        Debug.Log("arg " + MadLevel.arguments);
+        Debug.Log("levelNum " + levelNum);
+        uiManager.textLevelNum.GetComponent<Text>().text = " - " + levelNum + " - ";
+
+        uiManager.textLevelNum.SetActive(true);
+        yield return new WaitForSeconds(0.5f);
+        uiManager.textLevelNum.SetActive(false);
+        //////////
+
+        //ObstacleCtrl 들 시작
         if (EventGameStart != null)
             EventGameStart();
+        //////////////
 
         goalCtrl.trigger.radius = 0.4f;
 
@@ -60,24 +86,43 @@ public class GameManager : MonoBehaviour {
         yield return StartCoroutine(playerCtrl.CoGameStart());
         AdManager.HideBannerAd(BannerAdNetwork.AdMob);
 
+        //UI 클리어시 이벤트 추가
+        uiManager.goBtnGameNext.GetComponent<Button>().onClick.AddListener(() =>
+        {
+            MadLevel.LoadNext();
+        });
+        uiManager.goBtnGameBack.GetComponent<Button>().onClick.AddListener(() =>
+        {
+            MadLevel.LoadLevelByName("LevelSelectScreen");
+        });
+        uiManager.goBtnGameRestart.GetComponent<Button>().onClick.AddListener(() =>
+        {
+            MadLevel.ReloadCurrent();
+        });
+        //////////////////
+
         gameState = eGameState.gamePlaying;
 
-        EasyMobileManager.ShowInterstitialAd();
+        //EasyMobileManager.ShowInterstitialAd();
     }
 
     public IEnumerator CoGameWin()
     {
         gameState = eGameState.gameOver;
-        UIManager.Instance.goImgGameWin.SetActive(true);
-        UIManager.Instance.goBtnGameRestart.SetActive(true);
+        if (MadLevel.HasNext())
+            uiManager.goBtnGameNext.SetActive(true);
+        uiManager.goImgGameWin.SetActive(true);
+        uiManager.goBtnGameRestart.SetActive(true);
+        uiManager.goBtnGameBack.SetActive(true);
         yield return null;
     }
 
     public IEnumerator CoGameLose()
     {
         gameState = eGameState.gameOver;
-        UIManager.Instance.goImgGameLose.SetActive(true);
-        UIManager.Instance.goBtnGameRestart.SetActive(true);
+        uiManager.goImgGameLose.SetActive(true);
+        uiManager.goBtnGameRestart.SetActive(true);
+        uiManager.goBtnGameBack.SetActive(true);
         yield return null;
     }
 
