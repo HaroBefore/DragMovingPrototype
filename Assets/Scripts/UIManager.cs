@@ -9,14 +9,18 @@ public class UIManager : MonoBehaviour {
         get { return instance; }
     }
 
-    public GameObject goBtnGameStart;
+    public GameObject textLevelNum;
+
+    public GameObject goBtnGameNext;
     public GameObject goBtnGameRestart;
+    public GameObject goBtnGameBack;
 
     public GameObject goImgGameWin;
     public GameObject goImgGameLose;
 
     private void Awake()
     {
+        instance = null;
         instance = this;
     }
 

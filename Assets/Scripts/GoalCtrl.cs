@@ -20,7 +20,6 @@ public class GoalCtrl : MonoBehaviour {
 
     public IEnumerator CoGameStart()
     {
-        //transform.position = new Vector3(UnityEngine.Random.Range(-4f, 4f), 8f, 0f);
         transform.DOScale(Vector3.one, 1f);
         yield return new WaitForSeconds(0.5f);
     }
@@ -29,21 +28,12 @@ public class GoalCtrl : MonoBehaviour {
     {
         if(collision.CompareTag("Player"))
         {
-            /*
-            if(endLevel)
-            {
-                StartCoroutine(GameManager.Instance.CoGameWin());
-            }
-            else
-            {
-                SceneManager.LoadScene(level);
-            }
-            */
-            MadLevelProfile.SetLevelBoolean(MadLevel.currentLevelName, "level_1", true);
-            MadLevelProfile.SetLevelBoolean(MadLevel.currentLevelName, "Game Level 3", false);
+            MadLevelProfile.SetLevelBoolean(MadLevel.currentLevelName, "star_1", true);
+            MadLevelProfile.SetLevelBoolean(MadLevel.currentLevelName, "star_2", true);
+            MadLevelProfile.SetLevelBoolean(MadLevel.currentLevelName, "star_3", true);
             MadLevelProfile.SetCompleted(MadLevel.currentLevelName, true);
 
-            MadLevel.LoadLevelByName("Level Select Screen");
+            StartCoroutine(GameManager.Instance.CoGameWin());
         }
     }
 }
