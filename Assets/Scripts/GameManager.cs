@@ -59,7 +59,7 @@ public class GameManager : MonoBehaviour {
 
     IEnumerator CoGameStart()
     {
-        AdManager.ShowBannerAd(BannerAdPosition.Bottom, BannerAdSize.SmartBanner);
+        //AdManager.ShowBannerAd(BannerAdPosition.Bottom, BannerAdSize.SmartBanner);
         yield return null;
         yield return StartCoroutine(goalCtrl.CoGameStart());
 
@@ -71,8 +71,6 @@ public class GameManager : MonoBehaviour {
         uiManager.textLevelNum.GetComponent<Text>().text = " - " + levelNum + " - ";
 
         uiManager.textLevelNum.SetActive(true);
-        yield return new WaitForSeconds(0.5f);
-        uiManager.textLevelNum.SetActive(false);
         //////////
 
         //ObstacleCtrl 들 시작
@@ -84,7 +82,9 @@ public class GameManager : MonoBehaviour {
 
         yield return new WaitForSeconds(0.8f);
         yield return StartCoroutine(playerCtrl.CoGameStart());
-        AdManager.HideBannerAd(BannerAdNetwork.AdMob);
+        //AdManager.HideBannerAd(BannerAdNetwork.AdMob);
+
+        uiManager.textLevelNum.SetActive(false);
 
         //UI 클리어시 이벤트 추가
         uiManager.goBtnGameNext.GetComponent<Button>().onClick.AddListener(() =>

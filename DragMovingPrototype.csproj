@@ -146,6 +146,7 @@
     <Compile Include="Assets\Scripts\GoalCtrl.cs" />
     <Compile Include="Assets\Scripts\ObstacleCtrl.cs" />
     <Compile Include="Assets\Scripts\PlayerCtrl.cs" />
+    <Compile Include="Assets\Scripts\TitleManager.cs" />
     <Compile Include="Assets\Scripts\UIManager.cs" />
     <Compile Include="Assets\Scripts\ZoneCtrl.cs" />
     <Compile Include="Assets\ThirdPartyAssets\Demigiant\DOTweenPro\DOTweenAnimation.cs" />

@@ -22,7 +22,7 @@ public class EasyMobileManager : MonoBehaviour {
 
     public static void ShowInterstitialAd()
     {
-        instance.StartCoroutine(instance.CoShowBanner());
+        instance.StartCoroutine(instance.CoShowInterstitialAd());
     }
 
 	// Use this for initialization
@@ -30,7 +30,7 @@ public class EasyMobileManager : MonoBehaviour {
 
 	}
 
-    private IEnumerator CoShowBanner()
+    private IEnumerator CoShowInterstitialAd()
     {
         yield return new WaitUntil(() => 
         {
