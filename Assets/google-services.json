@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "177214129079",
+    "firebase_url": "https://pingproject-c8795.firebaseio.com",
+    "project_id": "pingproject-c8795",
+    "storage_bucket": "pingproject-c8795.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:177214129079:android:c6d9be9babc6ac66",
+        "android_client_info": {
+          "package_name": "com.Haro.Ping"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "177214129079-pc6pv3o6hns807852da3thksmlcsa74q.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCtdrNjXTqhysBU1SrLRr2d_HfYPwoSuCw"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

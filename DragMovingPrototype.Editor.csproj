@@ -118,41 +118,56 @@
     <Reference Include="SyntaxTree.VisualStudio.Unity.Bridge">
       <HintPath>Library\UnityAssemblies\SyntaxTree.VisualStudio.Unity.Bridge.dll</HintPath>
     </Reference>
-    <Reference Include="Google.JarResolver">
-      <HintPath>Assets\ThirdPartyAssets\PlayServicesResolver\Editor\Google.JarResolver.dll</HintPath>
-    </Reference>
-    <Reference Include="Google.IOSResolver">
-      <HintPath>Assets\ThirdPartyAssets\PlayServicesResolver\Editor\Google.IOSResolver.dll</HintPath>
-    </Reference>
-    <Reference Include="Google.VersionHandler">
-      <HintPath>Assets\ThirdPartyAssets\PlayServicesResolver\Editor\Google.VersionHandler.dll</HintPath>
-    </Reference>
-    <Reference Include="DOTweenEditor">
-      <HintPath>Assets\ThirdPartyAssets\Demigiant\DOTween\Editor\DOTweenEditor.dll</HintPath>
-    </Reference>
-    <Reference Include="DOTween46">
-      <HintPath>Assets\ThirdPartyAssets\Demigiant\DOTween\DOTween46.dll</HintPath>
-    </Reference>
-    <Reference Include="DOTweenProEditor">
-      <HintPath>Assets\ThirdPartyAssets\Demigiant\DOTweenPro\Editor\DOTweenProEditor.dll</HintPath>
-    </Reference>
-    <Reference Include="DOTween50">
-      <HintPath>Assets\ThirdPartyAssets\Demigiant\DOTween\DOTween50.dll</HintPath>
-    </Reference>
     <Reference Include="DemiLib">
       <HintPath>Assets\ThirdPartyAssets\Demigiant\DemiLib\Core\DemiLib.dll</HintPath>
     </Reference>
     <Reference Include="DemiEditor">
       <HintPath>Assets\ThirdPartyAssets\Demigiant\DemiLib\Core\Editor\DemiEditor.dll</HintPath>
     </Reference>
-    <Reference Include="DOTween43">
-      <HintPath>Assets\ThirdPartyAssets\Demigiant\DOTween\DOTween43.dll</HintPath>
-    </Reference>
     <Reference Include="DOTween">
       <HintPath>Assets\ThirdPartyAssets\Demigiant\DOTween\DOTween.dll</HintPath>
     </Reference>
+    <Reference Include="DOTween43">
+      <HintPath>Assets\ThirdPartyAssets\Demigiant\DOTween\DOTween43.dll</HintPath>
+    </Reference>
+    <Reference Include="DOTween46">
+      <HintPath>Assets\ThirdPartyAssets\Demigiant\DOTween\DOTween46.dll</HintPath>
+    </Reference>
+    <Reference Include="DOTween50">
+      <HintPath>Assets\ThirdPartyAssets\Demigiant\DOTween\DOTween50.dll</HintPath>
+    </Reference>
+    <Reference Include="DOTweenEditor">
+      <HintPath>Assets\ThirdPartyAssets\Demigiant\DOTween\Editor\DOTweenEditor.dll</HintPath>
+    </Reference>
     <Reference Include="DOTweenPro">
       <HintPath>Assets\ThirdPartyAssets\Demigiant\DOTweenPro\DOTweenPro.dll</HintPath>
+    </Reference>
+    <Reference Include="DOTweenProEditor">
+      <HintPath>Assets\ThirdPartyAssets\Demigiant\DOTweenPro\Editor\DOTweenProEditor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Compat">
+      <HintPath>Assets\Firebase\Plugins\Unity.Compat.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Tasks">
+      <HintPath>Assets\Firebase\Plugins\Unity.Tasks.dll</HintPath>
+    </Reference>
+    <Reference Include="Firebase.Editor">
+      <HintPath>Assets\Firebase\Editor\Firebase.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Firebase.App">
+      <HintPath>Assets\Firebase\Plugins\Firebase.App.dll</HintPath>
+    </Reference>
+    <Reference Include="Firebase.Analytics">
+      <HintPath>Assets\Firebase\Plugins\Firebase.Analytics.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.IOSResolver">
+      <HintPath>Assets\PlayServicesResolver\Editor\Google.IOSResolver.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.JarResolver">
+      <HintPath>Assets\PlayServicesResolver\Editor\Google.JarResolver.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.VersionHandler">
+      <HintPath>Assets\PlayServicesResolver\Editor\Google.VersionHandler.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -177,6 +192,8 @@
     <Compile Include="Assets\EasyMobile\Editor\EM_SettingsEditor_GameService.cs" />
     <Compile Include="Assets\EasyMobile\Editor\EM_SettingsEditor_IAP.cs" />
     <Compile Include="Assets\EasyMobile\Editor\EM_SettingsEditor_Notification.cs" />
+    <Compile Include="Assets\Firebase\Editor\AnalyticsDeps.cs" />
+    <Compile Include="Assets\Firebase\Editor\AppDeps.cs" />
     <Compile Include="Assets\ThirdPartyAssets\Demigiant\DOTweenPro\Editor\DOTweenAnimationInspector.cs" />
     <Compile Include="Assets\ThirdPartyAssets\GoogleMobileAds\Editor\AdMobDependencies.cs" />
     <Compile Include="Assets\ThirdPartyAssets\Illogika\HeavyDutyInspector\Examples\LocalizationKeys\Editor\LocalizationKey.cs" />
@@ -218,6 +235,72 @@
     <Compile Include="Assets\ThirdPartyAssets\Illogika\HeavyDutyInspector\PropertyDrawers\Editor\Vector2Drawer.cs" />
     <Compile Include="Assets\ThirdPartyAssets\Illogika\HeavyDutyInspector\PropertyDrawers\Editor\Vector3Drawer.cs" />
     <Compile Include="Assets\ThirdPartyAssets\Illogika\ScriptTemplates\Editor\InstallScriptTemplates.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Mad Level Manager\Examples\Editor\ExampleGenerator.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Mad Level Manager\Scripts\Editor\IMadLevelGenerator.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Mad Level Manager\Scripts\Editor\Inspectors\MadAnimColorInspector.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Mad Level Manager\Scripts\Editor\Inspectors\MadAnimInspector.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Mad Level Manager\Scripts\Editor\Inspectors\MadAnimMoveInspector.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Mad Level Manager\Scripts\Editor\Inspectors\MadAnimRotateInspector.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Mad Level Manager\Scripts\Editor\Inspectors\MadAnimScaleInspector.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Mad Level Manager\Scripts\Editor\Inspectors\MadAnimatorInspector.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Mad Level Manager\Scripts\Editor\Inspectors\MadLevelAbstractLayoutInspector.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Mad Level Manager\Scripts\Editor\Inspectors\MadLevelAnimatorInspector.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Mad Level Manager\Scripts\Editor\Inspectors\MadLevelBackgroundInspector.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Mad Level Manager\Scripts\Editor\Inspectors\MadLevelBackgroundLayerInspector.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Mad Level Manager\Scripts\Editor\Inspectors\MadLevelFreeLayoutInspector.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Mad Level Manager\Scripts\Editor\Inspectors\MadLevelGridLayoutInspector.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Mad Level Manager\Scripts\Editor\Inspectors\MadLevelIconInspector.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Mad Level Manager\Scripts\Editor\Inspectors\MadLevelImageInspector.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Mad Level Manager\Scripts\Editor\Inspectors\MadLevelInputControlInspector.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Mad Level Manager\Scripts\Editor\Inspectors\MadLevelPropertyInspector.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Mad Level Manager\Scripts\Editor\Inspectors\MadLevelPropertyTextInspector.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Mad Level Manager\Scripts\Editor\Inspectors\MadLevelSettingsInspector.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Mad Level Manager\Scripts\Editor\MadLevelConfigurationEditor.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Mad Level Manager\Scripts\Editor\MadLevelUpdater.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Mad Level Manager\Scripts\Editor\MadLevelWatcher.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Mad Level Manager\Scripts\Editor\Tools\IMadLevelConfigurationInspectorAddon.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Mad Level Manager\Scripts\Editor\Tools\MadLevelBackgroundTool.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Mad Level Manager\Scripts\Editor\Tools\MadLevelConfigurationInspector.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Mad Level Manager\Scripts\Editor\Tools\MadLevelExtensionEditor.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Mad Level Manager\Scripts\Editor\Tools\MadLevelFreeTool.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Mad Level Manager\Scripts\Editor\Tools\MadLevelGeneratorTool.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Mad Level Manager\Scripts\Editor\Tools\MadLevelGridBulletsTool.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Mad Level Manager\Scripts\Editor\Tools\MadLevelGridTool.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Mad Level Manager\Scripts\Editor\Tools\MadLevelGroupsEditTool.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Mad Level Manager\Scripts\Editor\Tools\MadLevelIconTool.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Mad Level Manager\Scripts\Editor\Tools\MadLevelInitTool.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Mad Level Manager\Scripts\Editor\Tools\MadLevelMenu.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Mad Level Manager\Scripts\Editor\Tools\MadLevelMoveAssetsTool.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Mad Level Manager\Scripts\Editor\Tools\MadLevelProfileBrowser.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Mad Level Manager\Scripts\Editor\Tools\MadLevelProfileTool.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Mad Level Manager\Scripts\Editor\Tools\MadLevelPropertyEmptyTool.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Mad Level Manager\Scripts\Editor\Tools\MadLevelPropertySpriteTool.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Mad Level Manager\Scripts\Editor\Tools\MadLevelPropertyTextTool.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Mad Level Manager\Scripts\Editor\Tools\TextureAlphaMultiplier.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Mad Level Manager\Scripts\Editor\TrialInfo.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Mad Level Manager\Scripts\Mad2D\Editor\Inspectors\MadAnchorInspector.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Mad Level Manager\Scripts\Mad2D\Editor\Inspectors\MadAtlasInspector.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Mad Level Manager\Scripts\Mad2D\Editor\Inspectors\MadDragStopDraggableInspector.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Mad Level Manager\Scripts\Mad2D\Editor\Inspectors\MadFontInspector.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Mad Level Manager\Scripts\Mad2D\Editor\Inspectors\MadFreeDraggableInspector.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Mad Level Manager\Scripts\Mad2D\Editor\Inspectors\MadSpriteInspector.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Mad Level Manager\Scripts\Mad2D\Editor\Inspectors\MadTextInspector.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Mad Level Manager\Scripts\Mad2D\Editor\MadAtlasBrowser.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Mad Level Manager\Scripts\Mad2D\Editor\MadAtlasBuilder.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Mad Level Manager\Scripts\Mad2D\Editor\MadAtlasConverter.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Mad Level Manager\Scripts\Mad2D\Editor\MadAtlasUtil.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Mad Level Manager\Scripts\Mad2D\Editor\MadExternalTools.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Mad Level Manager\Scripts\Mad2D\Editor\MadFontBuilder.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Mad Level Manager\Scripts\Mad2D\Editor\MadInitTool.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Mad Level Manager\Scripts\Mad2D\Editor\MadTexturePacker.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Mad Level Manager\Scripts\MadCommons\Editor\MadAssets.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Mad Level Manager\Scripts\MadCommons\Editor\MadEditorBase.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Mad Level Manager\Scripts\MadCommons\Editor\MadGUI.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Mad Level Manager\Scripts\MadCommons\Editor\MadInputDialog.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Mad Level Manager\Scripts\MadCommons\Editor\MadPath.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Mad Level Manager\Scripts\MadCommons\Editor\MadTrialEditor.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Mad Level Manager\Scripts\MadCommons\Editor\MadUpdater.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Mad Level Manager\Scripts\MadCommons\Editor\MadWWWFormSender.cs" />
     <Compile Include="Assets\ThirdPartyAssets\ProCore\ProGrids\About\Editor\pg_AboutWindow.cs" />
     <Compile Include="Assets\ThirdPartyAssets\ProCore\ProGrids\Editor\pg_Editor.cs" />
     <Compile Include="Assets\ThirdPartyAssets\ProCore\ProGrids\Editor\pg_GridRenderer.cs" />
@@ -235,7 +318,16 @@
     <None Include="Assets\EasyMobile\GUISkins\Fonts\License\OFL.txt" />
     <None Include="Assets\EasyMobile\GUISkins\Fonts\License\ubuntu-font-licence-1.0.txt" />
     <None Include="Assets\EasyMobile\link.xml" />
+    <None Include="Assets\Firebase\m2repository\com\google\firebase\firebase-analytics-unity\maven-metadata.xml" />
+    <None Include="Assets\Firebase\m2repository\com\google\firebase\firebase-app-unity\maven-metadata.xml" />
+    <None Include="Assets\PlayServicesResolver\Editor\play-services-resolver.txt" />
+    <None Include="Assets\Plugins\Android\Firebase\AndroidManifest.xml" />
+    <None Include="Assets\Plugins\Android\Firebase\res\values\google-services.xml" />
     <None Include="Assets\Plugins\Android\GoogleMobileAdsPlugin\AndroidManifest.xml" />
+    <None Include="Assets\Plugins\Android\firebase-common-10.0.1\AndroidManifest.xml" />
+    <None Include="Assets\Plugins\Android\firebase-common-10.0.1\proguard.txt" />
+    <None Include="Assets\Plugins\Android\firebase-iid-10.0.1\AndroidManifest.xml" />
+    <None Include="Assets\Plugins\Android\firebase-iid-10.0.1\proguard.txt" />
     <None Include="Assets\ThirdPartyAssets\Demigiant\DOTween\DOTween.XML" />
     <None Include="Assets\ThirdPartyAssets\Demigiant\DOTween\DOTween43.xml" />
     <None Include="Assets\ThirdPartyAssets\Demigiant\DOTween\DOTween46.xml" />
@@ -251,7 +343,22 @@
     <None Include="Assets\ThirdPartyAssets\Illogika\ScriptTemplates\100-C%23 Named Script-NewNamedBehaviourScript.cs.txt" />
     <None Include="Assets\ThirdPartyAssets\Illogika\ScriptTemplates\101-C%23 Custom Keyword-NewKeywordScript.cs.txt" />
     <None Include="Assets\ThirdPartyAssets\Illogika\ScriptTemplates\102-C%23 Custom Keyword Editor-NewKeywordEditorScript.cs.txt" />
-    <None Include="Assets\ThirdPartyAssets\PlayServicesResolver\Editor\play-services-resolver.txt" />
+    <None Include="Assets\ThirdPartyAssets\Mad Level Manager\Examples\Example 5 - Unity 5\README.txt" />
+    <None Include="Assets\ThirdPartyAssets\Mad Level Manager\Examples\Stuff\Fonts\Boogaloo New\SIL OFL Font License Boogaloo.txt" />
+    <None Include="Assets\ThirdPartyAssets\Mad Level Manager\Examples\Stuff\Fonts\Boogaloo New\boogaloo.txt" />
+    <None Include="Assets\ThirdPartyAssets\Mad Level Manager\Examples\Stuff\Fonts\Boogaloo\SIL OFL Font License Boogaloo.txt" />
+    <None Include="Assets\ThirdPartyAssets\Mad Level Manager\README.TXT" />
+    <None Include="Assets\ThirdPartyAssets\Mad Level Manager\Scripts\Mad2D\Resources\Shaders\Font DB.shader" />
+    <None Include="Assets\ThirdPartyAssets\Mad Level Manager\Scripts\Mad2D\Resources\Shaders\Font White DB.shader" />
+    <None Include="Assets\ThirdPartyAssets\Mad Level Manager\Scripts\Mad2D\Resources\Shaders\Font White.shader" />
+    <None Include="Assets\ThirdPartyAssets\Mad Level Manager\Scripts\Mad2D\Resources\Shaders\Font.shader" />
+    <None Include="Assets\ThirdPartyAssets\Mad Level Manager\Scripts\Mad2D\Resources\Shaders\UnlitTransparentTint DB.shader" />
+    <None Include="Assets\ThirdPartyAssets\Mad Level Manager\Scripts\Mad2D\Resources\Shaders\UnlitTransparentTint.shader" />
+    <None Include="Assets\ThirdPartyAssets\Mad Level Manager\Scripts\Mad2D\Resources\Shaders\UnlitTransparentTintPre DB.shader" />
+    <None Include="Assets\ThirdPartyAssets\Mad Level Manager\Scripts\Mad2D\Resources\Shaders\UnlitTransparentTintPre.shader" />
+    <None Include="Assets\ThirdPartyAssets\Mad Level Manager\Themes\Theme1\Fonts\font.txt" />
+    <None Include="Assets\ThirdPartyAssets\Mad Level Manager\Themes\Theme2\Font\abeezee-glyphs.txt" />
+    <None Include="Assets\ThirdPartyAssets\Mad Level Manager\Themes\Theme2\Font\abeezee-license.txt" />
     <None Include="Assets\ThirdPartyAssets\ProCore\ProGrids\About\changelog.txt" />
     <None Include="Assets\ThirdPartyAssets\ProCore\ProGrids\About\pc_AboutEntry_ProGrids.txt" />
     <None Include="Assets\ThirdPartyAssets\ProCore\ProGrids\Shader\pg_GridShader.shader" />

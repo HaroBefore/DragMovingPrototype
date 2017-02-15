@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using DG.Tweening;
+using MadLevelManager;
 
 public class GoalCtrl : MonoBehaviour {
     [HideInInspector]
@@ -28,6 +29,7 @@ public class GoalCtrl : MonoBehaviour {
     {
         if(collision.CompareTag("Player"))
         {
+            /*
             if(endLevel)
             {
                 StartCoroutine(GameManager.Instance.CoGameWin());
@@ -35,7 +37,13 @@ public class GoalCtrl : MonoBehaviour {
             else
             {
                 SceneManager.LoadScene(level);
-            }            
+            }
+            */
+            MadLevelProfile.SetLevelBoolean(MadLevel.currentLevelName, "level_1", true);
+            MadLevelProfile.SetLevelBoolean(MadLevel.currentLevelName, "Game Level 3", false);
+            MadLevelProfile.SetCompleted(MadLevel.currentLevelName, true);
+
+            MadLevel.LoadLevelByName("Level Select Screen");
         }
     }
 }
