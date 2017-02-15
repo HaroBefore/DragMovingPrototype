@@ -39,11 +39,11 @@ public class GoalCtrl : MonoBehaviour {
                 SceneManager.LoadScene(level);
             }
             */
-            MadLevelProfile.SetLevelBoolean(MadLevel.currentLevelName, "level_1", true);
-            MadLevelProfile.SetLevelBoolean(MadLevel.currentLevelName, "Game Level 3", false);
-            MadLevelProfile.SetCompleted(MadLevel.currentLevelName, true);
-
-            MadLevel.LoadLevelByName("Level Select Screen");
+            //MadLevelProfile.SetLevelBoolean(MadLevel.currentLevelName, "level_1", true);
+            //MadLevelProfile.SetLevelBoolean(MadLevel.currentLevelName, "Game Level 3", false);
+            //MadLevelProfile.SetCompleted(MadLevel.currentLevelName, true);
+            MadLevel.LoadNext();
+            //MadLevel.LoadLevelByName("Level Select Screen");
         }
     }
 }
