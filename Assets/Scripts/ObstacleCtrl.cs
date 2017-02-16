@@ -218,10 +218,6 @@ public class ObstacleCtrl : MonoBehaviour {
         {
             isOnTimeZone = zoneTimeScaleQueue.Count > 0 ? true : false;
 
-            Debug.Log("zoneTImeScaleCnt : " + zoneTimeScaleQueue.Count);
-            if (isOnTimeZone)
-                Debug.Log("PeekScale : " + zoneTimeScaleQueue.Peek());
-
             timeScaleMultiply = isOnTimeZone ? zoneTimeScaleQueue.Peek() : GameManager.Instance.baseicClickedTimeScaleMultiply;
     
             if (scaleTweener != null)
@@ -231,8 +227,6 @@ public class ObstacleCtrl : MonoBehaviour {
             if (pathTweener != null)
                 pathTweener.timeScale = originSpeedTimeScale * timeScaleMultiply;
         }
-
-        Debug.Log("TimeScale : " + timeScaleMultiply);
     }
 
     public Tweener MakeRotTweener(bool isRightRot, float addAngle)
