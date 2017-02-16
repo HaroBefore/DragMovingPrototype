@@ -199,15 +199,21 @@ public class ObstacleCtrl : MonoBehaviour {
 
     public void UpdateTimeScale()
     {
-        scaleTweener.timeScale = originChangeScaleDuration = (1f) * timeScaleMultiply;
-        rotTweener.timeScale = originAngleTimeScale = (normalAnglePerSec + arrWayPoint[curWayPointIdx].addAngle) * timeScaleMultiply;
-        pathTweener.timeScale = originSpeedTimeScale = (normalSpeedPerSec + arrWayPoint[curWayPointIdx].addSpeed) * timeScaleMultiply;
+        if(scaleTweener != null)
+            scaleTweener.timeScale = originChangeScaleDuration = (1f) * timeScaleMultiply;
+        if(rotTweener != null)
+            rotTweener.timeScale = originAngleTimeScale = (normalAnglePerSec + arrWayPoint[curWayPointIdx].addAngle) * timeScaleMultiply;
+        if(pathTweener != null)
+            pathTweener.timeScale = originSpeedTimeScale = (normalSpeedPerSec + arrWayPoint[curWayPointIdx].addSpeed) * timeScaleMultiply;
 
         if (PlayerCtrl.isClick && !isOnTimeZone)
         {
-            scaleTweener.timeScale = originChangeScaleDuration * 0.05f;
-            rotTweener.timeScale = originAngleTimeScale * 0.05f;
-            pathTweener.timeScale = originSpeedTimeScale * 0.05f;
+            if(scaleTweener != null)
+                scaleTweener.timeScale = originChangeScaleDuration * 0.05f;
+            if(rotTweener != null)
+                rotTweener.timeScale = originAngleTimeScale * 0.05f;
+            if(pathTweener != null)
+                pathTweener.timeScale = originSpeedTimeScale * 0.05f;
         }
     }
 

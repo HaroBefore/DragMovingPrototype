@@ -61,7 +61,6 @@ public class GameManager : MonoBehaviour {
     {
         //AdManager.ShowBannerAd(BannerAdPosition.Bottom, BannerAdSize.SmartBanner);
         yield return null;
-        yield return StartCoroutine(goalCtrl.CoGameStart());
 
         //레벨 번호 보이고 사라짐
         int levelNum = 0;
@@ -81,6 +80,7 @@ public class GameManager : MonoBehaviour {
         goalCtrl.trigger.radius = 0.4f;
 
         yield return new WaitForSeconds(0.8f);
+        yield return StartCoroutine(goalCtrl.CoGameStart());
         yield return StartCoroutine(playerCtrl.CoGameStart());
         //AdManager.HideBannerAd(BannerAdNetwork.AdMob);
 

@@ -64,10 +64,13 @@ public class ZoneCtrl : MonoBehaviour {
         {
             Debug.Log("Enter");
             ObstacleCtrl obstacle = collision.GetComponent<ObstacleCtrl>();
-            obstacle.timeScaleMultiply = timeScaleMultiply;
-            if (isActiveOnlyIfClicked)
-                obstacle.isOnTimeZone = true;
-            obstacle.UpdateTimeScale();
+            if(obstacle != null)
+            {
+                obstacle.timeScaleMultiply = timeScaleMultiply;
+                if (isActiveOnlyIfClicked)
+                    obstacle.isOnTimeZone = true;
+                obstacle.UpdateTimeScale();
+            }
         }
     }
 
@@ -83,11 +86,14 @@ public class ZoneCtrl : MonoBehaviour {
         {
             Debug.Log("Exit");
             ObstacleCtrl obstacle = collision.GetComponent<ObstacleCtrl>();
-            obstacle.timeScaleMultiply = 1f;
+            if(obstacle != null)
+            {
+                obstacle.timeScaleMultiply = 1f;
 
-            if (isActiveOnlyIfClicked)
-                obstacle.isOnTimeZone = false;
-            obstacle.UpdateTimeScale();
+                if (isActiveOnlyIfClicked)
+                    obstacle.isOnTimeZone = false;
+                obstacle.UpdateTimeScale();
+            }
         }
     }
 }

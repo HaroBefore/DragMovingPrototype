@@ -58,8 +58,8 @@ public class PlayerCtrl : MonoBehaviour {
                 pos.z = 10;
 
                 //Debug.Log(Camera.main.ScreenToWorldPoint(mousePos));
-                if(pos != Vector3.zero)
-                    transform.position = Vector3.Lerp(transform.position, Camera.main.ScreenToWorldPoint(pos), 0.9f);
+                if (pos != Vector3.zero)
+                    transform.position = Camera.main.ScreenToWorldPoint(pos);
             }
         }
     }
