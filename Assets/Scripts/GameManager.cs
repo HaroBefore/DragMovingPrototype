@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 using EasyMobile;
 using MadLevelManager;
 using UnityEngine.UI;
+using HeavyDutyInspector;
 
 public class GameManager : MonoBehaviour {
     static GameManager instance;
@@ -23,6 +24,9 @@ public class GameManager : MonoBehaviour {
     GoalCtrl goalCtrl;
     [HideInInspector]
     public PlayerCtrl playerCtrl;
+
+    [Comment("Zone에 있지 않을 때 기본 TimeScale 배율")]
+    public float baseicClickedTimeScaleMultiply = 0.05f;
 
     private void Awake()
     {

@@ -9,8 +9,7 @@ public class ZoneCtrl : MonoBehaviour {
     Collider2D trigger;
 
     public float timeScaleMultiply = 1f;
-    public bool isActiveOnlyIfClicked = false;
-
+    
     private void Awake()
     {
         rigidbody = GetComponent<Rigidbody2D>();
@@ -54,21 +53,16 @@ public class ZoneCtrl : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (isActiveOnlyIfClicked)
-        {
-            Debug.Log("active");
-            if (!PlayerCtrl.isClick)
-                return;
-        }
         if (collision.CompareTag("Obstacle"))
-        {
+           {
             Debug.Log("Enter");
             ObstacleCtrl obstacle = collision.GetComponent<ObstacleCtrl>();
             if(obstacle != null)
             {
-                obstacle.timeScaleMultiply = timeScaleMultiply;
-                if (isActiveOnlyIfClicked)
-                    obstacle.isOnTimeZone = true;
+                //obstacle.timeScaleMultiply = timeScaleMultiply;
+                obstacle.zoneTimeScaleQueue.Enqueue(timeScaleMultiply);
+                Debug.Log("Enqueue : " + timeScaleMultiply);
+                //obstacle.isOnTimeZone = true;
                 obstacle.UpdateTimeScale();
             }
         }
@@ -76,22 +70,16 @@ public class ZoneCtrl : MonoBehaviour {
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if(isActiveOnlyIfClicked)
-        {
-            if (!PlayerCtrl.isClick)
-                return;
-            
-        }
         if (collision.CompareTag("Obstacle"))
         {
             Debug.Log("Exit");
             ObstacleCtrl obstacle = collision.GetComponent<ObstacleCtrl>();
             if(obstacle != null)
             {
-                obstacle.timeScaleMultiply = 1f;
-
-                if (isActiveOnlyIfClicked)
-                    obstacle.isOnTimeZone = false;
+                //obstacle.timeScaleMultiply = 1f;
+                float t = obstacle.zoneTimeScaleQueue.Dequeue();
+                Debug.Log("Dequeue : " + t);
+                //obstacle.isOnTimeZone = false;
                 obstacle.UpdateTimeScale();
             }
         }

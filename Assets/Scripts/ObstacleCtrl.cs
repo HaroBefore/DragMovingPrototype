@@ -27,10 +27,14 @@ public struct WayPoint
     }
 }
 
+[RequireComponent(typeof(DOTweenPath))]
 public class ObstacleCtrl : MonoBehaviour {
 
     [ComponentSelection]
     public DOTweenPath doTweenPath;
+
+    [HideInInspector]
+    public Queue<float> zoneTimeScaleQueue;
 
     [Comment("WayPoint 설정 후 클릭")]
     [Button("Reset wayPointPath Position", "ResetArrWayPoint", true)]
@@ -97,6 +101,7 @@ public class ObstacleCtrl : MonoBehaviour {
     private void Awake()
     {
         doTweenPath = GetComponent<DOTweenPath>();
+        zoneTimeScaleQueue = new Queue<float>();
         beginScale = transform.localScale;
 
         ResetArrWayPoint();
@@ -199,22 +204,35 @@ public class ObstacleCtrl : MonoBehaviour {
 
     public void UpdateTimeScale()
     {
-        if(scaleTweener != null)
-            scaleTweener.timeScale = originChangeScaleDuration = (1f) * timeScaleMultiply;
-        if(rotTweener != null)
-            rotTweener.timeScale = originAngleTimeScale = (normalAnglePerSec + arrWayPoint[curWayPointIdx].addAngle) * timeScaleMultiply;
-        if(pathTweener != null)
-            pathTweener.timeScale = originSpeedTimeScale = (normalSpeedPerSec + arrWayPoint[curWayPointIdx].addSpeed) * timeScaleMultiply;
+        if (zoneTimeScaleQueue.Count == 0)
+            timeScaleMultiply = 1f;
 
-        if (PlayerCtrl.isClick && !isOnTimeZone)
+        if(scaleTweener != null)
+            scaleTweener.timeScale = originChangeScaleDuration = 1f;
+        if(rotTweener != null)
+            rotTweener.timeScale = originAngleTimeScale = (normalAnglePerSec + arrWayPoint[curWayPointIdx].addAngle);
+        if(pathTweener != null)
+            pathTweener.timeScale = originSpeedTimeScale = (normalSpeedPerSec + arrWayPoint[curWayPointIdx].addSpeed);
+
+        if (PlayerCtrl.isClick)
         {
-            if(scaleTweener != null)
-                scaleTweener.timeScale = originChangeScaleDuration * 0.05f;
-            if(rotTweener != null)
-                rotTweener.timeScale = originAngleTimeScale * 0.05f;
-            if(pathTweener != null)
-                pathTweener.timeScale = originSpeedTimeScale * 0.05f;
+            isOnTimeZone = zoneTimeScaleQueue.Count > 0 ? true : false;
+
+            Debug.Log("zoneTImeScaleCnt : " + zoneTimeScaleQueue.Count);
+            if (isOnTimeZone)
+                Debug.Log("PeekScale : " + zoneTimeScaleQueue.Peek());
+
+            timeScaleMultiply = isOnTimeZone ? zoneTimeScaleQueue.Peek() : GameManager.Instance.baseicClickedTimeScaleMultiply;
+    
+            if (scaleTweener != null)
+                scaleTweener.timeScale = originChangeScaleDuration * timeScaleMultiply;
+            if (rotTweener != null)
+                rotTweener.timeScale = originAngleTimeScale * timeScaleMultiply;
+            if (pathTweener != null)
+                pathTweener.timeScale = originSpeedTimeScale * timeScaleMultiply;
         }
+
+        Debug.Log("TimeScale : " + timeScaleMultiply);
     }
 
     public Tweener MakeRotTweener(bool isRightRot, float addAngle)
