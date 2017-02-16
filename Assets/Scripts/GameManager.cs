@@ -19,6 +19,8 @@ public class GameManager : MonoBehaviour {
 
     public eGameState gameState = eGameState.None;
 
+    public bool isShowAd = false;
+
     UIManager uiManager;
 
     GoalCtrl goalCtrl;
@@ -63,7 +65,8 @@ public class GameManager : MonoBehaviour {
 
     IEnumerator CoGameStart()
     {
-        //AdManager.ShowBannerAd(BannerAdPosition.Bottom, BannerAdSize.SmartBanner);
+        if(isShowAd)
+            AdManager.ShowBannerAd(BannerAdPosition.Bottom, BannerAdSize.SmartBanner);
         yield return null;
 
         //레벨 번호 보이고 사라짐
@@ -86,7 +89,8 @@ public class GameManager : MonoBehaviour {
         yield return new WaitForSeconds(0.8f);
         yield return StartCoroutine(goalCtrl.CoGameStart());
         yield return StartCoroutine(playerCtrl.CoGameStart());
-        //AdManager.HideBannerAd(BannerAdNetwork.AdMob);
+        if(isShowAd)
+            AdManager.HideBannerAd(BannerAdNetwork.AdMob);
 
         uiManager.textLevelNum.SetActive(false);
 
@@ -107,7 +111,8 @@ public class GameManager : MonoBehaviour {
 
         gameState = eGameState.gamePlaying;
 
-        //EasyMobileManager.ShowInterstitialAd();
+        if(isShowAd)
+            EasyMobileManager.ShowInterstitialAd();
     }
 
     public IEnumerator CoGameWin()
