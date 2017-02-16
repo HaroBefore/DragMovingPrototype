@@ -17,7 +17,7 @@ public struct WayPoint
     public float addSpeed;
     public float addAngle;
     public bool isFlipRotate;
-    public bool useSetting;
+    public bool useScaleSetting;
     public WayPoint(Vector3 scale, Vector3 pos, float addSpeed, float addAngle, bool isFlipRotate)
     {
         this.scale = scale;
@@ -25,7 +25,7 @@ public struct WayPoint
         this.addSpeed = addSpeed;
         this.addAngle = addAngle;
         this.isFlipRotate = isFlipRotate;
-        useSetting = true;
+        useScaleSetting = true;
     }
 }
 
@@ -81,7 +81,7 @@ public class ObstacleCtrl : MonoBehaviour
                     break;
                 arrWayPoint[i] = oldArrWayPoint[i];
             }
-            if (!oldArrWayPoint[i].useSetting)
+            if (!oldArrWayPoint[i].useScaleSetting)
                 arrWayPoint[i].scale = transform.localScale;
 
             arrWayPoint[i].pos = doTweenPath.wps[i];
