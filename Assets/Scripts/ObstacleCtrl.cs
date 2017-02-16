@@ -17,6 +17,7 @@ public struct WayPoint
     public float addSpeed;
     public float addAngle;
     public bool isFlipRotate;
+    public bool useSetting;
     public WayPoint(Vector3 scale, Vector3 pos, float addSpeed, float addAngle, bool isFlipRotate)
     {
         this.scale = scale;
@@ -24,11 +25,13 @@ public struct WayPoint
         this.addSpeed = addSpeed;
         this.addAngle = addAngle;
         this.isFlipRotate = isFlipRotate;
+        useSetting = true;
     }
 }
 
 [RequireComponent(typeof(DOTweenPath))]
-public class ObstacleCtrl : MonoBehaviour {
+public class ObstacleCtrl : MonoBehaviour
+{
 
     [ComponentSelection]
     public DOTweenPath doTweenPath;
@@ -57,6 +60,7 @@ public class ObstacleCtrl : MonoBehaviour {
 
     void ResetArrWayPoint()
     {
+
         WayPoint[] oldArrWayPoint = arrWayPoint;
         if (doTweenPath == null)
             Debug.Log("[Error]ObstacleCtrl - DoTweenPath가 null 입니다");
@@ -70,13 +74,18 @@ public class ObstacleCtrl : MonoBehaviour {
 
         for (int i = 0; i < cnt; i++)
         {
+
             if (oldArrWayPoint != null)
             {
                 if (oldArrWayPoint.Length == i)
                     break;
                 arrWayPoint[i] = oldArrWayPoint[i];
             }
+            if (!oldArrWayPoint[i].useSetting)
+                arrWayPoint[i].scale = transform.localScale;
+
             arrWayPoint[i].pos = doTweenPath.wps[i];
+
         }
     }
 
@@ -107,26 +116,27 @@ public class ObstacleCtrl : MonoBehaviour {
         ResetArrWayPoint();
 
         WayPoint[] temp = arrWayPoint;
-        arrWayPoint = new WayPoint[temp.Length+1];
+        arrWayPoint = new WayPoint[temp.Length + 1];
 
         arrWayPoint[0].scale = transform.localScale;
         arrWayPoint[0].pos = transform.position;
 
         for (int i = 1; i < arrWayPoint.Length; i++)
         {
-            arrWayPoint[i] = temp[i-1];
+            arrWayPoint[i] = temp[i - 1];
         }
     }
     // Use this for initialization
-    void Start () {
+    void Start()
+    {
         StartCoroutine(CoInit());
     }
 
-    
+
     public IEnumerator CoInit()
     {
         yield return null;
-        
+
         wayPointPath = new Vector3[arrWayPoint.Length];
         for (int i = 0; i < wayPointPath.Length; i++)
         {
@@ -149,7 +159,7 @@ public class ObstacleCtrl : MonoBehaviour {
 
     public void OnGameStart()
     {
-        if(isBeginAnimateScale)
+        if (isBeginAnimateScale)
             transform.DOScale(beginScale, 0.2f);
 
         rotTweener = transform.DORotate(transform.rotation.eulerAngles + new Vector3(0f, 0f, 360f), 1f, RotateMode.LocalAxisAdd)
@@ -158,8 +168,8 @@ public class ObstacleCtrl : MonoBehaviour {
             .SetLoops(-1)
             .Pause();
         rotTweener.timeScale = originAngleTimeScale = normalAnglePerSec;
-        
-        if(wayPointPath.Length > 1)
+
+        if (wayPointPath.Length > 1)
         {
             pathTweener = transform.DOPath(wayPointPath, 1f)
                 .SetLoops(-1, LoopType.Yoyo)
@@ -189,16 +199,16 @@ public class ObstacleCtrl : MonoBehaviour {
                 });
             pathTweener.timeScale = originSpeedTimeScale = normalSpeedPerSec;
         }
-        
+
         StartCoroutine(CoPlay(pathTweener, rotTweener));
     }
 
     IEnumerator CoPlay(TweenerCore<Vector3, Path, DG.Tweening.Plugins.Options.PathOptions> pathTweener, Tweener rotTweener)
     {
         yield return new WaitForSeconds(0.5f);
-        if(pathTweener != null)
+        if (pathTweener != null)
             pathTweener.Play();
-        if(rotTweener != null)
+        if (rotTweener != null)
             rotTweener.Play();
     }
 
@@ -207,11 +217,11 @@ public class ObstacleCtrl : MonoBehaviour {
         if (zoneTimeScaleQueue.Count == 0)
             timeScaleMultiply = 1f;
 
-        if(scaleTweener != null)
+        if (scaleTweener != null)
             scaleTweener.timeScale = originChangeScaleDuration = 1f;
-        if(rotTweener != null)
+        if (rotTweener != null)
             rotTweener.timeScale = originAngleTimeScale = (normalAnglePerSec + arrWayPoint[curWayPointIdx].addAngle);
-        if(pathTweener != null)
+        if (pathTweener != null)
             pathTweener.timeScale = originSpeedTimeScale = (normalSpeedPerSec + arrWayPoint[curWayPointIdx].addSpeed);
 
         if (PlayerCtrl.isClick)
@@ -219,7 +229,7 @@ public class ObstacleCtrl : MonoBehaviour {
             isOnTimeZone = zoneTimeScaleQueue.Count > 0 ? true : false;
 
             timeScaleMultiply = isOnTimeZone ? zoneTimeScaleQueue.Peek() : GameManager.Instance.baseicClickedTimeScaleMultiply;
-    
+
             if (scaleTweener != null)
                 scaleTweener.timeScale = originChangeScaleDuration * timeScaleMultiply;
             if (rotTweener != null)

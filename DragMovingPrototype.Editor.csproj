@@ -109,9 +109,6 @@
     <Reference Include="UnityEditor.Android.Extensions">
       <HintPath>Library\UnityAssemblies\UnityEditor.Android.Extensions.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEditor.iOS.Extensions">
-      <HintPath>Library\UnityAssemblies\UnityEditor.iOS.Extensions.dll</HintPath>
-    </Reference>
     <Reference Include="UnityEditor.WebGL.Extensions">
       <HintPath>Library\UnityAssemblies\UnityEditor.WebGL.Extensions.dll</HintPath>
     </Reference>
@@ -120,12 +117,6 @@
     </Reference>
     <Reference Include="SyntaxTree.VisualStudio.Unity.Bridge">
       <HintPath>Library\UnityAssemblies\SyntaxTree.VisualStudio.Unity.Bridge.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEditor.iOS.Extensions.Xcode">
-      <HintPath>Library\UnityAssemblies\UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEditor.iOS.Extensions.Common">
-      <HintPath>Library\UnityAssemblies\UnityEditor.iOS.Extensions.Common.dll</HintPath>
     </Reference>
     <Reference Include="Firebase.Editor">
       <HintPath>Assets\Firebase\Editor\Firebase.Editor.dll</HintPath>
@@ -349,9 +340,9 @@
     <None Include="Assets\ThirdPartyAssets\Demigiant\DemiLib\Core\DemiLib.xml" />
     <None Include="Assets\ThirdPartyAssets\Demigiant\DemiLib\Core\Editor\DemiEditor.xml" />
     <None Include="Assets\ThirdPartyAssets\Demigiant\readme_DOTweenPro.txt" />
-    <None Include="Assets\ThirdPartyAssets\Illogika\ScriptTemplates\100-C%23 Named Script-NewNamedBehaviourScript.cs.txt" />
-    <None Include="Assets\ThirdPartyAssets\Illogika\ScriptTemplates\101-C%23 Custom Keyword-NewKeywordScript.cs.txt" />
-    <None Include="Assets\ThirdPartyAssets\Illogika\ScriptTemplates\102-C%23 Custom Keyword Editor-NewKeywordEditorScript.cs.txt" />
+    <None Include="Assets\ThirdPartyAssets\Illogika\ScriptTemplates\100-C# Named Script-NewNamedBehaviourScript.cs.txt" />
+    <None Include="Assets\ThirdPartyAssets\Illogika\ScriptTemplates\101-C# Custom Keyword-NewKeywordScript.cs.txt" />
+    <None Include="Assets\ThirdPartyAssets\Illogika\ScriptTemplates\102-C# Custom Keyword Editor-NewKeywordEditorScript.cs.txt" />
     <None Include="Assets\ThirdPartyAssets\Mad Level Manager\Examples\Example 5 - Unity 5\README.txt" />
     <None Include="Assets\ThirdPartyAssets\Mad Level Manager\Examples\Stuff\Fonts\Boogaloo New\SIL OFL Font License Boogaloo.txt" />
     <None Include="Assets\ThirdPartyAssets\Mad Level Manager\Examples\Stuff\Fonts\Boogaloo New\boogaloo.txt" />
