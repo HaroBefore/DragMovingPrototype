@@ -105,6 +105,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\CurveGenerator.cs" />
     <Compile Include="Assets\EasyMobile\Demo\Scripts\AdvertisingDemo.cs" />
     <Compile Include="Assets\EasyMobile\Demo\Scripts\ColorChooser.cs" />
     <Compile Include="Assets\EasyMobile\Demo\Scripts\DemoHomeController.cs" />
@@ -140,6 +141,7 @@
     <Compile Include="Assets\EasyMobile\Script\MobileNativeUI\Platforms\iOSNativeAlert.cs" />
     <Compile Include="Assets\EasyMobile\Script\Notification\NotificationManager.cs" />
     <Compile Include="Assets\EasyMobile\Script\Notification\NotificationSettings.cs" />
+    <Compile Include="Assets\PennerDoubleAnimation.cs" />
     <Compile Include="Assets\Scripts\EasyMobileManager.cs" />
     <Compile Include="Assets\Scripts\Enums.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
