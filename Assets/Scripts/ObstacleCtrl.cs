@@ -52,10 +52,11 @@ public class ObstacleCtrl : MonoBehaviour
     public float normalAnglePerSec;
     public float changeScaleDuration = 0.2f;
     public float timeScaleMultiply = 1f;
+    public float delay = 0f;
     public LoopType looptype = LoopType.Yoyo;
     [Readonly]
     public bool isOnTimeZone = false;
-
+    
     public AnimationCurve easeCurve;
 
     void ResetArrWayPoint()
@@ -171,11 +172,12 @@ public class ObstacleCtrl : MonoBehaviour
         if (wayPointPath.Length > 1)
         {
             pathTweener = transform.DOPath(wayPointPath, 1f)
-                .SetLoops(-1, LoopType.Yoyo)
+                .SetLoops(-1, looptype)
                 .SetAutoKill(false)
                 .SetEase(easeCurve)
                 .SetSpeedBased(true)
                 .Pause()
+                .SetDelay(delay)
                 .OnWaypointChange(idx =>
                 {
                     curWayPointIdx = idx;
