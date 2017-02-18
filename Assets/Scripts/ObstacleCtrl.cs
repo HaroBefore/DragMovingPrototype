@@ -52,7 +52,7 @@ public class ObstacleCtrl : MonoBehaviour
     public float normalAnglePerSec;
     public float changeScaleDuration = 0.2f;
     public float timeScaleMultiply = 1f;
-
+    public LoopType looptype = LoopType.Yoyo;
     [Readonly]
     public bool isOnTimeZone = false;
 
@@ -112,7 +112,6 @@ public class ObstacleCtrl : MonoBehaviour
         doTweenPath = GetComponent<DOTweenPath>();
         zoneTimeScaleQueue = new Queue<float>();
         beginScale = transform.localScale;
-
         ResetArrWayPoint();
 
         WayPoint[] temp = arrWayPoint;
