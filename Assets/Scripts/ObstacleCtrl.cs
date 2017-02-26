@@ -177,7 +177,7 @@ public class ObstacleCtrl : MonoBehaviour
                 .SetEase(easeCurve)
                 .SetSpeedBased(true)
                 .Pause()
-                .SetDelay(delay)
+                .SetDelay(delay * normalSpeedPerSec)
                 .OnWaypointChange(idx =>
                 {
                     curWayPointIdx = idx;
