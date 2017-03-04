@@ -15,6 +15,7 @@ public class PlayerCtrl : MonoBehaviour {
     public bool isDieIfRelaseTouch = false;
 
     Vector3 offset;
+    Touch touch;
 
     TrailRenderer trail;
 
@@ -36,7 +37,7 @@ public class PlayerCtrl : MonoBehaviour {
     public IEnumerator CoGameStart()
     {
         //Tweener tweener = transform.DOScale(new Vector3(0.3f, 0.3f, 0.3f), 1f);
-        yield return transform.DOScale(new Vector3(0.3f, 0.3f, 0.3f), 1f).WaitForCompletion();
+        yield return transform.DOScale(new Vector3(0.4f, 0.4f, 0.4f), 1f).WaitForCompletion();
         //trail.Clear();
         //trail.enabled = true;
     }
@@ -59,7 +60,11 @@ public class PlayerCtrl : MonoBehaviour {
 
                 //Debug.Log(Camera.main.ScreenToWorldPoint(mousePos));
                 if (pos != Vector3.zero)
-                    transform.position = Camera.main.ScreenToWorldPoint(pos);
+                {
+                    Vector3 movePos = Camera.main.ScreenToWorldPoint(pos);
+                    if ((movePos - transform.position).sqrMagnitude < 2.5f * 2.5f)
+                        transform.position = movePos;
+                }
             }
         }
     }
@@ -76,6 +81,7 @@ public class PlayerCtrl : MonoBehaviour {
         if (EventBeginClickedPlayer != null)
             EventBeginClickedPlayer();
     }
+
 
     private void OnMouseUp()
     {
