@@ -6,12 +6,15 @@ using UnityEngine;
 
 public class FixedObstacleCtrl : Obstacle
 {
-    public Vector3 destScale;
+    public Vector2 destScale;
     bool isBeginToDest = true;
+
+    Vector3 destScaleVec3;
 
     new private void Start()
     {
         GameManager.Instance.EventGameStart += OnGameStart;
+        destScaleVec3 = destScale;
     }
 
     public void OnDestroy()
@@ -41,7 +44,6 @@ public class FixedObstacleCtrl : Obstacle
         rotTweener.timeScale = originAngleTimeScale = normalAnglePerSec;
 
         scaleTweener = ToScale();
-        scaleTweener.timeScale = originChangeScaleSpeed = changeScaleSpeed;
 
         StartCoroutine(CoPlay());
     }
@@ -49,7 +51,6 @@ public class FixedObstacleCtrl : Obstacle
     IEnumerator CoPlay()
     {
         yield return null;
-        //yield return new WaitForSeconds(0.5f);
         if (isBeginToPlay)
         {
             isPlayingTween = true;
@@ -66,10 +67,9 @@ public class FixedObstacleCtrl : Obstacle
 
     public Tweener ToScale()
     {
-        Vector3 scale = isBeginToDest ? destScale : beginScale;
-        var tween = transform.DOScale(scale, 1f)
+        Vector3 scale = isBeginToDest ? destScaleVec3 : beginScale;
+        var tween = transform.DOScale(scale, changeScaleSpeed)
             .SetEase(Ease.Linear)
-            .SetSpeedBased(true)
             .Pause()
             .OnComplete(() =>
             {
@@ -83,11 +83,12 @@ public class FixedObstacleCtrl : Obstacle
 
     public override void UpdateTimeScale()
     {
+
         if (zoneTimeScaleQueue.Count == 0)
             timeScaleMultiply = 1f;
 
         if (scaleTweener != null)
-            scaleTweener.timeScale = originChangeScaleSpeed = changeScaleSpeed;
+            scaleTweener.timeScale = 1f;
         if (rotTweener != null)
             rotTweener.timeScale = originAngleTimeScale = normalAnglePerSec;
 
@@ -96,7 +97,7 @@ public class FixedObstacleCtrl : Obstacle
         if (PlayerCtrl.isClick)
         {
             if (scaleTweener != null)
-                scaleTweener.timeScale = originChangeScaleSpeed * timeScaleMultiply;
+                scaleTweener.timeScale = 1f * timeScaleMultiply;
             if (rotTweener != null)
                 rotTweener.timeScale = originAngleTimeScale * timeScaleMultiply;
         }
