@@ -25,8 +25,8 @@ public abstract class Obstacle : MonoBehaviour {
     public bool isBeginAnimateScale = false;
 
     public float timeScaleMultiply = 1f;
-    [Readonly]
-    public bool isOnTimeZone = false;
+   // [Readonly]
+    public bool isOnSlow = false;
 
     protected bool isPlayingTween = false;
 
@@ -142,9 +142,7 @@ public abstract class Obstacle : MonoBehaviour {
     {
         if (PlayerCtrl.isClick)
         {
-            isOnTimeZone = zoneTimeScaleQueue.Count > 0 ? true : false;
-
-            timeScaleMultiply = isOnTimeZone ? zoneTimeScaleQueue.Peek() : GameManager.Instance.baseicClickedTimeScaleMultiply;
+            timeScaleMultiply = isOnSlow ? GameManager.Instance.baseicClickedTimeScaleMultiply : 1 ;
         }
     }
 

@@ -27,8 +27,7 @@ public class GameManager : MonoBehaviour {
     [HideInInspector]
     public PlayerCtrl playerCtrl;
 
-    [Comment("Zone에 있지 않을 때 기본 TimeScale 배율")]
-    public float baseicClickedTimeScaleMultiply = 0.05f;
+    [Readonly] public float baseicClickedTimeScaleMultiply = 0.2f;
 
     private void Awake()
     {
