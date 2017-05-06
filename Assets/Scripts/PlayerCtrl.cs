@@ -43,7 +43,7 @@ public class PlayerCtrl : MonoBehaviour {
     public IEnumerator CoGameStart()
     {
         //Tweener tweener = transform.DOScale(new Vector3(0.3f, 0.3f, 0.3f), 1f);
-        yield return transform.DOScale(Vector3.one * 1.5f, 1.5f).WaitForCompletion();
+        yield return transform.DOScale(Vector3.one * 0.3f, 1.5f).WaitForCompletion();
         //trail.Clear();
         //trail.enabled = true;
 
@@ -53,46 +53,69 @@ public class PlayerCtrl : MonoBehaviour {
     {
         if(GameManager.Instance.gameState == eGameState.gamePlaying)
         {
-            if (isClick)
+            Vector3 pos = Vector3.zero;
+            if (Input.touchCount > 0)
             {
-                Vector3 pos = Vector3.zero;
-                if (Input.touchCount > 0)
+                touch = Input.touches[0];
+                if(touch.phase == TouchPhase.Began)
+                {
+                    BeginClick();
+                }
+
+                if(touch.phase == TouchPhase.Ended || touch.phase == TouchPhase.Canceled)
+                {
+                    EndClick();
+                }
+
+                if(isClick)
                 {
                     pos = Input.GetTouch(0).position;
+                    pos.z = 10;
                 }
+            }
 #if UNITY_EDITOR
-                pos = Input.mousePosition;
-#endif
-                pos.z = 10;
-
-                //Debug.Log(Camera.main.ScreenToWorldPoint(mousePos));
-                if (pos != Vector3.zero)
+            else
+            {
+                if (Input.GetMouseButtonDown(0))
                 {
-                    Vector3 movePos = Camera.main.ScreenToWorldPoint(pos);
-                    if ((movePos - transform.position).sqrMagnitude < 2.5f * 2.5f)
-                        transform.position = movePos;
+                    BeginClick();
                 }
+                if (Input.GetMouseButtonUp(0))
+                {
+                    EndClick();
+                }
+
+                if (isClick)
+                {
+                    pos = Input.mousePosition;
+                    pos.z = 10;
+                    Debug.Log("Clicking");
+                }
+            }
+#endif
+
+            //Debug.Log(Camera.main.ScreenToWorldPoint(mousePos));
+            if (pos != Vector3.zero)
+            {
+                Vector3 movePos = Camera.main.ScreenToWorldPoint(pos);
+                transform.position = movePos + offset;// + offset;
+                //if ((movePos - transform.position).sqrMagnitude < 2.5f * 2.5f)
+                //    transform.position = movePos;
             }
         }
     }
-    
-    public void Die()
-    {
-        StartCoroutine(GameManager.Instance.CoGameLose());
-    }
 
-    private void OnMouseDown()
+    public void BeginClick()
     {
-        offset = transform.position;
+        Vector3 touchPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+
+        offset = transform.position - touchPos;
         isClick = true;
         if (EventBeginClickedPlayer != null)
             EventBeginClickedPlayer();
-
-        transform.DOScale(Vector3.zero, 0.5f);
     }
 
-
-    private void OnMouseUp()
+    public void EndClick()
     {
         isClick = false;
         offset = Vector3.zero;
@@ -103,10 +126,25 @@ public class PlayerCtrl : MonoBehaviour {
         {
             if (GameManager.Instance.gameState == eGameState.gamePlaying)
             {
-                Die();   
+                Die();
             }
         }
-        else
-            transform.DOScale(originScale, 0.5f);
+    }
+    
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        Debug.Log("Die");
+        if (GameManager.Instance.gameState == eGameState.gamePlaying)
+        {
+            if (collision.CompareTag("Obstacle"))
+            {
+                StartCoroutine(GameManager.Instance.CoGameLose());
+            }
+        }
+    }
+
+    public void Die()
+    {
+        StartCoroutine(GameManager.Instance.CoGameLose());
     }
 }

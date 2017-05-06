@@ -35,12 +35,12 @@ public class GameManager : MonoBehaviour {
 
     private void Awake()
     {
+        Application.targetFrameRate = 60;
         instance = this;
     }
 
     // Use this for initialization
     IEnumerator Start () {
-
         //gameState = eGameState.gameStartWaiting;
         //OnGameStart();
 
