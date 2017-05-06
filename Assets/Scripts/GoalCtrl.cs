@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using DG.Tweening;
 using MadLevelManager;
+using TMPro;
 
 public class GoalCtrl : MonoBehaviour {
     [HideInInspector]
@@ -12,10 +13,20 @@ public class GoalCtrl : MonoBehaviour {
     public bool endLevel;
     public string level;
 
+    public bool isTimeGoal;
+    public TextMeshProUGUI timeText;
+    public float timeLimit = 10f;
+
     private void Awake()
     {
         trigger = GetComponent<CircleCollider2D>();
         transform.localScale = Vector3.zero;
+        if (isTimeGoal)
+        {
+            timeText.text = string.Format("{0:0.0}", timeLimit);
+        }
+        else
+            timeText.text = "";
     }
 
     public IEnumerator CoGameStart()
@@ -35,5 +46,32 @@ public class GoalCtrl : MonoBehaviour {
 
             StartCoroutine(GameManager.Instance.CoGameWin());
         }
+    }
+
+    public void BeginTimer()
+    {
+        StartCoroutine(CoTimer());
+    }
+
+    IEnumerator CoTimer()
+    {
+        while(timeLimit > 0f)
+        {
+            if(PlayerCtrl.isClick)
+            {
+                yield return new WaitForSeconds(0.01f);
+                timeLimit -= 0.01f;
+            }
+            else
+            {
+                yield return new WaitForSeconds(0.1f);
+                timeLimit -= 0.1f;
+            }
+            timeText.text = string.Format("{0:0.0}", timeLimit);
+        }
+        timeLimit = 0f;
+        timeText.text = string.Format("{0:0.0}", timeLimit);
+
+        StartCoroutine(GameManager.Instance.CoGameLose());
     }
 }

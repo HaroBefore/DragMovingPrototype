@@ -6,10 +6,12 @@ using UnityEngine;
 
 public class FixedObstacleCtrl : Obstacle
 {
-    public Vector2 destScale;
+    public Vector2 destScale = Vector3.one;
     bool isBeginToDest = true;
+    public bool isRightRot = true;
 
     Vector3 destScaleVec3;
+    public float delayChangeScale = 0f;
 
     new private void Start()
     {
@@ -36,7 +38,10 @@ public class FixedObstacleCtrl : Obstacle
 
     public override void BeginObstacle()
     {
-        rotTweener = transform.DORotate(transform.rotation.eulerAngles + new Vector3(0f, 0f, 360f), 1f, RotateMode.LocalAxisAdd)
+        Vector3 rot = transform.rotation.eulerAngles;
+        rot = isRightRot ? rot - new Vector3(0f, 0f, 360f) : rot + new Vector3(0f, 0f, 360f);
+
+        rotTweener = transform.DORotate(transform.rotation.eulerAngles + rot, 1f, RotateMode.LocalAxisAdd)
             .SetEase(Ease.Linear)
             .SetSpeedBased(true)
             .SetLoops(-1)
@@ -57,7 +62,6 @@ public class FixedObstacleCtrl : Obstacle
 
             if (scaleTweener != null)
             {
-                Debug.Log("Scale");
                 scaleTweener.Play();
             }
             if (rotTweener != null)
@@ -67,10 +71,14 @@ public class FixedObstacleCtrl : Obstacle
 
     public Tweener ToScale()
     {
+
+        float delay = isOnSlow == false ? delayChangeScale :
+            PlayerCtrl.isClick ? delayChangeScale * 5f : delayChangeScale;
         Vector3 scale = isBeginToDest ? destScaleVec3 : beginScale;
         var tween = transform.DOScale(scale, changeScaleSpeed)
             .SetEase(Ease.Linear)
             .Pause()
+            .SetDelay(delay)
             .OnComplete(() =>
             {
                 isBeginToDest = !isBeginToDest;

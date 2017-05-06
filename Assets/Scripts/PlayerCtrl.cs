@@ -17,11 +17,17 @@ public class PlayerCtrl : MonoBehaviour {
     Vector3 offset;
     Touch touch;
 
+    Vector3 originScale;
+
     TrailRenderer trail;
 
     private void Awake()
     {
+        if (GameObject.FindObjectsOfType<PlayerCtrl>().Length > 1)
+            Destroy(this.gameObject);
+
         //trail = GetComponent<TrailRenderer>();
+        originScale = transform.localScale;
         transform.localScale = Vector3.zero;
         //trail.enabled = false;
 
@@ -37,9 +43,10 @@ public class PlayerCtrl : MonoBehaviour {
     public IEnumerator CoGameStart()
     {
         //Tweener tweener = transform.DOScale(new Vector3(0.3f, 0.3f, 0.3f), 1f);
-        yield return transform.DOScale(new Vector3(0.4f, 0.4f, 0.4f), 1f).WaitForCompletion();
+        yield return transform.DOScale(Vector3.one * 1.5f, 1.5f).WaitForCompletion();
         //trail.Clear();
         //trail.enabled = true;
+
     }
 
     private void FixedUpdate()
@@ -80,6 +87,8 @@ public class PlayerCtrl : MonoBehaviour {
         isClick = true;
         if (EventBeginClickedPlayer != null)
             EventBeginClickedPlayer();
+
+        transform.DOScale(Vector3.zero, 0.5f);
     }
 
 
@@ -90,22 +99,14 @@ public class PlayerCtrl : MonoBehaviour {
         if (EventEndClickedPlayer != null)
             EventEndClickedPlayer();
 
-        if(isDieIfRelaseTouch)
+        if (isDieIfRelaseTouch)
         {
             if (GameManager.Instance.gameState == eGameState.gamePlaying)
             {
                 Die();   
             }
         }
-    }
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (GameManager.Instance.gameState == eGameState.gamePlaying)
-        {
-            if (collision.CompareTag("Obstacle"))
-            {
-                StartCoroutine(GameManager.Instance.CoGameLose());
-            }
-        }
+        else
+            transform.DOScale(originScale, 0.5f);
     }
 }

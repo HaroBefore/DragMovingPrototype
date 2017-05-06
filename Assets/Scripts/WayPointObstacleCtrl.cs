@@ -13,7 +13,6 @@ using UnityEngine.Events;
 public struct WayPoint
 {
     public Vector3 scale;
-    [HideInInspector]
     public Vector3 pos;
     public float addSpeed;
     public float addAngle;
@@ -43,11 +42,17 @@ public class WayPointObstacleCtrl : Obstacle
     [Button("Reset wayPointPath Position", "ResetArrWayPoint", true)]
     public bool hidden;
 
-    public float normalSpeedPerSec;
+    [Comment("True 일 때 Local기반 움직임")]
+    public bool isLocalMove = false;
+
+    [Comment("True 일 때 속도(Seped) 기반 False 일 때 시간(Time) 기반")]
+    public bool isSpeedBased = true;
+
+    public float normalSpeedPerSec = 1f;
     public float delay = 0f;
     public LoopType looptype = LoopType.Yoyo;
     
-    public AnimationCurve easeCurve;
+    public AnimationCurve easeCurve = AnimationCurve.Linear(0f,0f,1f,1f);
 
     void ResetArrWayPoint()
     {
@@ -100,13 +105,24 @@ public class WayPointObstacleCtrl : Obstacle
 
         doTweenPath = GetComponent<DOTweenPath>();
         beginScale = transform.localScale;
-        ResetArrWayPoint();
+
+        if (!isLocalMove)
+        {
+            ResetArrWayPoint();
+        }
 
         WayPoint[] temp = arrWayPoint;
         arrWayPoint = new WayPoint[temp.Length + 1];
 
         arrWayPoint[0].scale = transform.localScale;
-        arrWayPoint[0].pos = transform.position;
+        if(isLocalMove)
+        {
+            arrWayPoint[0].pos = transform.localPosition;
+        }
+        else
+        {
+            arrWayPoint[0].pos = transform.position;
+        }
 
         for (int i = 1; i < arrWayPoint.Length; i++)
         {
@@ -145,13 +161,22 @@ public class WayPointObstacleCtrl : Obstacle
         rotTweener.Play();
         rotTweener.timeScale = originAngleTimeScale = normalAnglePerSec;
 
+        if(isLocalMove)
+        {
+            for (int i = 0; i < wayPointPath.Length; i++)
+            {
+                Debug.Log(wayPointPath[i]);
+            }
+        }
+        
+
         if (wayPointPath.Length > 1)
         {
-            pathTweener = transform.DOPath(wayPointPath, 1f)
+            pathTweener = transform.DOLocalPath(wayPointPath, 1f, gizmoColor: Color.red)
+                .SetSpeedBased(isSpeedBased)
                 .SetLoops(-1, looptype)
                 .SetAutoKill(false)
                 .SetEase(easeCurve)
-                .SetSpeedBased(true)
                 .Pause()
                 .SetDelay(delay * normalSpeedPerSec)
                 .OnWaypointChange(idx =>

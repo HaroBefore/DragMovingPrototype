@@ -21,13 +21,17 @@ public class GameManager : MonoBehaviour {
 
     public bool isShowAd = false;
 
+    public Color goalColor;
+    public Color timeGoalColor;
+
     UIManager uiManager;
 
     GoalCtrl goalCtrl;
     [HideInInspector]
     public PlayerCtrl playerCtrl;
 
-    [Readonly] public float baseicClickedTimeScaleMultiply = 0.2f;
+    [Readonly]
+    public float baseicClickedTimeScaleMultiply = 0.2f;
 
     private void Awake()
     {
@@ -84,6 +88,8 @@ public class GameManager : MonoBehaviour {
         //////////////
 
         goalCtrl.trigger.radius = 0.4f;
+        if (goalCtrl.isTimeGoal)
+            goalCtrl.GetComponent<SpriteRenderer>().color = timeGoalColor;
 
         yield return new WaitForSeconds(0.8f);
         yield return StartCoroutine(goalCtrl.CoGameStart());
@@ -107,6 +113,7 @@ public class GameManager : MonoBehaviour {
             MadLevel.ReloadCurrent();
         });
         //////////////////
+        goalCtrl.BeginTimer();
 
         gameState = eGameState.gamePlaying;
 

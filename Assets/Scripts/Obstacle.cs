@@ -58,7 +58,7 @@ public abstract class Obstacle : MonoBehaviour {
     public void OnGameStart()
     {
         if (isBeginAnimateScale)
-            transform.DOScale(beginScale, 0.2f);
+            transform.DOScale(beginScale, 0.1f);
 
         BeginObstacle();
     }
