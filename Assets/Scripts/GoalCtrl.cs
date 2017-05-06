@@ -50,7 +50,8 @@ public class GoalCtrl : MonoBehaviour {
 
     public void BeginTimer()
     {
-        StartCoroutine(CoTimer());
+        if(isTimeGoal)
+            StartCoroutine(CoTimer());
     }
 
     IEnumerator CoTimer()
