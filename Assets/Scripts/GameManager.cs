@@ -30,7 +30,7 @@ public class GameManager : MonoBehaviour {
     [HideInInspector]
     public PlayerCtrl playerCtrl;
 
-    [Readonly]
+    
     public float baseicClickedTimeScaleMultiply = 0.2f;
 
     private void Awake()
@@ -77,7 +77,7 @@ public class GameManager : MonoBehaviour {
         Int32.TryParse(MadLevel.arguments, out levelNum);
         Debug.Log("arg " + MadLevel.arguments);
         Debug.Log("levelNum " + levelNum);
-        uiManager.textLevelNum.GetComponent<Text>().text = " - " + levelNum + " - ";
+        uiManager.textLevelNum.GetComponent<Text>().text = levelNum.ToString();
 
         uiManager.textLevelNum.SetActive(true);
         //////////
@@ -134,10 +134,11 @@ public class GameManager : MonoBehaviour {
 
     public IEnumerator CoGameLose()
     {
-        gameState = eGameState.gameOver;
-        uiManager.goImgGameLose.SetActive(true);
-        uiManager.goBtnGameRestart.SetActive(true);
-        uiManager.goBtnGameBack.SetActive(true);
+        //gameState = eGameState.gameOver;
+        //uiManager.goImgGameLose.SetActive(true);
+        //uiManager.goBtnGameRestart.SetActive(true);
+        //uiManager.goBtnGameBack.SetActive(true);
+        MadLevel.ReloadCurrent();
         yield return null;
     }
 

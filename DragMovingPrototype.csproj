@@ -152,11 +152,13 @@
     <Compile Include="Assets\Scripts\Enums.cs" />
     <Compile Include="Assets\Scripts\FixedObstacleCtrl.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
+    <Compile Include="Assets\Scripts\GoMenu.cs" />
     <Compile Include="Assets\Scripts\GoalCtrl.cs" />
     <Compile Include="Assets\Scripts\Helper.cs" />
     <Compile Include="Assets\Scripts\Obstacle.cs" />
     <Compile Include="Assets\Scripts\PlayerBodyCtrl.cs" />
     <Compile Include="Assets\Scripts\PlayerCtrl.cs" />
+    <Compile Include="Assets\Scripts\RotateExtraOptions.cs" />
     <Compile Include="Assets\Scripts\TitleManager.cs" />
     <Compile Include="Assets\Scripts\UIManager.cs" />
     <Compile Include="Assets\Scripts\WayPointObstacleCtrl.cs" />

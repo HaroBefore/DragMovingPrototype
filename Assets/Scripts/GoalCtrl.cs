@@ -39,12 +39,13 @@ public class GoalCtrl : MonoBehaviour {
     {
         if(collision.CompareTag("Player"))
         {
-            MadLevelProfile.SetLevelBoolean(MadLevel.currentLevelName, "star_1", true);
-            MadLevelProfile.SetLevelBoolean(MadLevel.currentLevelName, "star_2", true);
-            MadLevelProfile.SetLevelBoolean(MadLevel.currentLevelName, "star_3", true);
-            MadLevelProfile.SetCompleted(MadLevel.currentLevelName, true);
+            //MadLevelProfile.SetLevelBoolean(MadLevel.currentLevelName, "star_1", true);
+            //MadLevelProfile.SetLevelBoolean(MadLevel.currentLevelName, "star_2", true);
+            //MadLevelProfile.SetLevelBoolean(MadLevel.currentLevelName, "star_3", true);
+            //MadLevelProfile.SetCompleted(MadLevel.currentLevelName, true);
+            MadLevel.LoadNext();
 
-            StartCoroutine(GameManager.Instance.CoGameWin());
+            //StartCoroutine(GameManager.Instance.CoGameWin());
         }
     }
 

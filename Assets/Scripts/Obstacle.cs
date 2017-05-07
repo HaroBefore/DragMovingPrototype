@@ -11,7 +11,9 @@ public abstract class Obstacle : MonoBehaviour {
     public bool isBeginToPlay = true;
 
     protected Tweener scaleTweener;
-    protected Tweener rotTweener;
+
+    [HideInInspector] // 임시수정
+    public Tweener rotTweener;
 
     protected Vector3 beginScale;
 
