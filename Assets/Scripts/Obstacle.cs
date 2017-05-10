@@ -12,8 +12,7 @@ public abstract class Obstacle : MonoBehaviour {
 
     protected Tweener scaleTweener;
 
-    [HideInInspector] // 임시수정
-    public Tweener rotTweener;
+    protected Tweener rotTweener;
 
     protected Vector3 beginScale;
 
