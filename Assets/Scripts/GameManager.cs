@@ -134,7 +134,7 @@ public class GameManager : MonoBehaviour {
 
     public IEnumerator CoGameLose()
     {
-        //gameState = eGameState.gameOver;
+        gameState = eGameState.gameOver;
         //uiManager.goImgGameLose.SetActive(true);
         //uiManager.goBtnGameRestart.SetActive(true);
         //uiManager.goBtnGameBack.SetActive(true);

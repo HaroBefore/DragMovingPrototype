@@ -12,9 +12,14 @@ public enum Option
     Flip = 2
 }
 
+
 public class FixedObstacleCtrl_test : Obstacle
 {
+    [Header("회전")]
+    [Space]
+    public bool isRightRot = true;
     public Option rotateOption;
+    public AnimationCurve rotateEaseCurve = AnimationCurve.Linear(0f, 0f, 1f, 1f);
     [HideConditional(true, "rotateOption", (int)Option.Phase)]
     public float phaseRot;
     [HideConditional(true, "rotateOption", (int)Option.Phase)]
@@ -27,14 +32,17 @@ public class FixedObstacleCtrl_test : Obstacle
     [HideConditional(true, "rotateOption", (int)Option.Flip)]
     public bool flipDelayOnAwake;
     [Space]
+    [Space]
 
-
+    [Header("크기변환")]
+    [Space]
     public Vector2 destScale = Vector3.one;
+    public AnimationCurve scaleEaseCurve = AnimationCurve.Linear(0f, 0f, 1f, 1f);
     bool isBeginToDest = true;
-    public bool isRightRot = true;
 
     Vector3 destScaleVec3;
     public float delayChangeScale = 0f;
+    public float scaleOnAwakeDelay;
 
     new private void Start()
     {
@@ -98,7 +106,7 @@ public class FixedObstacleCtrl_test : Obstacle
                 {
                     rot = isRightRot ? rot + new Vector3(0f, 0f, phaseRot) : rot - new Vector3(0f, 0f, phaseRot);
                     tween = transform.DORotate(transform.rotation.eulerAngles + rot*-1, 1f, RotateMode.LocalAxisAdd)
-                        .SetEase(Ease.Linear)
+                        .SetEase(rotateEaseCurve)
                         .SetSpeedBased(true)
                         .Pause()
                         .SetDelay(_phaseDuration = isPhase ? phaseDuration * normalAnglePerSec : 0)
@@ -115,7 +123,7 @@ public class FixedObstacleCtrl_test : Obstacle
                 {
                     rot = isRightRot ? rot + new Vector3(0f, 0f, flipRot) : rot - new Vector3(0f, 0f, flipRot);
                     tween = transform.DORotate(transform.rotation.eulerAngles + rot* -1, 1f, RotateMode.LocalAxisAdd)
-                        .SetEase(Ease.Linear)
+                        .SetEase(rotateEaseCurve)
                         .SetSpeedBased(true)
                         .SetDelay(_flipDelay = flipDelayOnAwake ? flipDelay * normalAnglePerSec : 0)
                         .OnComplete(() =>
@@ -131,7 +139,7 @@ public class FixedObstacleCtrl_test : Obstacle
             default:
                 rot = isRightRot ? rot - new Vector3(0f, 0f, 360f) : rot + new Vector3(0f, 0f, 360f);
                 tween = transform.DORotate(transform.rotation.eulerAngles + rot, 1f, RotateMode.LocalAxisAdd)
-                        .SetEase(Ease.Linear)
+                        .SetEase(rotateEaseCurve)
                         .SetSpeedBased(true)
                         .SetLoops(-1)
                         .Pause();
@@ -147,11 +155,12 @@ public class FixedObstacleCtrl_test : Obstacle
             PlayerCtrl.isClick ? delayChangeScale * 5f : delayChangeScale;
         Vector3 scale = isBeginToDest ? destScaleVec3 : beginScale;
         Tweener tween = transform.DOScale(scale, changeScaleSpeed)
-            .SetEase(Ease.Linear)
+            .SetEase(scaleEaseCurve)
             .Pause()
-            .SetDelay(delay)
+            .SetDelay(delay = scaleOnAwakeDelay > 0 ? delay+ scaleOnAwakeDelay : delay)
             .OnComplete(() =>
             {
+                scaleOnAwakeDelay = 0;
                 isBeginToDest = !isBeginToDest;
                 scaleTweener = ToScale();
                 UpdateTimeScale();
