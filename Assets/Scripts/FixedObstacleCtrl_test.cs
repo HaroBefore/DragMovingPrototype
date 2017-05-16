@@ -18,6 +18,7 @@ public class FixedObstacleCtrl_test : Obstacle
     [Header("회전")]
     [Space]
     public bool isRightRot = true;
+    public float rotateOnAwakeDelay;
     public Option rotateOption;
     public AnimationCurve rotateEaseCurve = AnimationCurve.Linear(0f, 0f, 1f, 1f);
     [HideConditional(true, "rotateOption", (int)Option.Phase)]
@@ -30,7 +31,6 @@ public class FixedObstacleCtrl_test : Obstacle
     [HideConditional(true, "rotateOption", (int)Option.Flip)]
     public float flipDelay;
     [HideConditional(true, "rotateOption", (int)Option.Flip)]
-    public bool flipDelayOnAwake;
     [Space]
     [Space]
 
@@ -109,11 +109,13 @@ public class FixedObstacleCtrl_test : Obstacle
                         .SetEase(rotateEaseCurve)
                         .SetSpeedBased(true)
                         .Pause()
-                        .SetDelay(_phaseDuration = isPhase ? phaseDuration * normalAnglePerSec : 0)
+                        .SetDelay(_phaseDuration = rotateOnAwakeDelay > 0 ? (phaseDuration + rotateOnAwakeDelay)* normalAnglePerSec : phaseDuration * normalAnglePerSec)
                         .OnComplete(() =>
                         {
+                            rotateOnAwakeDelay = 0;
                             rotTweener = ToRotate();
                             UpdateTimeScale();
+                            onPause.Invoke();
                             rotTweener.Play();
                         });
                         isPhase = true;
@@ -125,15 +127,16 @@ public class FixedObstacleCtrl_test : Obstacle
                     tween = transform.DORotate(transform.rotation.eulerAngles + rot* -1, 1f, RotateMode.LocalAxisAdd)
                         .SetEase(rotateEaseCurve)
                         .SetSpeedBased(true)
-                        .SetDelay(_flipDelay = flipDelayOnAwake ? flipDelay * normalAnglePerSec : 0)
+                        .SetDelay(_flipDelay = rotateOnAwakeDelay>0 ? (flipDelay + rotateOnAwakeDelay) * normalAnglePerSec : flipDelay * normalAnglePerSec)
                         .OnComplete(() =>
                         {
+                            rotateOnAwakeDelay = 0;
                             isRightRot = !isRightRot;
                             rotTweener = ToRotate();
                             UpdateTimeScale();
                             rotTweener.Play();
                         });
-                    flipDelayOnAwake = true;
+
                 }
                 break;
             default:
@@ -141,6 +144,7 @@ public class FixedObstacleCtrl_test : Obstacle
                 tween = transform.DORotate(transform.rotation.eulerAngles + rot, 1f, RotateMode.LocalAxisAdd)
                         .SetEase(rotateEaseCurve)
                         .SetSpeedBased(true)
+                        .SetDelay(rotateOnAwakeDelay * normalAnglePerSec)
                         .SetLoops(-1)
                         .Pause();
                 break;
