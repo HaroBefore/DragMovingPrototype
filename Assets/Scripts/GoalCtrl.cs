@@ -37,7 +37,7 @@ public class GoalCtrl : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.CompareTag("Player"))
+        if(collision.CompareTag("MainPlayer") || collision.CompareTag("CustomPlayer"))
         {
             //MadLevelProfile.SetLevelBoolean(MadLevel.currentLevelName, "star_1", true);
             //MadLevelProfile.SetLevelBoolean(MadLevel.currentLevelName, "star_2", true);

@@ -19,6 +19,8 @@ public class GameManager : MonoBehaviour {
 
     public eGameState gameState = eGameState.None;
 
+    public bool useMultiPlayer = false;
+
     public bool isShowAd = false;
 
     public Color goalColor;
@@ -28,7 +30,7 @@ public class GameManager : MonoBehaviour {
 
     GoalCtrl goalCtrl;
     [HideInInspector]
-    public PlayerCtrl playerCtrl;
+    public PlayerCtrl[] playerCtrl;
 
     
     public float baseicClickedTimeScaleMultiply = 0.2f;
@@ -49,7 +51,7 @@ public class GameManager : MonoBehaviour {
         yield return new WaitUntil(() => { return async.isDone; });
 
         goalCtrl = GameObject.Find("Goal").GetComponent<GoalCtrl>();
-        playerCtrl = GameObject.Find("Player").GetComponent<PlayerCtrl>();
+        playerCtrl = GameObject.FindObjectsOfType<PlayerCtrl>();
 
         uiManager = UIManager.Instance; 
 
@@ -93,7 +95,11 @@ public class GameManager : MonoBehaviour {
 
         yield return new WaitForSeconds(0.8f);
         yield return StartCoroutine(goalCtrl.CoGameStart());
-        yield return StartCoroutine(playerCtrl.CoGameStart());
+
+        foreach (PlayerCtrl _playerCtrl in playerCtrl)
+        {
+            yield return StartCoroutine(_playerCtrl.CoGameStart());
+        }
         if(isShowAd)
             AdManager.HideBannerAd(BannerAdNetwork.AdMob);
 

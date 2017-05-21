@@ -4,7 +4,8 @@ using UnityEngine;
 using DG.Tweening;
 using HeavyDutyInspector;
 
-public class PlayerCtrl : MonoBehaviour {
+public class PlayerCtrl : MonoBehaviour
+{
     public delegate void EventArgs();
     public static event EventArgs EventBeginClickedPlayer;  //플레이어 클릭 시작시 이벤트
     public static event EventArgs EventEndClickedPlayer;    //플레이어 클릭 종료시 이벤트
@@ -23,8 +24,17 @@ public class PlayerCtrl : MonoBehaviour {
 
     private void Awake()
     {
-        if (GameObject.FindObjectsOfType<PlayerCtrl>().Length > 1)
-            Destroy(this.gameObject);
+        if (GameManager.Instance.useMultiPlayer == false)
+        {
+            if (CompareTag("CustomPlayer"))
+                Destroy(this.gameObject);
+        }
+        else
+        {
+            if (CompareTag("MainPlayer"))
+                Destroy(this.gameObject);
+        }
+
 
         //trail = GetComponent<TrailRenderer>();
         originScale = transform.localScale;
@@ -51,23 +61,23 @@ public class PlayerCtrl : MonoBehaviour {
 
     private void FixedUpdate()
     {
-        if(GameManager.Instance.gameState == eGameState.gamePlaying)
+        if (GameManager.Instance.gameState == eGameState.gamePlaying)
         {
             Vector3 pos = Vector3.zero;
             if (Input.touchCount > 0)
             {
                 touch = Input.touches[0];
-                if(touch.phase == TouchPhase.Began)
+                if (touch.phase == TouchPhase.Began)
                 {
                     BeginClick();
                 }
 
-                if(touch.phase == TouchPhase.Ended || touch.phase == TouchPhase.Canceled)
+                if (touch.phase == TouchPhase.Ended || touch.phase == TouchPhase.Canceled)
                 {
                     EndClick();
                 }
 
-                if(isClick)
+                if (isClick)
                 {
                     pos = Input.GetTouch(0).position;
                     pos.z = 10;
@@ -130,7 +140,7 @@ public class PlayerCtrl : MonoBehaviour {
             }
         }
     }
-    
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         Debug.Log("Die");
