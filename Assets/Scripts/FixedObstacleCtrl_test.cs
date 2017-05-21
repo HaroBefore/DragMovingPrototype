@@ -30,13 +30,14 @@ public class FixedObstacleCtrl_test : Obstacle
     public float flipRot;
     [HideConditional(true, "rotateOption", (int)Option.Flip)]
     public float flipDelay;
-    [HideConditional(true, "rotateOption", (int)Option.Flip)]
+
     [Space]
     [Space]
 
     [Header("크기변환")]
     [Space]
-    public Vector2 destScale = Vector3.one;
+
+    public Vector2 destScale = Vector2.one;
     public AnimationCurve scaleEaseCurve = AnimationCurve.Linear(0f, 0f, 1f, 1f);
     bool isBeginToDest = true;
 
