@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2015
+# Visual Studio 2017
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DragMovingPrototype", "DragMovingPrototype.csproj", "{9720DEBA-8EF3-81B1-58C1-FFDFEC59BC42}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DragMovingPrototype.Editor", "DragMovingPrototype.Editor.csproj", "{FB9978DF-3FEE-D8C1-F524-FAE49DE6EFED}"

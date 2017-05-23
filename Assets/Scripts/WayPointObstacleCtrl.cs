@@ -257,9 +257,6 @@ public class WayPointObstacleCtrl : Obstacle
 
     public override void UpdateTimeScale()
     {
-        if (zoneTimeScaleQueue.Count == 0)
-            timeScaleMultiply = 1f;
-
         if (scaleTweener != null)
             scaleTweener.timeScale = originChangeScaleSpeed = 1f;
         if (pathTweener != null)

@@ -91,10 +91,6 @@ public class FixedObstacleCtrl : Obstacle
 
     public override void UpdateTimeScale()
     {
-
-        if (zoneTimeScaleQueue.Count == 0)
-            timeScaleMultiply = 1f;
-
         if (scaleTweener != null)
             scaleTweener.timeScale = 1f;
         if (rotTweener != null)

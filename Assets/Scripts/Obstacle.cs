@@ -19,9 +19,6 @@ public abstract class Obstacle : MonoBehaviour {
     public float changeScaleSpeed;
     public float normalAnglePerSec;
 
-    [HideInInspector]
-    public Queue<float> zoneTimeScaleQueue;
-
     [Comment("true 시 레벨 시작시 스케일 애니메이션을 실행합니다")]
     public bool isBeginAnimateScale = false;
 
@@ -39,7 +36,6 @@ public abstract class Obstacle : MonoBehaviour {
 
     protected void Awake()
     {
-        zoneTimeScaleQueue = new Queue<float>();
         beginScale = transform.localScale;
     }
 
