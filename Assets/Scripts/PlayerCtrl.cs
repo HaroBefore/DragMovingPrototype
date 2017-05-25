@@ -24,16 +24,6 @@ public class PlayerCtrl : MonoBehaviour
 
     private void Awake()
     {
-        if (GameManager.Instance.useMultiPlayer == false)
-        {
-            if (CompareTag("CustomPlayer"))
-                Destroy(this.gameObject);
-        }
-        else
-        {
-            if (CompareTag("MainPlayer"))
-                Destroy(this.gameObject);
-        }
 
 
         //trail = GetComponent<TrailRenderer>();
@@ -52,6 +42,17 @@ public class PlayerCtrl : MonoBehaviour
 
     public IEnumerator CoGameStart()
     {
+        if (GameManager.Instance.useMultiPlayer == false)
+        {
+            if (CompareTag("CustomPlayer"))
+                Destroy(this.gameObject);
+        }
+        else
+        {
+            if (CompareTag("MainPlayer"))
+                Destroy(this.gameObject);
+        }
+
         //Tweener tweener = transform.DOScale(new Vector3(0.3f, 0.3f, 0.3f), 1f);
         yield return transform.DOScale(Vector3.one * 0.3f, 1.5f).WaitForCompletion();
         //trail.Clear();
