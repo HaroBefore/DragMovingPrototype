@@ -172,7 +172,13 @@ public class WayPointObstacleCtrl : Obstacle
 
         if (wayPointPath.Length > 1)
         {
-            pathTweener = transform.DOLocalPath(wayPointPath, 1f, gizmoColor: Color.red)
+            float duration = 1f;
+            if(!isSpeedBased)
+            {
+                duration *= normalSpeedPerSec * normalSpeedPerSec;
+            }
+            
+            pathTweener = transform.DOLocalPath(wayPointPath, duration, gizmoColor: Color.red)
                 .SetSpeedBased(isSpeedBased)
                 .SetLoops(-1, looptype)
                 .SetAutoKill(false)
@@ -189,7 +195,7 @@ public class WayPointObstacleCtrl : Obstacle
                     }
                     scaleTweener = ScaleWayPoint(idx);
                     scaleTweener.Play();
-
+                    
                     if (rotTweener != null)
                     {
                         rotTweener.Kill();
