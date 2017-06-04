@@ -110,7 +110,7 @@ public class FixedObstacleCtrl_test : Obstacle
                         .SetEase(rotateEaseCurve)
                         .SetSpeedBased(true)
                         .Pause()
-                        .SetDelay(_phaseDuration = rotateOnAwakeDelay > 0 ? (phaseDuration + rotateOnAwakeDelay)* normalAnglePerSec : phaseDuration * normalAnglePerSec)
+                        .SetDelay(_phaseDuration = rotateOnAwakeDelay > 0 ? rotateOnAwakeDelay* normalAnglePerSec : phaseDuration * normalAnglePerSec)
                         .OnComplete(() =>
                         {
                             rotateOnAwakeDelay = 0;
