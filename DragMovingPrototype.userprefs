@@ -1,0 +1,19 @@
+﻿<Properties StartupConfiguration="{9720DEBA-8EF3-81B1-58C1-FFDFEC59BC42}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/GameManager.cs">
+    <Files>
+      <File FileName="Assets/ThirdPartyAssets/PygmyMonkey/ColorPalette/Runtime/Core/ColorPaletteData.cs" Line="93" Column="30" />
+      <File FileName="Assets/ThirdPartyAssets/PygmyMonkey/ColorPalette/Example/Scripts/ColorPaletteDemo1.cs" Line="10" Column="5" />
+      <File FileName="Assets/ThirdPartyAssets/PygmyMonkey/ColorPalette/Example/Scripts/ColorPaletteDemo3.cs" Line="50" Column="55" />
+      <File FileName="Assets/ThirdPartyAssets/PygmyMonkey/ColorPalette/Runtime/ColorPaletteObject.cs" Line="56" Column="52" />
+      <File FileName="Assets/Scripts/GameManager.cs" Line="61" Column="9" />
+      <File FileName="Assets/Scripts/Enums.cs" Line="16" Column="10" />
+      <File FileName="Assets/Scripts/FixedObstacleCtrl_test.cs" Line="102" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+</Properties>
