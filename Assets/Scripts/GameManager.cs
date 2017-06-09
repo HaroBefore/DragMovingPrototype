@@ -7,6 +7,7 @@ using EasyMobile;
 using MadLevelManager;
 using UnityEngine.UI;
 using HeavyDutyInspector;
+using PygmyMonkey.ColorPalette;
 
 public class GameManager : MonoBehaviour {
     static GameManager instance;
@@ -23,14 +24,14 @@ public class GameManager : MonoBehaviour {
 
     public bool isShowAd = false;
 
-    public Color goalColor;
-    public Color timeGoalColor;
-
     UIManager uiManager;
 
     GoalCtrl goalCtrl;
     [HideInInspector]
     public PlayerCtrl[] playerCtrl;
+    ColorPaletteData colorPaletteData;
+
+    public eColorPaletteType colorPaletteType;
 
     
     public float baseicClickedTimeScaleMultiply = 0.2f;
@@ -38,6 +39,7 @@ public class GameManager : MonoBehaviour {
     private void Awake()
     {
         Application.targetFrameRate = 60;
+        colorPaletteData = ColorPaletteData.Singleton;
         instance = this;
     }
 
@@ -49,6 +51,8 @@ public class GameManager : MonoBehaviour {
         var async = SceneManager.LoadSceneAsync("PlayUI", LoadSceneMode.Additive);
 
         yield return new WaitUntil(() => { return async.isDone; });
+
+        colorPaletteData.setCurrentPalette((int)colorPaletteType);
 
         goalCtrl = GameObject.Find("Goal").GetComponent<GoalCtrl>();
         playerCtrl = GameObject.FindObjectsOfType<PlayerCtrl>();
@@ -91,7 +95,10 @@ public class GameManager : MonoBehaviour {
 
         goalCtrl.trigger.radius = 0.4f;
         if (goalCtrl.isTimeGoal)
-            goalCtrl.GetComponent<SpriteRenderer>().color = timeGoalColor;
+        {
+			goalCtrl.GetComponent<ColorPaletteObject>().colorIndex = 3; //time color
+            goalCtrl.GetComponent<ColorPaletteObject>().updateColor();
+        }
 
         yield return new WaitForSeconds(0.8f);
         yield return StartCoroutine(goalCtrl.CoGameStart());

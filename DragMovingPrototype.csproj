@@ -12,13 +12,23 @@
     <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
-    <TargetFrameworkProfile>Unity Subset v3.5</TargetFrameworkProfile>
+    <TargetFrameworkProfile></TargetFrameworkProfile>
     <CompilerResponseFile></CompilerResponseFile>
     <UnityProjectType>Game:1</UnityProjectType>
     <UnityBuildTarget>Android:13</UnityBuildTarget>
     <UnityVersion>5.6.1f1</UnityVersion>
     <RootNamespace></RootNamespace>
     <LangVersion>4</LangVersion>
+    <NoConfig>true</NoConfig>
+    <NoStdLib>true</NoStdLib>
+    <AddAdditionalExplicitAssemblyReferences>false</AddAdditionalExplicitAssemblyReferences>
+    <AutoUnifyAssemblyReferences>false</AutoUnifyAssemblyReferences>
+  </PropertyGroup>
+  <PropertyGroup>
+    <NoConfig>true</NoConfig>
+    <NoStdLib>true</NoStdLib>
+    <AddAdditionalExplicitAssemblyReferences>false</AddAdditionalExplicitAssemblyReferences>
+    <AutoUnifyAssemblyReferences>false</AutoUnifyAssemblyReferences>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -27,7 +37,7 @@
     <IntermediateOutputPath>Temp\UnityVS_obj\Debug\</IntermediateOutputPath>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <DefineConstants>DEBUG;TRACE;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_5_6_1;UNITY_5_6;UNITY_5;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_GENERICS;ENABLE_PVR_GI;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_RUNTIME_NAVMESH_BUILDING;ENABLE_SPRITERENDERER_FLIPPING;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_RAKNET;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_HUB;ENABLE_CLOUD_PROJECT_ID;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_METRICS;ENABLE_EDITOR_METRICS_CACHING;ENABLE_NATIVE_ARRAY;INCLUDE_DYNAMIC_GI;INCLUDE_GI;PLATFORM_SUPPORTS_MONO;INCLUDE_PUBNUB;ENABLE_PLAYMODE_TESTS_RUNNER;ENABLE_SCRIPTING_NEW_CSHARP_COMPILER;ENABLE_VIDEO;UNITY_ANDROID;ENABLE_SUBSTANCE;UNITY_ANDROID_API;ENABLE_EGL;ENABLE_NETWORK;ENABLE_RUNTIME_GI;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_UNITYWEBREQUEST;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;PLATFORM_SUPPORTS_ADS_ID;UNITY_CAN_SHOW_SPLASH_SCREEN;ENABLE_VR;ENABLE_UNITYADS_RUNTIME;UNITY_UNITYADS_API;ENABLE_MONO;NET_2_0_SUBSET;ENABLE_PROFILER;DEBUG;TRACE;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN;ENABLE_NATIVE_ARRAY_CHECKS;UNITY_TEAM_LICENSE;ENABLE_VSTU;EASY_MOBILE;EM_ADMOB;TMP_PRESENT;UNITY_HAS_GOOGLEVR</DefineConstants>
+    <DefineConstants>DEBUG;TRACE;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_5_6_1;UNITY_5_6;UNITY_5;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_GENERICS;ENABLE_PVR_GI;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_RUNTIME_NAVMESH_BUILDING;ENABLE_SPRITERENDERER_FLIPPING;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_RAKNET;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_HUB;ENABLE_CLOUD_PROJECT_ID;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_METRICS;ENABLE_EDITOR_METRICS_CACHING;ENABLE_NATIVE_ARRAY;INCLUDE_DYNAMIC_GI;INCLUDE_GI;PLATFORM_SUPPORTS_MONO;INCLUDE_PUBNUB;ENABLE_PLAYMODE_TESTS_RUNNER;ENABLE_SCRIPTING_NEW_CSHARP_COMPILER;ENABLE_VIDEO;UNITY_ANDROID;ENABLE_SUBSTANCE;UNITY_ANDROID_API;ENABLE_EGL;ENABLE_NETWORK;ENABLE_RUNTIME_GI;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_UNITYWEBREQUEST;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;PLATFORM_SUPPORTS_ADS_ID;UNITY_CAN_SHOW_SPLASH_SCREEN;ENABLE_VR;ENABLE_UNITYADS_RUNTIME;UNITY_UNITYADS_API;ENABLE_MONO;NET_2_0_SUBSET;ENABLE_PROFILER;DEBUG;TRACE;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_OSX;ENABLE_NATIVE_ARRAY_CHECKS;UNITY_TEAM_LICENSE;ENABLE_VSTU;EASY_MOBILE;EM_ADMOB;TMP_PRESENT;UNITY_HAS_GOOGLEVR</DefineConstants>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
@@ -37,77 +47,99 @@
     <IntermediateOutputPath>Temp\UnityVS_obj\Release\</IntermediateOutputPath>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <DefineConstants>TRACE;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_5_6_1;UNITY_5_6;UNITY_5;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_GENERICS;ENABLE_PVR_GI;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_RUNTIME_NAVMESH_BUILDING;ENABLE_SPRITERENDERER_FLIPPING;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_RAKNET;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_HUB;ENABLE_CLOUD_PROJECT_ID;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_METRICS;ENABLE_EDITOR_METRICS_CACHING;ENABLE_NATIVE_ARRAY;INCLUDE_DYNAMIC_GI;INCLUDE_GI;PLATFORM_SUPPORTS_MONO;INCLUDE_PUBNUB;ENABLE_PLAYMODE_TESTS_RUNNER;ENABLE_SCRIPTING_NEW_CSHARP_COMPILER;ENABLE_VIDEO;UNITY_ANDROID;ENABLE_SUBSTANCE;UNITY_ANDROID_API;ENABLE_EGL;ENABLE_NETWORK;ENABLE_RUNTIME_GI;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_UNITYWEBREQUEST;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;PLATFORM_SUPPORTS_ADS_ID;UNITY_CAN_SHOW_SPLASH_SCREEN;ENABLE_VR;ENABLE_UNITYADS_RUNTIME;UNITY_UNITYADS_API;ENABLE_MONO;NET_2_0_SUBSET;ENABLE_PROFILER;DEBUG;TRACE;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN;ENABLE_NATIVE_ARRAY_CHECKS;UNITY_TEAM_LICENSE;ENABLE_VSTU;EASY_MOBILE;EM_ADMOB;TMP_PRESENT;UNITY_HAS_GOOGLEVR</DefineConstants>
+    <DefineConstants>TRACE;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_5_6_1;UNITY_5_6;UNITY_5;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_GENERICS;ENABLE_PVR_GI;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_RUNTIME_NAVMESH_BUILDING;ENABLE_SPRITERENDERER_FLIPPING;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_RAKNET;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_HUB;ENABLE_CLOUD_PROJECT_ID;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_METRICS;ENABLE_EDITOR_METRICS_CACHING;ENABLE_NATIVE_ARRAY;INCLUDE_DYNAMIC_GI;INCLUDE_GI;PLATFORM_SUPPORTS_MONO;INCLUDE_PUBNUB;ENABLE_PLAYMODE_TESTS_RUNNER;ENABLE_SCRIPTING_NEW_CSHARP_COMPILER;ENABLE_VIDEO;UNITY_ANDROID;ENABLE_SUBSTANCE;UNITY_ANDROID_API;ENABLE_EGL;ENABLE_NETWORK;ENABLE_RUNTIME_GI;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_UNITYWEBREQUEST;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;PLATFORM_SUPPORTS_ADS_ID;UNITY_CAN_SHOW_SPLASH_SCREEN;ENABLE_VR;ENABLE_UNITYADS_RUNTIME;UNITY_UNITYADS_API;ENABLE_MONO;NET_2_0_SUBSET;ENABLE_PROFILER;DEBUG;TRACE;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_OSX;ENABLE_NATIVE_ARRAY_CHECKS;UNITY_TEAM_LICENSE;ENABLE_VSTU;EASY_MOBILE;EM_ADMOB;TMP_PRESENT;UNITY_HAS_GOOGLEVR</DefineConstants>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="mscorlib" />
-    <Reference Include="System" />
-    <Reference Include="System.XML" />
-    <Reference Include="System.Core" />
-    <Reference Include="Boo.Lang" />
-    <Reference Include="UnityScript.Lang" />
-    <Reference Include="System.Runtime.Serialization" />
-    <Reference Include="System.Xml.Linq" />
+    <Reference Include="mscorlib">
+      <HintPath>/Applications/Unity/Unity.app/Contents/Mono/lib/mono/unity/mscorlib.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <HintPath>/Applications/Unity/Unity.app/Contents/Mono/lib/mono/unity/System.dll</HintPath>
+    </Reference>
+    <Reference Include="System.XML">
+      <HintPath>/Applications/Unity/Unity.app/Contents/Mono/lib/mono/unity/System.XML.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core">
+      <HintPath>/Applications/Unity/Unity.app/Contents/Mono/lib/mono/unity/System.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Boo.Lang">
+      <HintPath>/Applications/Unity/Unity.app/Contents/Mono/lib/mono/unity/Boo.Lang.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityScript.Lang">
+      <HintPath>/Applications/Unity/Unity.app/Contents/Mono/lib/mono/unity/UnityScript.Lang.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization">
+      <HintPath>/Applications/Unity/Unity.app/Contents/Mono/lib/mono/unity/System.Runtime.Serialization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <HintPath>/Applications/Unity/Unity.app/Contents/Mono/lib/mono/unity/System.Xml.Linq.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEngine">
-      <HintPath>Library\UnityAssemblies\UnityEngine.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.UI">
-      <HintPath>Library\UnityAssemblies\UnityEngine.UI.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.Networking">
-      <HintPath>Library\UnityAssemblies\UnityEngine.Networking.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.TestRunner">
-      <HintPath>Library\UnityAssemblies\UnityEngine.TestRunner.dll</HintPath>
-    </Reference>
-    <Reference Include="nunit.framework">
-      <HintPath>Library\UnityAssemblies\nunit.framework.dll</HintPath>
+      <HintPath>/Applications/Unity/Unity.app/Contents/Managed/UnityEngine.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.Analytics">
-      <HintPath>Library\UnityAssemblies\UnityEngine.Analytics.dll</HintPath>
+      <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TestRunner">
+      <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/TestRunner/UnityEngine.TestRunner.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework">
+      <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/TestRunner/nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Networking">
+      <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.HoloLens">
-      <HintPath>Library\UnityAssemblies\UnityEngine.HoloLens.dll</HintPath>
+      <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnityHoloLens/RuntimeEditor/UnityEngine.HoloLens.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.VR">
-      <HintPath>Library\UnityAssemblies\UnityEngine.VR.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEditor">
-      <HintPath>Library\UnityAssemblies\UnityEditor.dll</HintPath>
+      <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnityVR/RuntimeEditor/UnityEngine.VR.dll</HintPath>
     </Reference>
     <Reference Include="Firebase.Analytics">
-      <HintPath>Assets\Firebase\Plugins\Firebase.Analytics.dll</HintPath>
+      <HintPath>Assets/Firebase/Plugins/Firebase.Analytics.dll</HintPath>
     </Reference>
     <Reference Include="Firebase.App">
-      <HintPath>Assets\Firebase\Plugins\Firebase.App.dll</HintPath>
+      <HintPath>Assets/Firebase/Plugins/Firebase.App.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Compat">
-      <HintPath>Assets\Firebase\Plugins\Unity.Compat.dll</HintPath>
+      <HintPath>Assets/Firebase/Plugins/Unity.Compat.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Tasks">
-      <HintPath>Assets\Firebase\Plugins\Unity.Tasks.dll</HintPath>
+      <HintPath>Assets/Firebase/Plugins/Unity.Tasks.dll</HintPath>
     </Reference>
     <Reference Include="TextMeshPro">
-      <HintPath>Assets\TextMesh Pro\Plugins\TextMeshPro.dll</HintPath>
+      <HintPath>Assets/TextMesh Pro/Plugins/TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="DemiLib">
-      <HintPath>Assets\ThirdPartyAssets\Demigiant\DemiLib\Core\DemiLib.dll</HintPath>
+      <HintPath>Assets/ThirdPartyAssets/Demigiant/DemiLib/Core/DemiLib.dll</HintPath>
     </Reference>
     <Reference Include="DOTween">
-      <HintPath>Assets\ThirdPartyAssets\Demigiant\DOTween\DOTween.dll</HintPath>
+      <HintPath>Assets/ThirdPartyAssets/Demigiant/DOTween/DOTween.dll</HintPath>
     </Reference>
     <Reference Include="DOTween43">
-      <HintPath>Assets\ThirdPartyAssets\Demigiant\DOTween\DOTween43.dll</HintPath>
+      <HintPath>Assets/ThirdPartyAssets/Demigiant/DOTween/DOTween43.dll</HintPath>
     </Reference>
     <Reference Include="DOTween46">
-      <HintPath>Assets\ThirdPartyAssets\Demigiant\DOTween\DOTween46.dll</HintPath>
+      <HintPath>Assets/ThirdPartyAssets/Demigiant/DOTween/DOTween46.dll</HintPath>
     </Reference>
     <Reference Include="DOTween50">
-      <HintPath>Assets\ThirdPartyAssets\Demigiant\DOTween\DOTween50.dll</HintPath>
+      <HintPath>Assets/ThirdPartyAssets/Demigiant/DOTween/DOTween50.dll</HintPath>
     </Reference>
     <Reference Include="DOTweenPro">
-      <HintPath>Assets\ThirdPartyAssets\Demigiant\DOTweenPro\DOTweenPro.dll</HintPath>
+      <HintPath>Assets/ThirdPartyAssets/Demigiant/DOTweenPro/DOTweenPro.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor">
+      <HintPath>/Applications/Unity/Unity.app/Contents/Managed/UnityEditor.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.iOS.Extensions.Xcode">
+      <HintPath>/Applications/Unity/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.iOS.Extensions.Common">
+      <HintPath>/Applications/Unity/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Common.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -146,6 +178,129 @@
     <Compile Include="Assets\EasyMobile\Script\MobileNativeUI\Platforms\iOSNativeAlert.cs" />
     <Compile Include="Assets\EasyMobile\Script\Notification\NotificationManager.cs" />
     <Compile Include="Assets\EasyMobile\Script\Notification\NotificationSettings.cs" />
+    <Compile Include="Assets\MaterialUI\Examples\Scripts\07 - Inputs\Example07LengthValidation.cs" />
+    <Compile Include="Assets\MaterialUI\Examples\Scripts\07 - Inputs\Example07LetterValidation.cs" />
+    <Compile Include="Assets\MaterialUI\Examples\Scripts\08 - Sliders\Example08.cs" />
+    <Compile Include="Assets\MaterialUI\Examples\Scripts\09 - Progress Indicators\Example09.cs" />
+    <Compile Include="Assets\MaterialUI\Examples\Scripts\10 - Vector Images\Example10.cs" />
+    <Compile Include="Assets\MaterialUI\Examples\Scripts\12 - App Bars\Example12.cs" />
+    <Compile Include="Assets\MaterialUI\Examples\Scripts\13 - Toasts &amp; Snackbars\Example13.cs" />
+    <Compile Include="Assets\MaterialUI\Examples\Scripts\14 - Dialogs\Example14.cs" />
+    <Compile Include="Assets\MaterialUI\Examples\Scripts\15 - Pickers\Example15.cs" />
+    <Compile Include="Assets\MaterialUI\Examples\Scripts\19 - Animation\Example19.cs" />
+    <Compile Include="Assets\MaterialUI\Scripts\Animation\AutoTween.cs" />
+    <Compile Include="Assets\MaterialUI\Scripts\Animation\EasyTween.cs" />
+    <Compile Include="Assets\MaterialUI\Scripts\Animation\Tween.cs" />
+    <Compile Include="Assets\MaterialUI\Scripts\Common\ColorCopier.cs" />
+    <Compile Include="Assets\MaterialUI\Scripts\Common\DragEventSender.cs" />
+    <Compile Include="Assets\MaterialUI\Scripts\Common\Interfaces.cs" />
+    <Compile Include="Assets\MaterialUI\Scripts\Common\MaterialUIScaler.cs" />
+    <Compile Include="Assets\MaterialUI\Scripts\Common\RectTransformSnap.cs" />
+    <Compile Include="Assets\MaterialUI\Scripts\Common\Ripples\MaterialRipple.cs" />
+    <Compile Include="Assets\MaterialUI\Scripts\Common\Ripples\Ripple.cs" />
+    <Compile Include="Assets\MaterialUI\Scripts\Common\Ripples\RippleManager.cs" />
+    <Compile Include="Assets\MaterialUI\Scripts\Common\Shadows\AnimatedShadow.cs" />
+    <Compile Include="Assets\MaterialUI\Scripts\Common\Shadows\MaterialShadow.cs" />
+    <Compile Include="Assets\MaterialUI\Scripts\Common\Shadows\ShadowGenerator.cs" />
+    <Compile Include="Assets\MaterialUI\Scripts\Common\SpriteSwapper.cs" />
+    <Compile Include="Assets\MaterialUI\Scripts\Common\ToggleBase.cs" />
+    <Compile Include="Assets\MaterialUI\Scripts\Common\VerticalScrollLayoutElement.cs" />
+    <Compile Include="Assets\MaterialUI\Scripts\Components\Buttons\MaterialButton.cs" />
+    <Compile Include="Assets\MaterialUI\Scripts\Components\Buttons\MaterialMovableFab.cs" />
+    <Compile Include="Assets\MaterialUI\Scripts\Components\Dialogs\DialogAlert.cs" />
+    <Compile Include="Assets\MaterialUI\Scripts\Components\Dialogs\DialogAnimator.cs" />
+    <Compile Include="Assets\MaterialUI\Scripts\Components\Dialogs\DialogBackground.cs" />
+    <Compile Include="Assets\MaterialUI\Scripts\Components\Dialogs\DialogCheckboxList.cs" />
+    <Compile Include="Assets\MaterialUI\Scripts\Components\Dialogs\DialogCheckboxOption.cs" />
+    <Compile Include="Assets\MaterialUI\Scripts\Components\Dialogs\DialogClickableItem.cs" />
+    <Compile Include="Assets\MaterialUI\Scripts\Components\Dialogs\DialogProgress.cs" />
+    <Compile Include="Assets\MaterialUI\Scripts\Components\Dialogs\DialogPrompt.cs" />
+    <Compile Include="Assets\MaterialUI\Scripts\Components\Dialogs\DialogRadioList.cs" />
+    <Compile Include="Assets\MaterialUI\Scripts\Components\Dialogs\DialogRadioOption.cs" />
+    <Compile Include="Assets\MaterialUI\Scripts\Components\Dialogs\DialogSections.cs" />
+    <Compile Include="Assets\MaterialUI\Scripts\Components\Dialogs\DialogSimpleList.cs" />
+    <Compile Include="Assets\MaterialUI\Scripts\Components\Dialogs\DialogSimpleOption.cs" />
+    <Compile Include="Assets\MaterialUI\Scripts\Components\Dialogs\MaterialDialog.cs" />
+    <Compile Include="Assets\MaterialUI\Scripts\Components\Dialogs\Pickers\DatePicker\DialogDatePicker.cs" />
+    <Compile Include="Assets\MaterialUI\Scripts\Components\Dialogs\Pickers\DatePicker\DialogDatePickerDayItem.cs" />
+    <Compile Include="Assets\MaterialUI\Scripts\Components\Dialogs\Pickers\DatePicker\DialogDatePickerYearItem.cs" />
+    <Compile Include="Assets\MaterialUI\Scripts\Components\Dialogs\Pickers\DatePicker\DialogDatePickerYearList.cs" />
+    <Compile Include="Assets\MaterialUI\Scripts\Components\Dialogs\Pickers\TimePicker\DialogTimePicker.cs" />
+    <Compile Include="Assets\MaterialUI\Scripts\Components\Dialogs\Pickers\TimePicker\DialogTimePickerClock.cs" />
+    <Compile Include="Assets\MaterialUI\Scripts\Components\MaterialAppBar.cs" />
+    <Compile Include="Assets\MaterialUI\Scripts\Components\MaterialCheckbox.cs" />
+    <Compile Include="Assets\MaterialUI\Scripts\Components\MaterialDropdown.cs" />
+    <Compile Include="Assets\MaterialUI\Scripts\Components\MaterialInputField.cs" />
+    <Compile Include="Assets\MaterialUI\Scripts\Components\MaterialNavDrawer.cs" />
+    <Compile Include="Assets\MaterialUI\Scripts\Components\MaterialSlider.cs" />
+    <Compile Include="Assets\MaterialUI\Scripts\Components\MaterialSwitch.cs" />
+    <Compile Include="Assets\MaterialUI\Scripts\Components\Menus\DropdownTrigger.cs" />
+    <Compile Include="Assets\MaterialUI\Scripts\Components\OptionData.cs" />
+    <Compile Include="Assets\MaterialUI\Scripts\Components\OverscrollConfig.cs" />
+    <Compile Include="Assets\MaterialUI\Scripts\Components\Progress\CircularProgressIndicator.cs" />
+    <Compile Include="Assets\MaterialUI\Scripts\Components\Progress\LinearProgressIndicator.cs" />
+    <Compile Include="Assets\MaterialUI\Scripts\Components\Progress\ProgressIndicator.cs" />
+    <Compile Include="Assets\MaterialUI\Scripts\Components\RadioGroups\MaterialRadio.cs" />
+    <Compile Include="Assets\MaterialUI\Scripts\Components\RadioGroups\MaterialRadioGroup.cs" />
+    <Compile Include="Assets\MaterialUI\Scripts\Components\Screens\MaterialScreen.cs" />
+    <Compile Include="Assets\MaterialUI\Scripts\Components\Screens\ScreenView.cs" />
+    <Compile Include="Assets\MaterialUI\Scripts\Components\Snackbars\Snackbar.cs" />
+    <Compile Include="Assets\MaterialUI\Scripts\Components\Snackbars\SnackbarAnimator.cs" />
+    <Compile Include="Assets\MaterialUI\Scripts\Components\Tabs\TabItem.cs" />
+    <Compile Include="Assets\MaterialUI\Scripts\Components\Tabs\TabPage.cs" />
+    <Compile Include="Assets\MaterialUI\Scripts\Components\Tabs\TabPagesScrollDetector.cs" />
+    <Compile Include="Assets\MaterialUI\Scripts\Components\Tabs\TabView.cs" />
+    <Compile Include="Assets\MaterialUI\Scripts\Components\Toasts\Toast.cs" />
+    <Compile Include="Assets\MaterialUI\Scripts\Components\Toasts\ToastAnimator.cs" />
+    <Compile Include="Assets\MaterialUI\Scripts\Components\VectorImages\ImageData.cs" />
+    <Compile Include="Assets\MaterialUI\Scripts\Components\VectorImages\MaterialIconEnum.cs" />
+    <Compile Include="Assets\MaterialUI\Scripts\Components\VectorImages\MaterialIconHelper.cs" />
+    <Compile Include="Assets\MaterialUI\Scripts\Components\VectorImages\MaterialUIIconHelper.cs" />
+    <Compile Include="Assets\MaterialUI\Scripts\Components\VectorImages\Model\Glyph.cs" />
+    <Compile Include="Assets\MaterialUI\Scripts\Components\VectorImages\Model\VectorImageData.cs" />
+    <Compile Include="Assets\MaterialUI\Scripts\Components\VectorImages\Model\VectorImageSet.cs" />
+    <Compile Include="Assets\MaterialUI\Scripts\Components\VectorImages\VectorImage.cs" />
+    <Compile Include="Assets\MaterialUI\Scripts\Components\VectorImages\VectorImageManager.cs" />
+    <Compile Include="Assets\MaterialUI\Scripts\Managers\DialogManager.cs" />
+    <Compile Include="Assets\MaterialUI\Scripts\Managers\PrefabManager.cs" />
+    <Compile Include="Assets\MaterialUI\Scripts\Managers\SnackbarManager.cs" />
+    <Compile Include="Assets\MaterialUI\Scripts\Managers\ToastManager.cs" />
+    <Compile Include="Assets\MaterialUI\Scripts\Managers\TweenManager.cs" />
+    <Compile Include="Assets\MaterialUI\Scripts\MaterialUtils\AdaptiveUIGrid.cs" />
+    <Compile Include="Assets\MaterialUI\Scripts\MaterialUtils\ContinuationManager.cs" />
+    <Compile Include="Assets\MaterialUI\Scripts\MaterialUtils\EditorCoroutine.cs" />
+    <Compile Include="Assets\MaterialUI\Scripts\MaterialUtils\EditorUpdate.cs" />
+    <Compile Include="Assets\MaterialUI\Scripts\MaterialUtils\Extensions.cs" />
+    <Compile Include="Assets\MaterialUI\Scripts\MaterialUtils\FPSCounter.cs" />
+    <Compile Include="Assets\MaterialUI\Scripts\MaterialUtils\HSBColor.cs" />
+    <Compile Include="Assets\MaterialUI\Scripts\MaterialUtils\InputFieldValidators\TextValidatorUtils.cs" />
+    <Compile Include="Assets\MaterialUI\Scripts\MaterialUtils\InstantiationHelpers\ButtonRectInstantiationHelper.cs" />
+    <Compile Include="Assets\MaterialUI\Scripts\MaterialUtils\InstantiationHelpers\ButtonRoundInstantiationHelper.cs" />
+    <Compile Include="Assets\MaterialUI\Scripts\MaterialUtils\InstantiationHelpers\CircleProgressIndicatorInstantiationHelper.cs" />
+    <Compile Include="Assets\MaterialUI\Scripts\MaterialUtils\InstantiationHelpers\DividerInstantiationHelper.cs" />
+    <Compile Include="Assets\MaterialUI\Scripts\MaterialUtils\InstantiationHelpers\EmptyUIObjectInstantiationHelper.cs" />
+    <Compile Include="Assets\MaterialUI\Scripts\MaterialUtils\InstantiationHelpers\InputFieldInstantiationHelper.cs" />
+    <Compile Include="Assets\MaterialUI\Scripts\MaterialUtils\InstantiationHelpers\InstantiationHelper.cs" />
+    <Compile Include="Assets\MaterialUI\Scripts\MaterialUtils\InstantiationHelpers\MaterialSliderInstantiationHelper.cs" />
+    <Compile Include="Assets\MaterialUI\Scripts\MaterialUtils\InstantiationHelpers\PanelInstantiationHelper.cs" />
+    <Compile Include="Assets\MaterialUI\Scripts\MaterialUtils\InstantiationHelpers\RadioInstantiationHelper.cs" />
+    <Compile Include="Assets\MaterialUI\Scripts\MaterialUtils\InstantiationHelpers\TabViewInstantiationHelper.cs" />
+    <Compile Include="Assets\MaterialUI\Scripts\MaterialUtils\InstantiationHelpers\ToggleInstantiationHelper.cs" />
+    <Compile Include="Assets\MaterialUI\Scripts\MaterialUtils\MaterialColor.cs" />
+    <Compile Include="Assets\MaterialUI\Scripts\MaterialUtils\MaterialUIVersion.cs" />
+    <Compile Include="Assets\MaterialUI\Scripts\MaterialUtils\TextUnicode.cs" />
+    <Compile Include="Assets\MaterialUI\Scripts\MaterialUtils\Utils.cs" />
+    <Compile Include="Assets\MaterialUI\Utils\LitJson\IJsonWrapper.cs" />
+    <Compile Include="Assets\MaterialUI\Utils\LitJson\JsonData.cs" />
+    <Compile Include="Assets\MaterialUI\Utils\LitJson\JsonException.cs" />
+    <Compile Include="Assets\MaterialUI\Utils\LitJson\JsonMapper.cs" />
+    <Compile Include="Assets\MaterialUI\Utils\LitJson\JsonMockWrapper.cs" />
+    <Compile Include="Assets\MaterialUI\Utils\LitJson\JsonReader.cs" />
+    <Compile Include="Assets\MaterialUI\Utils\LitJson\JsonWriter.cs" />
+    <Compile Include="Assets\MaterialUI\Utils\LitJson\Lexer.cs" />
+    <Compile Include="Assets\MaterialUI\Utils\LitJson\ParserToken.cs" />
+    <Compile Include="Assets\MaterialUI\Utils\PropertyDrawers\ObserveAttribute\ObserveAttribute.cs" />
+    <Compile Include="Assets\MaterialUI\Utils\PropertyDrawers\PopupAttribute\PopupAttribute.cs" />
     <Compile Include="Assets\PennerDoubleAnimation.cs" />
     <Compile Include="Assets\Scripts\DeadZoneCtrl.cs" />
     <Compile Include="Assets\Scripts\EasyMobileManager.cs" />
@@ -396,6 +551,26 @@
     <Compile Include="Assets\ThirdPartyAssets\ProCore\ProGrids\Classes\pg_IconUtility.cs" />
     <Compile Include="Assets\ThirdPartyAssets\ProCore\ProGrids\Classes\pg_SceneMeshRender.cs" />
     <Compile Include="Assets\ThirdPartyAssets\ProCore\ProGrids\Classes\pg_Util.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\PygmyMonkey\ColorPalette\Example\Scripts\ColorPaletteDemo1.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\PygmyMonkey\ColorPalette\Example\Scripts\ColorPaletteDemo2.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\PygmyMonkey\ColorPalette\Example\Scripts\ColorPaletteDemo3.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\PygmyMonkey\ColorPalette\Runtime\ColorPaletteObject.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\PygmyMonkey\ColorPalette\Runtime\Core\ColorInfo.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\PygmyMonkey\ColorPalette\Runtime\Core\ColorPalette.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\PygmyMonkey\ColorPalette\Runtime\Core\ColorPaletteData.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\PygmyMonkey\ColorPalette\Runtime\Importers\FileImporters\ACOFileImporter.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\PygmyMonkey\ColorPalette\Runtime\Importers\FileImporters\ASEFileImporter.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\PygmyMonkey\ColorPalette\Runtime\Importers\FileImporters\ColorPresetFileImporter.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\PygmyMonkey\ColorPalette\Runtime\Importers\FileImporters\GPLFileImporter.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\PygmyMonkey\ColorPalette\Runtime\Importers\FileImporters\Model\ParserColorResult.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\PygmyMonkey\ColorPalette\Runtime\Importers\FileImporters\SVGFileImporter.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\PygmyMonkey\ColorPalette\Runtime\Importers\WebsiteImporters\ColorCombosWebsiteImporter.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\PygmyMonkey\ColorPalette\Runtime\Importers\WebsiteImporters\ColourLoversWebsiteImporter.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\PygmyMonkey\ColorPalette\Runtime\Importers\WebsiteImporters\ColrdWebsiteImporter.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\PygmyMonkey\ColorPalette\Runtime\Importers\WebsiteImporters\DribbbleWebsiteImporter.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\PygmyMonkey\ColorPalette\Utils\ColorUtils.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\PygmyMonkey\ColorPalette\Utils\PaletteFirstUseUtils.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\PygmyMonkey\ColorPalette\Utils\PaletteUtils.cs" />
     <Compile Include="Assets\ThirdPartyAssets\SpriteTrail\SCRIPT\CORE\SpriteTrail.cs" />
     <Compile Include="Assets\ThirdPartyAssets\SpriteTrail\SCRIPT\CORE\TrailElement.cs" />
     <Compile Include="Assets\ThirdPartyAssets\SpriteTrail\SCRIPT\CORE\TrailPreset.cs" />
@@ -421,6 +596,11 @@
     <None Include="Assets\EasyMobile\link.xml" />
     <None Include="Assets\Firebase\m2repository\com\google\firebase\firebase-analytics-unity\maven-metadata.xml" />
     <None Include="Assets\Firebase\m2repository\com\google\firebase\firebase-app-unity\maven-metadata.xml" />
+    <None Include="Assets\MaterialUI\CHANGELOG.txt" />
+    <None Include="Assets\MaterialUI\Fonts\Resources\Material Design Icons\LICENSE.txt" />
+    <None Include="Assets\MaterialUI\Fonts\Roboto\NOTICE.txt" />
+    <None Include="Assets\MaterialUI\Materials\SignedDistanceFieldUI.shader" />
+    <None Include="Assets\MaterialUI\README.txt" />
     <None Include="Assets\PlayServicesResolver\Editor\play-services-resolver.txt" />
     <None Include="Assets\Plugins\Android\Firebase\AndroidManifest.xml" />
     <None Include="Assets\Plugins\Android\Firebase\res\values\google-services.xml" />
@@ -482,6 +662,7 @@
     <None Include="Assets\ThirdPartyAssets\ProCore\ProGrids\About\changelog.txt" />
     <None Include="Assets\ThirdPartyAssets\ProCore\ProGrids\About\pc_AboutEntry_ProGrids.txt" />
     <None Include="Assets\ThirdPartyAssets\ProCore\ProGrids\Shader\pg_GridShader.shader" />
+    <None Include="Assets\ThirdPartyAssets\PygmyMonkey\ColorPalette\ReadMe.txt" />
     <None Include="Assets\ThirdPartyAssets\SpriteTrail\GRAPH\SHADERS\SpritesSilhouette.shader" />
     <None Include="Assets\ThirdPartyAssets\SpriteTrail\README.txt" />
   </ItemGroup>
