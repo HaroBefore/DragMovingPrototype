@@ -1,14 +1,15 @@
 ﻿<Properties StartupConfiguration="{9720DEBA-8EF3-81B1-58C1-FFDFEC59BC42}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/GameManager.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/EventZone.cs">
     <Files>
       <File FileName="Assets/ThirdPartyAssets/PygmyMonkey/ColorPalette/Runtime/Core/ColorPaletteData.cs" Line="93" Column="30" />
       <File FileName="Assets/ThirdPartyAssets/PygmyMonkey/ColorPalette/Example/Scripts/ColorPaletteDemo1.cs" Line="10" Column="5" />
       <File FileName="Assets/ThirdPartyAssets/PygmyMonkey/ColorPalette/Example/Scripts/ColorPaletteDemo3.cs" Line="50" Column="55" />
       <File FileName="Assets/ThirdPartyAssets/PygmyMonkey/ColorPalette/Runtime/ColorPaletteObject.cs" Line="56" Column="52" />
-      <File FileName="Assets/Scripts/GameManager.cs" Line="99" Column="36" />
+      <File FileName="Assets/Scripts/GameManager.cs" Line="126" Column="38" />
       <File FileName="Assets/Scripts/Enums.cs" Line="16" Column="10" />
-      <File FileName="Assets/Scripts/FixedObstacleCtrl_test.cs" Line="102" Column="1" />
+      <File FileName="Assets/Scripts/FixedObstacleCtrl_test.cs" Line="26" Column="55" />
       <File FileName="Assets/MaterialUI/Scripts/Common/Ripples/RippleManager.cs" Line="119" Column="66" />
+      <File FileName="Assets/Scripts/EventZone.cs" Line="35" Column="12" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.ItemProperties.DragMovingPrototype PreferredExecutionTarget="Unity.Editor" />

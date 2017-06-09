@@ -1,0 +1,671 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.20506</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9720DEBA-8EF3-81B1-58C1-FFDFEC59BC42}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Assembly-CSharp</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile></TargetFrameworkProfile>
+    <CompilerResponseFile></CompilerResponseFile>
+    <UnityProjectType>Game:1</UnityProjectType>
+    <UnityBuildTarget>Android:13</UnityBuildTarget>
+    <UnityVersion>5.6.1f1</UnityVersion>
+    <RootNamespace></RootNamespace>
+    <LangVersion>4</LangVersion>
+    <NoConfig>true</NoConfig>
+    <NoStdLib>true</NoStdLib>
+    <AddAdditionalExplicitAssemblyReferences>false</AddAdditionalExplicitAssemblyReferences>
+    <AutoUnifyAssemblyReferences>false</AutoUnifyAssemblyReferences>
+  </PropertyGroup>
+  <PropertyGroup>
+    <NoConfig>true</NoConfig>
+    <NoStdLib>true</NoStdLib>
+    <AddAdditionalExplicitAssemblyReferences>false</AddAdditionalExplicitAssemblyReferences>
+    <AutoUnifyAssemblyReferences>false</AutoUnifyAssemblyReferences>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Temp\UnityVS_bin\Debug\</OutputPath>
+    <IntermediateOutputPath>Temp\UnityVS_obj\Debug\</IntermediateOutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DefineConstants>DEBUG;TRACE;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_5_6_1;UNITY_5_6;UNITY_5;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_GENERICS;ENABLE_PVR_GI;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_RUNTIME_NAVMESH_BUILDING;ENABLE_SPRITERENDERER_FLIPPING;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_RAKNET;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_HUB;ENABLE_CLOUD_PROJECT_ID;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_METRICS;ENABLE_EDITOR_METRICS_CACHING;ENABLE_NATIVE_ARRAY;INCLUDE_DYNAMIC_GI;INCLUDE_GI;PLATFORM_SUPPORTS_MONO;INCLUDE_PUBNUB;ENABLE_PLAYMODE_TESTS_RUNNER;ENABLE_SCRIPTING_NEW_CSHARP_COMPILER;ENABLE_VIDEO;UNITY_ANDROID;ENABLE_SUBSTANCE;UNITY_ANDROID_API;ENABLE_EGL;ENABLE_NETWORK;ENABLE_RUNTIME_GI;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_UNITYWEBREQUEST;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;PLATFORM_SUPPORTS_ADS_ID;UNITY_CAN_SHOW_SPLASH_SCREEN;ENABLE_VR;ENABLE_UNITYADS_RUNTIME;UNITY_UNITYADS_API;ENABLE_MONO;NET_2_0_SUBSET;ENABLE_PROFILER;DEBUG;TRACE;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_OSX;ENABLE_NATIVE_ARRAY_CHECKS;UNITY_TEAM_LICENSE;ENABLE_VSTU;EASY_MOBILE;EM_ADMOB;TMP_PRESENT;UNITY_HAS_GOOGLEVR</DefineConstants>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Temp\UnityVS_bin\Release\</OutputPath>
+    <IntermediateOutputPath>Temp\UnityVS_obj\Release\</IntermediateOutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DefineConstants>TRACE;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_5_6_1;UNITY_5_6;UNITY_5;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_GENERICS;ENABLE_PVR_GI;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_RUNTIME_NAVMESH_BUILDING;ENABLE_SPRITERENDERER_FLIPPING;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_RAKNET;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_HUB;ENABLE_CLOUD_PROJECT_ID;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_METRICS;ENABLE_EDITOR_METRICS_CACHING;ENABLE_NATIVE_ARRAY;INCLUDE_DYNAMIC_GI;INCLUDE_GI;PLATFORM_SUPPORTS_MONO;INCLUDE_PUBNUB;ENABLE_PLAYMODE_TESTS_RUNNER;ENABLE_SCRIPTING_NEW_CSHARP_COMPILER;ENABLE_VIDEO;UNITY_ANDROID;ENABLE_SUBSTANCE;UNITY_ANDROID_API;ENABLE_EGL;ENABLE_NETWORK;ENABLE_RUNTIME_GI;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_UNITYWEBREQUEST;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;PLATFORM_SUPPORTS_ADS_ID;UNITY_CAN_SHOW_SPLASH_SCREEN;ENABLE_VR;ENABLE_UNITYADS_RUNTIME;UNITY_UNITYADS_API;ENABLE_MONO;NET_2_0_SUBSET;ENABLE_PROFILER;DEBUG;TRACE;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_OSX;ENABLE_NATIVE_ARRAY_CHECKS;UNITY_TEAM_LICENSE;ENABLE_VSTU;EASY_MOBILE;EM_ADMOB;TMP_PRESENT;UNITY_HAS_GOOGLEVR</DefineConstants>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="mscorlib">
+      <HintPath>/Applications/Unity/Unity.app/Contents/Mono/lib/mono/unity/mscorlib.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <HintPath>/Applications/Unity/Unity.app/Contents/Mono/lib/mono/unity/System.dll</HintPath>
+    </Reference>
+    <Reference Include="System.XML">
+      <HintPath>/Applications/Unity/Unity.app/Contents/Mono/lib/mono/unity/System.XML.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core">
+      <HintPath>/Applications/Unity/Unity.app/Contents/Mono/lib/mono/unity/System.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Boo.Lang">
+      <HintPath>/Applications/Unity/Unity.app/Contents/Mono/lib/mono/unity/Boo.Lang.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityScript.Lang">
+      <HintPath>/Applications/Unity/Unity.app/Contents/Mono/lib/mono/unity/UnityScript.Lang.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization">
+      <HintPath>/Applications/Unity/Unity.app/Contents/Mono/lib/mono/unity/System.Runtime.Serialization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <HintPath>/Applications/Unity/Unity.app/Contents/Mono/lib/mono/unity/System.Xml.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine">
+      <HintPath>/Applications/Unity/Unity.app/Contents/Managed/UnityEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Analytics">
+      <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TestRunner">
+      <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/TestRunner/UnityEngine.TestRunner.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework">
+      <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/TestRunner/nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Networking">
+      <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.HoloLens">
+      <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnityHoloLens/RuntimeEditor/UnityEngine.HoloLens.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.VR">
+      <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnityVR/RuntimeEditor/UnityEngine.VR.dll</HintPath>
+    </Reference>
+    <Reference Include="Firebase.Analytics">
+      <HintPath>Assets/Firebase/Plugins/Firebase.Analytics.dll</HintPath>
+    </Reference>
+    <Reference Include="Firebase.App">
+      <HintPath>Assets/Firebase/Plugins/Firebase.App.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Compat">
+      <HintPath>Assets/Firebase/Plugins/Unity.Compat.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Tasks">
+      <HintPath>Assets/Firebase/Plugins/Unity.Tasks.dll</HintPath>
+    </Reference>
+    <Reference Include="TextMeshPro">
+      <HintPath>Assets/TextMesh Pro/Plugins/TextMeshPro.dll</HintPath>
+    </Reference>
+    <Reference Include="DemiLib">
+      <HintPath>Assets/ThirdPartyAssets/Demigiant/DemiLib/Core/DemiLib.dll</HintPath>
+    </Reference>
+    <Reference Include="DOTween">
+      <HintPath>Assets/ThirdPartyAssets/Demigiant/DOTween/DOTween.dll</HintPath>
+    </Reference>
+    <Reference Include="DOTween43">
+      <HintPath>Assets/ThirdPartyAssets/Demigiant/DOTween/DOTween43.dll</HintPath>
+    </Reference>
+    <Reference Include="DOTween46">
+      <HintPath>Assets/ThirdPartyAssets/Demigiant/DOTween/DOTween46.dll</HintPath>
+    </Reference>
+    <Reference Include="DOTween50">
+      <HintPath>Assets/ThirdPartyAssets/Demigiant/DOTween/DOTween50.dll</HintPath>
+    </Reference>
+    <Reference Include="DOTweenPro">
+      <HintPath>Assets/ThirdPartyAssets/Demigiant/DOTweenPro/DOTweenPro.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor">
+      <HintPath>/Applications/Unity/Unity.app/Contents/Managed/UnityEditor.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.iOS.Extensions.Xcode">
+      <HintPath>/Applications/Unity/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.iOS.Extensions.Common">
+      <HintPath>/Applications/Unity/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Common.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Assets\EasyMobile\Demo\Scripts\AdvertisingDemo.cs" />
+    <Compile Include="Assets\EasyMobile\Demo\Scripts\ColorChooser.cs" />
+    <Compile Include="Assets\EasyMobile\Demo\Scripts\DemoHomeController.cs" />
+    <Compile Include="Assets\EasyMobile\Demo\Scripts\DemoUtils.cs" />
+    <Compile Include="Assets\EasyMobile\Demo\Scripts\GameServiceDemo.cs" />
+    <Compile Include="Assets\EasyMobile\Demo\Scripts\InAppPurchaseDemo.cs" />
+    <Compile Include="Assets\EasyMobile\Demo\Scripts\MobileNativeShareDemo.cs" />
+    <Compile Include="Assets\EasyMobile\Demo\Scripts\MobileNativeUIDemo.cs" />
+    <Compile Include="Assets\EasyMobile\Demo\Scripts\SoundManager.cs" />
+    <Compile Include="Assets\EasyMobile\Demo\ScrollableList\ScrollableList.cs" />
+    <Compile Include="Assets\EasyMobile\Demo\ScrollableList\ScrollableListItem.cs" />
+    <Compile Include="Assets\EasyMobile\Script\Advertising\AdLocation.cs" />
+    <Compile Include="Assets\EasyMobile\Script\Advertising\AdManager.cs" />
+    <Compile Include="Assets\EasyMobile\Script\Advertising\AdSettings.cs" />
+    <Compile Include="Assets\EasyMobile\Script\Advertising\BannerAdPosition.cs" />
+    <Compile Include="Assets\EasyMobile\Script\Advertising\BannerAdSize.cs" />
+    <Compile Include="Assets\EasyMobile\Script\EM_PrefabManager.cs" />
+    <Compile Include="Assets\EasyMobile\Script\EM_Settings.cs" />
+    <Compile Include="Assets\EasyMobile\Script\GameService\GPGSGameInfo.cs" />
+    <Compile Include="Assets\EasyMobile\Script\GameService\GameServiceItem.cs" />
+    <Compile Include="Assets\EasyMobile\Script\GameService\GameServiceManager.cs" />
+    <Compile Include="Assets\EasyMobile\Script\GameService\GameServiceSettings.cs" />
+    <Compile Include="Assets\EasyMobile\Script\InAppPurchase\IAPManager.cs" />
+    <Compile Include="Assets\EasyMobile\Script\InAppPurchase\IAPProduct.cs" />
+    <Compile Include="Assets\EasyMobile\Script\InAppPurchase\IAPSettings.cs" />
+    <Compile Include="Assets\EasyMobile\Script\InAppPurchase\IAPStore.cs" />
+    <Compile Include="Assets\EasyMobile\Script\MobileNativeShare\MobileNativeShare.cs" />
+    <Compile Include="Assets\EasyMobile\Script\MobileNativeShare\Platforms\AndroidNativeShare.cs" />
+    <Compile Include="Assets\EasyMobile\Script\MobileNativeShare\Platforms\iOSNativeShare.cs" />
+    <Compile Include="Assets\EasyMobile\Script\MobileNativeUI\MobileNativeAlert.cs" />
+    <Compile Include="Assets\EasyMobile\Script\MobileNativeUI\MobileNativeUI.cs" />
+    <Compile Include="Assets\EasyMobile\Script\MobileNativeUI\Platforms\AndroidNativeAlert.cs" />
+    <Compile Include="Assets\EasyMobile\Script\MobileNativeUI\Platforms\iOSNativeAlert.cs" />
+    <Compile Include="Assets\EasyMobile\Script\Notification\NotificationManager.cs" />
+    <Compile Include="Assets\EasyMobile\Script\Notification\NotificationSettings.cs" />
+    <Compile Include="Assets\MaterialUI\Examples\Scripts\07 - Inputs\Example07LengthValidation.cs" />
+    <Compile Include="Assets\MaterialUI\Examples\Scripts\07 - Inputs\Example07LetterValidation.cs" />
+    <Compile Include="Assets\MaterialUI\Examples\Scripts\08 - Sliders\Example08.cs" />
+    <Compile Include="Assets\MaterialUI\Examples\Scripts\09 - Progress Indicators\Example09.cs" />
+    <Compile Include="Assets\MaterialUI\Examples\Scripts\10 - Vector Images\Example10.cs" />
+    <Compile Include="Assets\MaterialUI\Examples\Scripts\12 - App Bars\Example12.cs" />
+    <Compile Include="Assets\MaterialUI\Examples\Scripts\13 - Toasts &amp; Snackbars\Example13.cs" />
+    <Compile Include="Assets\MaterialUI\Examples\Scripts\14 - Dialogs\Example14.cs" />
+    <Compile Include="Assets\MaterialUI\Examples\Scripts\15 - Pickers\Example15.cs" />
+    <Compile Include="Assets\MaterialUI\Examples\Scripts\19 - Animation\Example19.cs" />
+    <Compile Include="Assets\MaterialUI\Scripts\Animation\AutoTween.cs" />
+    <Compile Include="Assets\MaterialUI\Scripts\Animation\EasyTween.cs" />
+    <Compile Include="Assets\MaterialUI\Scripts\Animation\Tween.cs" />
+    <Compile Include="Assets\MaterialUI\Scripts\Common\ColorCopier.cs" />
+    <Compile Include="Assets\MaterialUI\Scripts\Common\DragEventSender.cs" />
+    <Compile Include="Assets\MaterialUI\Scripts\Common\Interfaces.cs" />
+    <Compile Include="Assets\MaterialUI\Scripts\Common\MaterialUIScaler.cs" />
+    <Compile Include="Assets\MaterialUI\Scripts\Common\RectTransformSnap.cs" />
+    <Compile Include="Assets\MaterialUI\Scripts\Common\Ripples\MaterialRipple.cs" />
+    <Compile Include="Assets\MaterialUI\Scripts\Common\Ripples\Ripple.cs" />
+    <Compile Include="Assets\MaterialUI\Scripts\Common\Ripples\RippleManager.cs" />
+    <Compile Include="Assets\MaterialUI\Scripts\Common\Shadows\AnimatedShadow.cs" />
+    <Compile Include="Assets\MaterialUI\Scripts\Common\Shadows\MaterialShadow.cs" />
+    <Compile Include="Assets\MaterialUI\Scripts\Common\Shadows\ShadowGenerator.cs" />
+    <Compile Include="Assets\MaterialUI\Scripts\Common\SpriteSwapper.cs" />
+    <Compile Include="Assets\MaterialUI\Scripts\Common\ToggleBase.cs" />
+    <Compile Include="Assets\MaterialUI\Scripts\Common\VerticalScrollLayoutElement.cs" />
+    <Compile Include="Assets\MaterialUI\Scripts\Components\Buttons\MaterialButton.cs" />
+    <Compile Include="Assets\MaterialUI\Scripts\Components\Buttons\MaterialMovableFab.cs" />
+    <Compile Include="Assets\MaterialUI\Scripts\Components\Dialogs\DialogAlert.cs" />
+    <Compile Include="Assets\MaterialUI\Scripts\Components\Dialogs\DialogAnimator.cs" />
+    <Compile Include="Assets\MaterialUI\Scripts\Components\Dialogs\DialogBackground.cs" />
+    <Compile Include="Assets\MaterialUI\Scripts\Components\Dialogs\DialogCheckboxList.cs" />
+    <Compile Include="Assets\MaterialUI\Scripts\Components\Dialogs\DialogCheckboxOption.cs" />
+    <Compile Include="Assets\MaterialUI\Scripts\Components\Dialogs\DialogClickableItem.cs" />
+    <Compile Include="Assets\MaterialUI\Scripts\Components\Dialogs\DialogProgress.cs" />
+    <Compile Include="Assets\MaterialUI\Scripts\Components\Dialogs\DialogPrompt.cs" />
+    <Compile Include="Assets\MaterialUI\Scripts\Components\Dialogs\DialogRadioList.cs" />
+    <Compile Include="Assets\MaterialUI\Scripts\Components\Dialogs\DialogRadioOption.cs" />
+    <Compile Include="Assets\MaterialUI\Scripts\Components\Dialogs\DialogSections.cs" />
+    <Compile Include="Assets\MaterialUI\Scripts\Components\Dialogs\DialogSimpleList.cs" />
+    <Compile Include="Assets\MaterialUI\Scripts\Components\Dialogs\DialogSimpleOption.cs" />
+    <Compile Include="Assets\MaterialUI\Scripts\Components\Dialogs\MaterialDialog.cs" />
+    <Compile Include="Assets\MaterialUI\Scripts\Components\Dialogs\Pickers\DatePicker\DialogDatePicker.cs" />
+    <Compile Include="Assets\MaterialUI\Scripts\Components\Dialogs\Pickers\DatePicker\DialogDatePickerDayItem.cs" />
+    <Compile Include="Assets\MaterialUI\Scripts\Components\Dialogs\Pickers\DatePicker\DialogDatePickerYearItem.cs" />
+    <Compile Include="Assets\MaterialUI\Scripts\Components\Dialogs\Pickers\DatePicker\DialogDatePickerYearList.cs" />
+    <Compile Include="Assets\MaterialUI\Scripts\Components\Dialogs\Pickers\TimePicker\DialogTimePicker.cs" />
+    <Compile Include="Assets\MaterialUI\Scripts\Components\Dialogs\Pickers\TimePicker\DialogTimePickerClock.cs" />
+    <Compile Include="Assets\MaterialUI\Scripts\Components\MaterialAppBar.cs" />
+    <Compile Include="Assets\MaterialUI\Scripts\Components\MaterialCheckbox.cs" />
+    <Compile Include="Assets\MaterialUI\Scripts\Components\MaterialDropdown.cs" />
+    <Compile Include="Assets\MaterialUI\Scripts\Components\MaterialInputField.cs" />
+    <Compile Include="Assets\MaterialUI\Scripts\Components\MaterialNavDrawer.cs" />
+    <Compile Include="Assets\MaterialUI\Scripts\Components\MaterialSlider.cs" />
+    <Compile Include="Assets\MaterialUI\Scripts\Components\MaterialSwitch.cs" />
+    <Compile Include="Assets\MaterialUI\Scripts\Components\Menus\DropdownTrigger.cs" />
+    <Compile Include="Assets\MaterialUI\Scripts\Components\OptionData.cs" />
+    <Compile Include="Assets\MaterialUI\Scripts\Components\OverscrollConfig.cs" />
+    <Compile Include="Assets\MaterialUI\Scripts\Components\Progress\CircularProgressIndicator.cs" />
+    <Compile Include="Assets\MaterialUI\Scripts\Components\Progress\LinearProgressIndicator.cs" />
+    <Compile Include="Assets\MaterialUI\Scripts\Components\Progress\ProgressIndicator.cs" />
+    <Compile Include="Assets\MaterialUI\Scripts\Components\RadioGroups\MaterialRadio.cs" />
+    <Compile Include="Assets\MaterialUI\Scripts\Components\RadioGroups\MaterialRadioGroup.cs" />
+    <Compile Include="Assets\MaterialUI\Scripts\Components\Screens\MaterialScreen.cs" />
+    <Compile Include="Assets\MaterialUI\Scripts\Components\Screens\ScreenView.cs" />
+    <Compile Include="Assets\MaterialUI\Scripts\Components\Snackbars\Snackbar.cs" />
+    <Compile Include="Assets\MaterialUI\Scripts\Components\Snackbars\SnackbarAnimator.cs" />
+    <Compile Include="Assets\MaterialUI\Scripts\Components\Tabs\TabItem.cs" />
+    <Compile Include="Assets\MaterialUI\Scripts\Components\Tabs\TabPage.cs" />
+    <Compile Include="Assets\MaterialUI\Scripts\Components\Tabs\TabPagesScrollDetector.cs" />
+    <Compile Include="Assets\MaterialUI\Scripts\Components\Tabs\TabView.cs" />
+    <Compile Include="Assets\MaterialUI\Scripts\Components\Toasts\Toast.cs" />
+    <Compile Include="Assets\MaterialUI\Scripts\Components\Toasts\ToastAnimator.cs" />
+    <Compile Include="Assets\MaterialUI\Scripts\Components\VectorImages\ImageData.cs" />
+    <Compile Include="Assets\MaterialUI\Scripts\Components\VectorImages\MaterialIconEnum.cs" />
+    <Compile Include="Assets\MaterialUI\Scripts\Components\VectorImages\MaterialIconHelper.cs" />
+    <Compile Include="Assets\MaterialUI\Scripts\Components\VectorImages\MaterialUIIconHelper.cs" />
+    <Compile Include="Assets\MaterialUI\Scripts\Components\VectorImages\Model\Glyph.cs" />
+    <Compile Include="Assets\MaterialUI\Scripts\Components\VectorImages\Model\VectorImageData.cs" />
+    <Compile Include="Assets\MaterialUI\Scripts\Components\VectorImages\Model\VectorImageSet.cs" />
+    <Compile Include="Assets\MaterialUI\Scripts\Components\VectorImages\VectorImage.cs" />
+    <Compile Include="Assets\MaterialUI\Scripts\Components\VectorImages\VectorImageManager.cs" />
+    <Compile Include="Assets\MaterialUI\Scripts\Managers\DialogManager.cs" />
+    <Compile Include="Assets\MaterialUI\Scripts\Managers\PrefabManager.cs" />
+    <Compile Include="Assets\MaterialUI\Scripts\Managers\SnackbarManager.cs" />
+    <Compile Include="Assets\MaterialUI\Scripts\Managers\ToastManager.cs" />
+    <Compile Include="Assets\MaterialUI\Scripts\Managers\TweenManager.cs" />
+    <Compile Include="Assets\MaterialUI\Scripts\MaterialUtils\AdaptiveUIGrid.cs" />
+    <Compile Include="Assets\MaterialUI\Scripts\MaterialUtils\ContinuationManager.cs" />
+    <Compile Include="Assets\MaterialUI\Scripts\MaterialUtils\EditorCoroutine.cs" />
+    <Compile Include="Assets\MaterialUI\Scripts\MaterialUtils\EditorUpdate.cs" />
+    <Compile Include="Assets\MaterialUI\Scripts\MaterialUtils\Extensions.cs" />
+    <Compile Include="Assets\MaterialUI\Scripts\MaterialUtils\FPSCounter.cs" />
+    <Compile Include="Assets\MaterialUI\Scripts\MaterialUtils\HSBColor.cs" />
+    <Compile Include="Assets\MaterialUI\Scripts\MaterialUtils\InputFieldValidators\TextValidatorUtils.cs" />
+    <Compile Include="Assets\MaterialUI\Scripts\MaterialUtils\InstantiationHelpers\ButtonRectInstantiationHelper.cs" />
+    <Compile Include="Assets\MaterialUI\Scripts\MaterialUtils\InstantiationHelpers\ButtonRoundInstantiationHelper.cs" />
+    <Compile Include="Assets\MaterialUI\Scripts\MaterialUtils\InstantiationHelpers\CircleProgressIndicatorInstantiationHelper.cs" />
+    <Compile Include="Assets\MaterialUI\Scripts\MaterialUtils\InstantiationHelpers\DividerInstantiationHelper.cs" />
+    <Compile Include="Assets\MaterialUI\Scripts\MaterialUtils\InstantiationHelpers\EmptyUIObjectInstantiationHelper.cs" />
+    <Compile Include="Assets\MaterialUI\Scripts\MaterialUtils\InstantiationHelpers\InputFieldInstantiationHelper.cs" />
+    <Compile Include="Assets\MaterialUI\Scripts\MaterialUtils\InstantiationHelpers\InstantiationHelper.cs" />
+    <Compile Include="Assets\MaterialUI\Scripts\MaterialUtils\InstantiationHelpers\MaterialSliderInstantiationHelper.cs" />
+    <Compile Include="Assets\MaterialUI\Scripts\MaterialUtils\InstantiationHelpers\PanelInstantiationHelper.cs" />
+    <Compile Include="Assets\MaterialUI\Scripts\MaterialUtils\InstantiationHelpers\RadioInstantiationHelper.cs" />
+    <Compile Include="Assets\MaterialUI\Scripts\MaterialUtils\InstantiationHelpers\TabViewInstantiationHelper.cs" />
+    <Compile Include="Assets\MaterialUI\Scripts\MaterialUtils\InstantiationHelpers\ToggleInstantiationHelper.cs" />
+    <Compile Include="Assets\MaterialUI\Scripts\MaterialUtils\MaterialColor.cs" />
+    <Compile Include="Assets\MaterialUI\Scripts\MaterialUtils\MaterialUIVersion.cs" />
+    <Compile Include="Assets\MaterialUI\Scripts\MaterialUtils\TextUnicode.cs" />
+    <Compile Include="Assets\MaterialUI\Scripts\MaterialUtils\Utils.cs" />
+    <Compile Include="Assets\MaterialUI\Utils\LitJson\IJsonWrapper.cs" />
+    <Compile Include="Assets\MaterialUI\Utils\LitJson\JsonData.cs" />
+    <Compile Include="Assets\MaterialUI\Utils\LitJson\JsonException.cs" />
+    <Compile Include="Assets\MaterialUI\Utils\LitJson\JsonMapper.cs" />
+    <Compile Include="Assets\MaterialUI\Utils\LitJson\JsonMockWrapper.cs" />
+    <Compile Include="Assets\MaterialUI\Utils\LitJson\JsonReader.cs" />
+    <Compile Include="Assets\MaterialUI\Utils\LitJson\JsonWriter.cs" />
+    <Compile Include="Assets\MaterialUI\Utils\LitJson\Lexer.cs" />
+    <Compile Include="Assets\MaterialUI\Utils\LitJson\ParserToken.cs" />
+    <Compile Include="Assets\MaterialUI\Utils\PropertyDrawers\ObserveAttribute\ObserveAttribute.cs" />
+    <Compile Include="Assets\MaterialUI\Utils\PropertyDrawers\PopupAttribute\PopupAttribute.cs" />
+    <Compile Include="Assets\PennerDoubleAnimation.cs" />
+    <Compile Include="Assets\Scripts\DeadZoneCtrl.cs" />
+    <Compile Include="Assets\Scripts\EasyMobileManager.cs" />
+    <Compile Include="Assets\Scripts\Enums.cs" />
+    <Compile Include="Assets\Scripts\EventZone.cs" />
+    <Compile Include="Assets\Scripts\FixedObstacleCtrl.cs" />
+    <Compile Include="Assets\Scripts\FixedObstacleCtrl_test.cs" />
+    <Compile Include="Assets\Scripts\GameManager.cs" />
+    <Compile Include="Assets\Scripts\GoMenu.cs" />
+    <Compile Include="Assets\Scripts\GoalCtrl.cs" />
+    <Compile Include="Assets\Scripts\Helper.cs" />
+    <Compile Include="Assets\Scripts\Obstacle.cs" />
+    <Compile Include="Assets\Scripts\PlayerBodyCtrl.cs" />
+    <Compile Include="Assets\Scripts\PlayerCtrl.cs" />
+    <Compile Include="Assets\Scripts\Push.cs" />
+    <Compile Include="Assets\Scripts\TitleManager.cs" />
+    <Compile Include="Assets\Scripts\UIManager.cs" />
+    <Compile Include="Assets\Scripts\WayPointObstacleCtrl.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples\Scripts\Benchmark01.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples\Scripts\Benchmark01_UGUI.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples\Scripts\Benchmark02.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples\Scripts\Benchmark03.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples\Scripts\Benchmark04.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples\Scripts\CameraController.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples\Scripts\ChatController.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples\Scripts\ObjectSpin.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples\Scripts\ShaderPropAnimator.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples\Scripts\SimpleScript.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples\Scripts\SkewTextExample.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples\Scripts\TMP_DigitValidator.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples\Scripts\TMP_ExampleScript_01.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples\Scripts\TMP_FrameRateCounter.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples\Scripts\TMP_TextEventCheck.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples\Scripts\TMP_TextEventHandler.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples\Scripts\TMP_TextInfoDebugTool.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples\Scripts\TMP_TextSelector_A.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples\Scripts\TMP_TextSelector_B.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples\Scripts\TMP_UiFrameRateCounter.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples\Scripts\TMPro_InstructionOverlay.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples\Scripts\TeleType.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples\Scripts\TextConsoleSimulator.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples\Scripts\TextMeshProFloatingText.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples\Scripts\TextMeshSpawner.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples\Scripts\VertexColorCycler.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples\Scripts\VertexJitter.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples\Scripts\VertexShakeA.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples\Scripts\VertexShakeB.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples\Scripts\VertexZoom.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples\Scripts\WarpTextExample.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Demigiant\DOTweenPro\DOTweenAnimation.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\GoogleMobileAds\Api\AdFailedToLoadEventArgs.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\GoogleMobileAds\Api\AdLoader.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\GoogleMobileAds\Api\AdPosition.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\GoogleMobileAds\Api\AdRequest.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\GoogleMobileAds\Api\AdSize.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\GoogleMobileAds\Api\BannerView.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\GoogleMobileAds\Api\CustomNativeEventArgs.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\GoogleMobileAds\Api\CustomNativeTemplateAd.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\GoogleMobileAds\Api\Gender.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\GoogleMobileAds\Api\ICustomInAppPurchase.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\GoogleMobileAds\Api\ICustomInAppPurchaseProcessor.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\GoogleMobileAds\Api\IDefaultInAppPurchaseProcessor.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\GoogleMobileAds\Api\IInAppPurchaseResult.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\GoogleMobileAds\Api\InterstitialAd.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\GoogleMobileAds\Api\NativeExpressAdView.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\GoogleMobileAds\Api\Reward.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\GoogleMobileAds\Api\RewardBasedVideoAd.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\GoogleMobileAds\Common\DummyClient.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\GoogleMobileAds\Common\IAdLoaderClient.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\GoogleMobileAds\Common\IBannerClient.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\GoogleMobileAds\Common\ICustomNativeTemplateClient.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\GoogleMobileAds\Common\IInterstitialClient.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\GoogleMobileAds\Common\INativeExpressAdClient.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\GoogleMobileAds\Common\IRewardBasedVideoAdClient.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\GoogleMobileAds\Common\Utils.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\GoogleMobileAds\Platforms\Android\AdLoaderClient.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\GoogleMobileAds\Platforms\Android\BannerClient.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\GoogleMobileAds\Platforms\Android\CustomInAppPurchaseListener.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\GoogleMobileAds\Platforms\Android\CustomNativeTemplateClient.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\GoogleMobileAds\Platforms\Android\DefaultInAppPurchaseListener.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\GoogleMobileAds\Platforms\Android\InAppPurchase.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\GoogleMobileAds\Platforms\Android\InAppPurchaseResult.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\GoogleMobileAds\Platforms\Android\InterstitialClient.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\GoogleMobileAds\Platforms\Android\NativeExpressAdClient.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\GoogleMobileAds\Platforms\Android\RewardBasedVideoAdClient.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\GoogleMobileAds\Platforms\Android\Utils.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\GoogleMobileAds\Platforms\GoogleMobileAdsClientFactory.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\GoogleMobileAds\Platforms\iOS\AdLoaderClient.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\GoogleMobileAds\Platforms\iOS\BannerClient.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\GoogleMobileAds\Platforms\iOS\CustomNativeTemplateClient.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\GoogleMobileAds\Platforms\iOS\Externs.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\GoogleMobileAds\Platforms\iOS\InterstitialClient.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\GoogleMobileAds\Platforms\iOS\MonoPInvokeCallbackAttribute.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\GoogleMobileAds\Platforms\iOS\NativeExpressAdClient.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\GoogleMobileAds\Platforms\iOS\RewardBasedVideoAdClient.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\GoogleMobileAds\Platforms\iOS\Utils.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Illogika\HeavyDutyInspector\Examples\LocalizationKeys\LocalizationKey.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Illogika\HeavyDutyInspector\Examples\LocalizationKeys\LocalizationKeysExample.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Illogika\HeavyDutyInspector\Examples\Scripts\ExampleAssetPath.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Illogika\HeavyDutyInspector\Examples\Scripts\ExampleButton.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Illogika\HeavyDutyInspector\Examples\Scripts\ExampleChangeCheckCallback.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Illogika\HeavyDutyInspector\Examples\Scripts\ExampleComment.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Illogika\HeavyDutyInspector\Examples\Scripts\ExampleComplexHeaders.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Illogika\HeavyDutyInspector\Examples\Scripts\ExampleComponentField.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Illogika\HeavyDutyInspector\Examples\Scripts\ExampleComponentSelection43.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Illogika\HeavyDutyInspector\Examples\Scripts\ExampleDictionary.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Illogika\HeavyDutyInspector\Examples\Scripts\ExampleDynamicRange.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Illogika\HeavyDutyInspector\Examples\Scripts\ExampleEditableComment.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Illogika\HeavyDutyInspector\Examples\Scripts\ExampleEditableProperty.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Illogika\HeavyDutyInspector\Examples\Scripts\ExampleEnumMask.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Illogika\HeavyDutyInspector\Examples\Scripts\ExampleHideConditional.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Illogika\HeavyDutyInspector\Examples\Scripts\ExampleImage.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Illogika\HeavyDutyInspector\Examples\Scripts\ExampleLayer.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Illogika\HeavyDutyInspector\Examples\Scripts\ExampleReadOnlyProperty.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Illogika\HeavyDutyInspector\Examples\Scripts\ExampleReadonly.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Illogika\HeavyDutyInspector\Examples\Scripts\ExampleReorderableArray.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Illogika\HeavyDutyInspector\Examples\Scripts\ExampleReorderableArrayComponentSelection.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Illogika\HeavyDutyInspector\Examples\Scripts\ExampleReorderableArrayCustomSerializableObject.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Illogika\HeavyDutyInspector\Examples\Scripts\ExampleReorderableList.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Illogika\HeavyDutyInspector\Examples\Scripts\ExampleReorderableListComponentSelection.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Illogika\HeavyDutyInspector\Examples\Scripts\ExampleReorderableListCustomSerializableObject.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Illogika\HeavyDutyInspector\Examples\Scripts\ExampleScene.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Illogika\HeavyDutyInspector\Examples\Scripts\ExampleTag.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Illogika\HeavyDutyInspector\Examples\Scripts\ExampleTagList.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Illogika\HeavyDutyInspector\Examples\Scripts\ExampleUnsignedIntDrawer.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Illogika\HeavyDutyInspector\Examples\Scripts\FakeState.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Illogika\HeavyDutyInspector\Examples\Scripts\FakeStateAttack.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Illogika\HeavyDutyInspector\Examples\Scripts\FakeStateGoToPosition.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Illogika\HeavyDutyInspector\Examples\Scripts\FakeStateIdle.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Illogika\HeavyDutyInspector\Extras\Spreadsheet.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Illogika\HeavyDutyInspector\NamedMonoBehaviour\Internal\NMBColorAttribute.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Illogika\HeavyDutyInspector\NamedMonoBehaviour\Internal\NMBNameAttribute.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Illogika\HeavyDutyInspector\NamedMonoBehaviour\MonoBehaviour.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Illogika\HeavyDutyInspector\NamedMonoBehaviour\NamedMonoBehaviour.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Illogika\HeavyDutyInspector\PropertyDrawers\AssetPathAttribute.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Illogika\HeavyDutyInspector\PropertyDrawers\BackgroundAttribute.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Illogika\HeavyDutyInspector\PropertyDrawers\ButtonAttribute.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Illogika\HeavyDutyInspector\PropertyDrawers\ChangeCheckCallbackAttribute.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Illogika\HeavyDutyInspector\PropertyDrawers\ColorExtension.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Illogika\HeavyDutyInspector\PropertyDrawers\CommentAttribute.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Illogika\HeavyDutyInspector\PropertyDrawers\ComplexHeaderAttribute.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Illogika\HeavyDutyInspector\PropertyDrawers\ComponentField.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Illogika\HeavyDutyInspector\PropertyDrawers\ComponentFieldRestrictionAttribute.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Illogika\HeavyDutyInspector\PropertyDrawers\ComponentSelectionAttribute.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Illogika\HeavyDutyInspector\PropertyDrawers\DictionaryAttribute.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Illogika\HeavyDutyInspector\PropertyDrawers\DynamicRangeAttribute.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Illogika\HeavyDutyInspector\PropertyDrawers\EditableCommentAttribute.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Illogika\HeavyDutyInspector\PropertyDrawers\EditablePropertyAttribute.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Illogika\HeavyDutyInspector\PropertyDrawers\EnumMaskAttribute.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Illogika\HeavyDutyInspector\PropertyDrawers\HideConditionalAttribute.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Illogika\HeavyDutyInspector\PropertyDrawers\HideVariableAttribute.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Illogika\HeavyDutyInspector\PropertyDrawers\ImageAttribute.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Illogika\HeavyDutyInspector\PropertyDrawers\ImageButtonAttribute.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Illogika\HeavyDutyInspector\PropertyDrawers\Keyword.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Illogika\HeavyDutyInspector\PropertyDrawers\KeywordsConfig.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Illogika\HeavyDutyInspector\PropertyDrawers\LayerAttribute.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Illogika\HeavyDutyInspector\PropertyDrawers\NamedMonoBehaviourAttribute.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Illogika\HeavyDutyInspector\PropertyDrawers\ReadonlyAttribute.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Illogika\HeavyDutyInspector\PropertyDrawers\ReadonlyPropertiesAttribute.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Illogika\HeavyDutyInspector\PropertyDrawers\ReorderableArrayAttribute.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Illogika\HeavyDutyInspector\PropertyDrawers\ReorderableListAttribute.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Illogika\HeavyDutyInspector\PropertyDrawers\Scene.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Illogika\HeavyDutyInspector\PropertyDrawers\SceneAttribute.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Illogika\HeavyDutyInspector\PropertyDrawers\SerializationWrappers.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Illogika\HeavyDutyInspector\PropertyDrawers\TagAttribute.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Illogika\HeavyDutyInspector\PropertyDrawers\TagListAttribute.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Mad Level Manager\Examples\Stuff\Scripts\Box.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Mad Level Manager\Examples\Stuff\Scripts\Instruction.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Mad Level Manager\Examples\Stuff\Scripts\LoseScript.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Mad Level Manager\Examples\Stuff\Scripts\MadLevelLoadingBar.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Mad Level Manager\Examples\Stuff\Scripts\MadLevelLoadingScreen.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Mad Level Manager\Examples\Stuff\Scripts\MadLevelQueryExample.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Mad Level Manager\Examples\Stuff\Scripts\MadLevelTesterController.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Mad Level Manager\Examples\Stuff\Scripts\MadLevelTesterOption.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Mad Level Manager\Examples\Stuff\Scripts\MadLevelYouAreHereScript.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Mad Level Manager\Examples\Stuff\Scripts\ResetProfileScript.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Mad Level Manager\Examples\Stuff\Scripts\WinPointsScript.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Mad Level Manager\Scripts\Base\Attributes.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Mad Level Manager\Scripts\Base\Background\MadLevelBackgroundLayer.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Mad Level Manager\Scripts\Base\IMadLevelProfileBackend.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Mad Level Manager\Scripts\Base\Layouts\MadLevelAbstractLayout.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Mad Level Manager\Scripts\Base\Layouts\MadLevelFreeLayout.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Mad Level Manager\Scripts\Base\Layouts\MadLevelGridBullets.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Mad Level Manager\Scripts\Base\Layouts\MadLevelGridLayout.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Mad Level Manager\Scripts\Base\Layouts\MadLevelLayout.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Mad Level Manager\Scripts\Base\MadAnim.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Mad Level Manager\Scripts\Base\MadAnimColor.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Mad Level Manager\Scripts\Base\MadAnimMove.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Mad Level Manager\Scripts\Base\MadAnimRotate.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Mad Level Manager\Scripts\Base\MadAnimScale.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Mad Level Manager\Scripts\Base\MadAnimator.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Mad Level Manager\Scripts\Base\MadFollow.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Mad Level Manager\Scripts\Base\MadLevel.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Mad Level Manager\Scripts\Base\MadLevelAnimator.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Mad Level Manager\Scripts\Base\MadLevelBackground.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Mad Level Manager\Scripts\Base\MadLevelConfiguration.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Mad Level Manager\Scripts\Base\MadLevelExtension.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Mad Level Manager\Scripts\Base\MadLevelHelp.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Mad Level Manager\Scripts\Base\MadLevelIcon.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Mad Level Manager\Scripts\Base\MadLevelImage.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Mad Level Manager\Scripts\Base\MadLevelInputControl.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Mad Level Manager\Scripts\Base\MadLevelProfile.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Mad Level Manager\Scripts\Base\MadLevelProfileBufferedBackend.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Mad Level Manager\Scripts\Base\MadLevelProfileWatcher.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Mad Level Manager\Scripts\Base\MadLevelProperty.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Mad Level Manager\Scripts\Base\MadLevelPropertyCondition.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Mad Level Manager\Scripts\Base\MadLevelPropertyText.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Mad Level Manager\Scripts\Base\MadLevelQuery.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Mad Level Manager\Scripts\Base\MadLevelRoot.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Mad Level Manager\Scripts\Base\MadLevelScene.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Mad Level Manager\Scripts\Base\MadLevelSettings.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Mad Level Manager\Scripts\Mad2D\MadAnchor.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Mad Level Manager\Scripts\Mad2D\MadAnimation.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Mad Level Manager\Scripts\Mad2D\MadAtlas.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Mad Level Manager\Scripts\Mad2D\MadBigMeshRenderer.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Mad Level Manager\Scripts\Mad2D\MadDragStopDraggable.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Mad Level Manager\Scripts\Mad2D\MadDraggable.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Mad Level Manager\Scripts\Mad2D\MadDrawCall.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Mad Level Manager\Scripts\Mad2D\MadDrawing.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Mad Level Manager\Scripts\Mad2D\MadEvent.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Mad Level Manager\Scripts\Mad2D\MadFont.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Mad Level Manager\Scripts\Mad2D\MadFontData.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Mad Level Manager\Scripts\Mad2D\MadFreeDraggable.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Mad Level Manager\Scripts\Mad2D\MadMaterialStore.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Mad Level Manager\Scripts\Mad2D\MadNode.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Mad Level Manager\Scripts\Mad2D\MadObject.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Mad Level Manager\Scripts\Mad2D\MadPanel.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Mad Level Manager\Scripts\Mad2D\MadPlayAudioClip.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Mad Level Manager\Scripts\Mad2D\MadRootNode.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Mad Level Manager\Scripts\Mad2D\MadShaders.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Mad Level Manager\Scripts\Mad2D\MadSprite.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Mad Level Manager\Scripts\Mad2D\MadText.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Mad Level Manager\Scripts\Mad2D\MadiTween.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Mad Level Manager\Scripts\MadCommons\MadDebug.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Mad Level Manager\Scripts\MadCommons\MadGameObject.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Mad Level Manager\Scripts\MadCommons\MadHashCode.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Mad Level Manager\Scripts\MadCommons\MadList.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Mad Level Manager\Scripts\MadCommons\MadMath.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Mad Level Manager\Scripts\MadCommons\MadMatrix.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Mad Level Manager\Scripts\MadCommons\MadNaturalSortComparer.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Mad Level Manager\Scripts\MadCommons\MadObjectPool.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Mad Level Manager\Scripts\MadCommons\MadScreen.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Mad Level Manager\Scripts\MadCommons\MadTransform.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Mad Level Manager\Scripts\MadCommons\MadTrial.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\Mad Level Manager\Scripts\MadCommons\MadUndo.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\ProCore\ProGrids\Classes\pg_Constant.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\ProCore\ProGrids\Classes\pg_Enum.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\ProCore\ProGrids\Classes\pg_IconUtility.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\ProCore\ProGrids\Classes\pg_SceneMeshRender.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\ProCore\ProGrids\Classes\pg_Util.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\PygmyMonkey\ColorPalette\Example\Scripts\ColorPaletteDemo1.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\PygmyMonkey\ColorPalette\Example\Scripts\ColorPaletteDemo2.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\PygmyMonkey\ColorPalette\Example\Scripts\ColorPaletteDemo3.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\PygmyMonkey\ColorPalette\Runtime\ColorPaletteObject.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\PygmyMonkey\ColorPalette\Runtime\Core\ColorInfo.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\PygmyMonkey\ColorPalette\Runtime\Core\ColorPalette.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\PygmyMonkey\ColorPalette\Runtime\Core\ColorPaletteData.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\PygmyMonkey\ColorPalette\Runtime\Importers\FileImporters\ACOFileImporter.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\PygmyMonkey\ColorPalette\Runtime\Importers\FileImporters\ASEFileImporter.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\PygmyMonkey\ColorPalette\Runtime\Importers\FileImporters\ColorPresetFileImporter.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\PygmyMonkey\ColorPalette\Runtime\Importers\FileImporters\GPLFileImporter.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\PygmyMonkey\ColorPalette\Runtime\Importers\FileImporters\Model\ParserColorResult.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\PygmyMonkey\ColorPalette\Runtime\Importers\FileImporters\SVGFileImporter.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\PygmyMonkey\ColorPalette\Runtime\Importers\WebsiteImporters\ColorCombosWebsiteImporter.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\PygmyMonkey\ColorPalette\Runtime\Importers\WebsiteImporters\ColourLoversWebsiteImporter.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\PygmyMonkey\ColorPalette\Runtime\Importers\WebsiteImporters\ColrdWebsiteImporter.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\PygmyMonkey\ColorPalette\Runtime\Importers\WebsiteImporters\DribbbleWebsiteImporter.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\PygmyMonkey\ColorPalette\Utils\ColorUtils.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\PygmyMonkey\ColorPalette\Utils\PaletteFirstUseUtils.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\PygmyMonkey\ColorPalette\Utils\PaletteUtils.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\SpriteTrail\SCRIPT\CORE\SpriteTrail.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\SpriteTrail\SCRIPT\CORE\TrailElement.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\SpriteTrail\SCRIPT\CORE\TrailPreset.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\SpriteTrail\SCRIPT\USED_IN_EXAMPLES\BasicPath.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\SpriteTrail\SCRIPT\USED_IN_EXAMPLES\ChangeScene.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\SpriteTrail\SCRIPT\USED_IN_EXAMPLES\ChangeTrailPreset.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\SpriteTrail\SCRIPT\USED_IN_EXAMPLES\EnableTrailOnKeyDown.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\SpriteTrail\SCRIPT\USED_IN_EXAMPLES\MoveItem.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\SpriteTrail\SCRIPT\USED_IN_EXAMPLES\Rotate.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\SpriteTrail\SCRIPT\USED_IN_EXAMPLES\SimpleCharacterControler2D.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\SpriteTrail\SCRIPT\USED_IN_EXAMPLES\TestSceneManager.cs" />
+    <Compile Include="Assets\ThirdPartyAssets\SpriteTrail\SCRIPT\USED_IN_EXAMPLES\TrailManagerExample.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\EasyMobile\Demo\Fonts\SIL Open Font License.txt" />
+    <None Include="Assets\EasyMobile\EasyMobileSettings.txt" />
+    <None Include="Assets\EasyMobile\Editor\Templates\Template_AppleTangle.txt" />
+    <None Include="Assets\EasyMobile\Editor\Templates\Template_Constants.txt" />
+    <None Include="Assets\EasyMobile\Editor\Templates\Template_GooglePlayTangle.txt" />
+    <None Include="Assets\EasyMobile\GUISkins\Fonts\License\LICENSE-2.0.txt" />
+    <None Include="Assets\EasyMobile\GUISkins\Fonts\License\OFL.txt" />
+    <None Include="Assets\EasyMobile\GUISkins\Fonts\License\ubuntu-font-licence-1.0.txt" />
+    <None Include="Assets\EasyMobile\link.xml" />
+    <None Include="Assets\Firebase\m2repository\com\google\firebase\firebase-analytics-unity\maven-metadata.xml" />
+    <None Include="Assets\Firebase\m2repository\com\google\firebase\firebase-app-unity\maven-metadata.xml" />
+    <None Include="Assets\MaterialUI\CHANGELOG.txt" />
+    <None Include="Assets\MaterialUI\Fonts\Resources\Material Design Icons\LICENSE.txt" />
+    <None Include="Assets\MaterialUI\Fonts\Roboto\NOTICE.txt" />
+    <None Include="Assets\MaterialUI\Materials\SignedDistanceFieldUI.shader" />
+    <None Include="Assets\MaterialUI\README.txt" />
+    <None Include="Assets\PlayServicesResolver\Editor\play-services-resolver.txt" />
+    <None Include="Assets\Plugins\Android\Firebase\AndroidManifest.xml" />
+    <None Include="Assets\Plugins\Android\Firebase\res\values\google-services.xml" />
+    <None Include="Assets\Plugins\Android\GoogleMobileAdsPlugin\AndroidManifest.xml" />
+    <None Include="Assets\Plugins\Android\firebase-common-10.0.1\AndroidManifest.xml" />
+    <None Include="Assets\Plugins\Android\firebase-common-10.0.1\proguard.txt" />
+    <None Include="Assets\Plugins\Android\firebase-iid-10.0.1\AndroidManifest.xml" />
+    <None Include="Assets\Plugins\Android\firebase-iid-10.0.1\proguard.txt" />
+    <None Include="Assets\TextMesh Pro\Fonts\Anton OFL.txt" />
+    <None Include="Assets\TextMesh Pro\Fonts\Bangers - OFL.txt" />
+    <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
+    <None Include="Assets\TextMesh Pro\Fonts\Oswald-Bold - OFL.txt" />
+    <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
+    <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
+    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap-Mobile.shader" />
+    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap.shader" />
+    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF Overlay.shader" />
+    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Masking.shader" />
+    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Overlay.shader" />
+    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile.shader" />
+    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
+    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface.shader" />
+    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF.shader" />
+    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Sprite.shader" />
+    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro.cginc" />
+    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro_Properties.cginc" />
+    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro_Surface.cginc" />
+    <None Include="Assets\ThirdPartyAssets\Demigiant\DOTween\DOTween.XML" />
+    <None Include="Assets\ThirdPartyAssets\Demigiant\DOTween\DOTween43.xml" />
+    <None Include="Assets\ThirdPartyAssets\Demigiant\DOTween\DOTween46.xml" />
+    <None Include="Assets\ThirdPartyAssets\Demigiant\DOTween\DOTween50.xml" />
+    <None Include="Assets\ThirdPartyAssets\Demigiant\DOTween\Editor\DOTweenEditor.XML" />
+    <None Include="Assets\ThirdPartyAssets\Demigiant\DOTween\readme.txt" />
+    <None Include="Assets\ThirdPartyAssets\Demigiant\DOTweenPro\DOTweenPro.XML" />
+    <None Include="Assets\ThirdPartyAssets\Demigiant\DOTweenPro\Editor\DOTweenProEditor.XML" />
+    <None Include="Assets\ThirdPartyAssets\Demigiant\DOTweenPro\readme.txt" />
+    <None Include="Assets\ThirdPartyAssets\Demigiant\DemiLib\Core\DemiLib.xml" />
+    <None Include="Assets\ThirdPartyAssets\Demigiant\DemiLib\Core\Editor\DemiEditor.xml" />
+    <None Include="Assets\ThirdPartyAssets\Demigiant\readme_DOTweenPro.txt" />
+    <None Include="Assets\ThirdPartyAssets\Illogika\ScriptTemplates\100-C# Named Script-NewNamedBehaviourScript.cs.txt" />
+    <None Include="Assets\ThirdPartyAssets\Illogika\ScriptTemplates\101-C# Custom Keyword-NewKeywordScript.cs.txt" />
+    <None Include="Assets\ThirdPartyAssets\Illogika\ScriptTemplates\102-C# Custom Keyword Editor-NewKeywordEditorScript.cs.txt" />
+    <None Include="Assets\ThirdPartyAssets\Mad Level Manager\Examples\Example 5 - Unity 5\README.txt" />
+    <None Include="Assets\ThirdPartyAssets\Mad Level Manager\Examples\Stuff\Fonts\Boogaloo New\SIL OFL Font License Boogaloo.txt" />
+    <None Include="Assets\ThirdPartyAssets\Mad Level Manager\Examples\Stuff\Fonts\Boogaloo New\boogaloo.txt" />
+    <None Include="Assets\ThirdPartyAssets\Mad Level Manager\Examples\Stuff\Fonts\Boogaloo\SIL OFL Font License Boogaloo.txt" />
+    <None Include="Assets\ThirdPartyAssets\Mad Level Manager\README.TXT" />
+    <None Include="Assets\ThirdPartyAssets\Mad Level Manager\Scripts\Mad2D\Resources\Shaders\Font DB.shader" />
+    <None Include="Assets\ThirdPartyAssets\Mad Level Manager\Scripts\Mad2D\Resources\Shaders\Font White DB.shader" />
+    <None Include="Assets\ThirdPartyAssets\Mad Level Manager\Scripts\Mad2D\Resources\Shaders\Font White.shader" />
+    <None Include="Assets\ThirdPartyAssets\Mad Level Manager\Scripts\Mad2D\Resources\Shaders\Font.shader" />
+    <None Include="Assets\ThirdPartyAssets\Mad Level Manager\Scripts\Mad2D\Resources\Shaders\UnlitTransparentTint DB.shader" />
+    <None Include="Assets\ThirdPartyAssets\Mad Level Manager\Scripts\Mad2D\Resources\Shaders\UnlitTransparentTint.shader" />
+    <None Include="Assets\ThirdPartyAssets\Mad Level Manager\Scripts\Mad2D\Resources\Shaders\UnlitTransparentTintPre DB.shader" />
+    <None Include="Assets\ThirdPartyAssets\Mad Level Manager\Scripts\Mad2D\Resources\Shaders\UnlitTransparentTintPre.shader" />
+    <None Include="Assets\ThirdPartyAssets\Mad Level Manager\Themes\Theme1\Fonts\font.txt" />
+    <None Include="Assets\ThirdPartyAssets\Mad Level Manager\Themes\Theme2\Font\abeezee-glyphs.txt" />
+    <None Include="Assets\ThirdPartyAssets\Mad Level Manager\Themes\Theme2\Font\abeezee-license.txt" />
+    <None Include="Assets\ThirdPartyAssets\ProCore\ProGrids\About\changelog.txt" />
+    <None Include="Assets\ThirdPartyAssets\ProCore\ProGrids\About\pc_AboutEntry_ProGrids.txt" />
+    <None Include="Assets\ThirdPartyAssets\ProCore\ProGrids\Shader\pg_GridShader.shader" />
+    <None Include="Assets\ThirdPartyAssets\PygmyMonkey\ColorPalette\ReadMe.txt" />
+    <None Include="Assets\ThirdPartyAssets\SpriteTrail\GRAPH\SHADERS\SpritesSilhouette.shader" />
+    <None Include="Assets\ThirdPartyAssets\SpriteTrail\README.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="GenerateTargetFrameworkMonikerAttribute" />
+</Project>
